@@ -12,7 +12,6 @@ shape = SubResource("RectangleShape2D_jhy13")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 4.76837e-07)
-scale = Vector2(1, 1)
 texture = ExtResource("1_xggit")
 region_enabled = true
 region_rect = Rect2(126, 36, 18, 18)
