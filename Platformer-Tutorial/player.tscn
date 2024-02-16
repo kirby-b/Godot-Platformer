@@ -1,53 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://buhrv3yofi81h"]
+[gd_scene load_steps=4 format=3 uid="uid://buhrv3yofi81h"]
 
-[ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://tilemap-characters_packed.png" id="1_0dp3w"]
 [ext_resource type="Script" path="res://player.gd" id="1_84ky7"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1fk7f"]
-atlas = ExtResource("1_0dp3w")
-region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gi57y"]
-atlas = ExtResource("1_0dp3w")
-region = Rect2(72, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0eekw"]
-atlas = ExtResource("1_0dp3w")
-region = Rect2(72, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k2a4r"]
-atlas = ExtResource("1_0dp3w")
-region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_167ud"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1fk7f")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gi57y")
-}],
-"loop": true,
-"name": &"jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0eekw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k2a4r")
-}],
-"loop": true,
-"name": &"run",
-"speed": 5.0
-}]
+[ext_resource type="SpriteFrames" uid="uid://b0r0g8qo2om4v" path="res://playerblue.tres" id="2_n70uf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euf5n"]
 size = Vector2(14, 19.5)
@@ -58,7 +12,7 @@ script = ExtResource("1_84ky7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2.38419e-07, -2.38419e-07)
 scale = Vector2(0.9375, 0.9375)
-sprite_frames = SubResource("SpriteFrames_167ud")
+sprite_frames = ExtResource("2_n70uf")
 animation = &"run"
 flip_h = true
 
