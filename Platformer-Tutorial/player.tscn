@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://b0r0g8qo2om4v" path="res://playerblue.tres" id="2_n70uf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euf5n"]
-size = Vector2(14, 19.5)
+size = Vector2(14, 21)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_84ky7")
@@ -18,5 +18,5 @@ flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
-position = Vector2(0, 1.75)
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_euf5n")
