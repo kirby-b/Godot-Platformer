@@ -20,3 +20,5 @@ flip_h = true
 texture_filter = 1
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_euf5n")
+
+[node name="Camera2D" type="Camera2D" parent="."]
