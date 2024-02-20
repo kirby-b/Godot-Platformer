@@ -12,7 +12,6 @@ region_enabled = true
 region_rect = Rect2(144, 54, 18, 18)
 
 [node name="Hitbox" parent="." instance=ExtResource("2_1racm")]
-collision_layer = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
 polygon = PackedVector2Array(-9, 0, -9, -4, -8, -4, -8, -6, -7, -6, -7, -8, -6, -8, -6, -9, -2, -9, -2, -8, -1, -8, -1, -6, 0, -6, 1, -6, 1, -8, 2, -8, 2, -9, 6, -9, 6, -8, 7, -8, 7, -6, 8, -6, 8, -4, 9, -4, 9, 0)

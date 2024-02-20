@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://buhrv3yofi81h"]
+[gd_scene load_steps=5 format=3 uid="uid://buhrv3yofi81h"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_84ky7"]
 [ext_resource type="SpriteFrames" uid="uid://b0r0g8qo2om4v" path="res://playerblue.tres" id="2_n70uf"]
+[ext_resource type="Resource" uid="uid://bke11hjl8viu2" path="res://BaseMovement.tres" id="2_s8k38"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euf5n"]
 size = Vector2(14, 21)
@@ -9,6 +10,7 @@ size = Vector2(14, 21)
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_84ky7")
+moveData = ExtResource("2_s8k38")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2.38419e-07, -2.38419e-07)
