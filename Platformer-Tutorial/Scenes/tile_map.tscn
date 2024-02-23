@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://vu60elt7dtyk"]
 
-[ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://tilemap_packed.png" id="1_062kk"]
+[ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="1_062kk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_waxli"]
 resource_name = "tmapPacked"

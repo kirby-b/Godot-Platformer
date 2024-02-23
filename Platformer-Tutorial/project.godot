@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Platformer-Tutorial"
-run/main_scene="res://world.tscn"
+run/main_scene="res://Scenes/world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Images/icon.svg"
 
 [display]
 
