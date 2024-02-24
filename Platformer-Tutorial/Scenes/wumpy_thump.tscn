@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://7chbjo5avsxe"]
+
+[ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://Images/tilemap-characters_packed.png" id="1_nyws8"]
+[ext_resource type="PackedScene" uid="uid://cqbw1x2hs0pri" path="res://Scenes/hitbox.tscn" id="2_wytch"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2id48"]
+atlas = ExtResource("1_nyws8")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2uw1h"]
+atlas = ExtResource("1_nyws8")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ihsp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2id48")
+}],
+"loop": true,
+"name": &"falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2uw1h")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="WumpyThump" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0ihsp")
+animation = &"idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-9, 8, -8, 8, -8, 9, 8, 9, 8, 8, 9, 8, 9, -8, 8, -8, 8, -9, -8, -9, -8, -8, -9, -8)
+
+[node name="Hitbox" parent="." instance=ExtResource("2_wytch")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+polygon = PackedVector2Array(-9, 8, -8, 8, -8, 9, 8, 9, 8, 8, 9, 8, 9, -8, 8, -8, 8, -9, -8, -9, -8, -8, -9, -8)

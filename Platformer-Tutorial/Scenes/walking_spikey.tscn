@@ -1,8 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccdtjnsr15nmy"]
+[gd_scene load_steps=8 format=3 uid="uid://ccdtjnsr15nmy"]
 
 [ext_resource type="Script" path="res://Scripts/walking_enemy.gd" id="1_ik2at"]
 [ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://Images/tilemap-characters_packed.png" id="1_srg23"]
 [ext_resource type="PackedScene" uid="uid://cqbw1x2hs0pri" path="res://Scenes/hitbox.tscn" id="3_tmglb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmyqc"]
+atlas = ExtResource("1_srg23")
+region = Rect2(192, 24, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nu3y7"]
 atlas = ExtResource("1_srg23")
@@ -14,6 +18,14 @@ region = Rect2(168, 24, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7jnl3"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmyqc")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nu3y7")

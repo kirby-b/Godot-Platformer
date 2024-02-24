@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://3b2mxglif1a3"]
+
+[ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://Images/tilemap-characters_packed.png" id="1_4itt8"]
+[ext_resource type="PackedScene" uid="uid://cqbw1x2hs0pri" path="res://Scenes/hitbox.tscn" id="2_vepnf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6iwb"]
+atlas = ExtResource("1_4itt8")
+region = Rect2(96, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6sxj"]
+atlas = ExtResource("1_4itt8")
+region = Rect2(120, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ukipd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6iwb")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6sxj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="fish" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ukipd")
+animation = &"idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-5, 8, 4, 8, 4, 4, 5, 2, 4, -5, 3, -7, -4, -7, -5, -5, -6, 2, -5, 4)
+
+[node name="Hitbox" parent="." instance=ExtResource("2_vepnf")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+polygon = PackedVector2Array(-5, 8, 4, 8, 4, 4, 5, 2, 4, -5, 3, -7, -4, -7, -5, -5, -6, 2, -5, 4)
