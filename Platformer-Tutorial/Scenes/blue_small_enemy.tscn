@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://75jfpslorw0m"]
+
+[ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://Images/tilemap-characters_packed.png" id="1_moaky"]
+[ext_resource type="PackedScene" uid="uid://cqbw1x2hs0pri" path="res://Scenes/hitbox.tscn" id="2_joip0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvyfs"]
+atlas = ExtResource("1_moaky")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvh38"]
+atlas = ExtResource("1_moaky")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwwop"]
+atlas = ExtResource("1_moaky")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ek8m4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvyfs")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvh38")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iwwop")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[node name="Blue_Small_Enemy" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_ek8m4")
+animation = &"walking"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-5, 0, -3, 0, -2, 0, 0, 0, 1, 0, 3, 0, 4, 0, 6, 0, 6, -1, 7, -1, 7, -11, 6, -11, 6, -12, 5, -12, 5, -13, -5, -13, -5, -12, -5, -12, -6, -12, -6, -11, -7, -11, -7, -1, -5, -1)
+
+[node name="LedgeCheckerL" type="RayCast2D" parent="."]
+position = Vector2(-6, -1)
+target_position = Vector2(0, 4)
+
+[node name="LedgeCheckerR" type="RayCast2D" parent="."]
+position = Vector2(7, -1)
+target_position = Vector2(0, 4)
+
+[node name="Hitbox" parent="." instance=ExtResource("2_joip0")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+polygon = PackedVector2Array(-5, 0, -3, 0, -2, 0, 0, 0, 1, 0, 3, 0, 4, 0, 6, 0, 6, -1, 7, -1, 7, -11, 6, -11, 6, -12, 5, -12, 5, -13, -5, -13, -5, -12, -5, -12, -6, -12, -6, -11, -7, -11, -7, -1, -5, -1)

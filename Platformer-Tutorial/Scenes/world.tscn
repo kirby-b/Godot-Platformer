@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://buhrv3yofi81h" path="res://Scenes/player.tscn" id="2_wcnmb"]
 [ext_resource type="PackedScene" uid="uid://mrc6i2nn0f84" path="res://Scenes/spikes.tscn" id="3_l77qj"]
 [ext_resource type="PackedScene" uid="uid://bcste5nfuypnr" path="res://Scenes/background.tscn" id="4_y78jv"]
-[ext_resource type="PackedScene" uid="uid://ccdtjnsr15nmy" path="res://Scenes/walking_enemy.tscn" id="5_1ykj7"]
+[ext_resource type="PackedScene" uid="uid://ccdtjnsr15nmy" path="res://Scenes/walking_spikey.tscn" id="5_1ykj7"]
 [ext_resource type="PackedScene" uid="uid://bj7kngt7dfwr2" path="res://Scenes/ladder.tscn" id="6_wyov3"]
 
 [node name="World" type="Node2D"]
@@ -28,10 +28,10 @@ position = Vector2(324, 207)
 
 [node name="Background" parent="." instance=ExtResource("4_y78jv")]
 
-[node name="WalkingEnemy2" parent="." instance=ExtResource("5_1ykj7")]
+[node name="WalkingSpikey1" parent="." instance=ExtResource("5_1ykj7")]
 position = Vector2(450, 171)
 
-[node name="WalkingEnemy" parent="." instance=ExtResource("5_1ykj7")]
+[node name="WalkingSpikey2" parent="." instance=ExtResource("5_1ykj7")]
 position = Vector2(495, 189)
 
 [node name="Ladder" parent="." instance=ExtResource("6_wyov3")]
