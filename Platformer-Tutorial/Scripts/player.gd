@@ -56,11 +56,13 @@ func move_state(direction, delta):
 	
 	# Handle jump/ buffered jump.
 	if (Input.is_action_pressed("ui_accept") and is_on_floor() ) or (jump_buffer and is_on_floor()):
+		SoundPlayer.play_sound(SoundPlayer.JUMP)
 		velocity.y = moveData.JUMP_VELOCITY
 		was_in_air = true
 		jump_buffer = false
 	# Handle double jump
 	if Input.is_action_just_pressed("ui_accept") and double_jump > 0 and not is_on_floor():
+		SoundPlayer.play_sound(SoundPlayer.JUMP)
 		velocity.y = moveData.JUMP_VELOCITY
 		double_jump -= 1
 	# Turns on buffered jump and timeout timer
@@ -108,3 +110,7 @@ func climb_state(direction):
 # Turns off the jump buffer after a small timeout period
 func _on_jump_buffer_timeout():
 	jump_buffer = false
+
+func player_death():
+	SoundPlayer.play_sound(SoundPlayer.HURT)
+	get_tree().call_deferred("reload_current_scene")

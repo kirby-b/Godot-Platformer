@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://gg52putus8ky"]
+
+[ext_resource type="Script" path="res://Scenes/sound_player.gd" id="1_r0imf"]
+
+[node name="SoundPlayer" type="Node"]
+script = ExtResource("1_r0imf")
+
+[node name="Players" type="Node" parent="."]
+
+[node name="Player1" type="AudioStreamPlayer" parent="Players"]
+bus = &"Sound"
+
+[node name="Player2" type="AudioStreamPlayer" parent="Players"]
+bus = &"Sound"
+
+[node name="Player3" type="AudioStreamPlayer" parent="Players"]
+bus = &"Sound"
+
+[node name="Player4" type="AudioStreamPlayer" parent="Players"]
+bus = &"Sound"
+
+[node name="Player5" type="AudioStreamPlayer" parent="Players"]
+bus = &"Sound"
+
+[node name="Player6" type="AudioStreamPlayer" parent="Players"]
+bus = &"Sound"
+
+[node name="Player7" type="AudioStreamPlayer" parent="Players"]
+bus = &"Sound"
