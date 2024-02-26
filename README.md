@@ -6,4 +6,6 @@ I have no idea what I will be doing with this, but it is based on a Godot 3 tuto
 
 Tutorial I followed:  https://www.youtube.com/playlist?list=PL9FzW-m48fn16W1Sz5bhTd1ArQQv4f-Cm
 
-Sprites from: https://www.kenney.nl/assets/pixel-platformer
+Sprites from:  https://www.kenney.nl/assets/pixel-platformer
+
+Sounds generated with:  https://sfbgames.itch.io/chiptone
