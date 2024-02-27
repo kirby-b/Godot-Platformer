@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cnid176a1lent"]
 
 [ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://Images/tilemap-characters_packed.png" id="1_58aiq"]
-[ext_resource type="Script" path="res://Scenes/navalmineman.gd" id="1_fx8n3"]
+[ext_resource type="Script" path="res://Scripts/navalmineman.gd" id="1_fx8n3"]
 [ext_resource type="PackedScene" uid="uid://cqbw1x2hs0pri" path="res://Scenes/hitbox.tscn" id="2_fu7m0"]
 
 [sub_resource type="Animation" id="Animation_k054e"]

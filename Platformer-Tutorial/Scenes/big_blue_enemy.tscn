@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cdxhlfu4e53hd"]
 
 [ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://Images/tilemap-characters_packed.png" id="1_dn4cj"]
-[ext_resource type="Script" path="res://Scenes/big_blue_enemy.gd" id="1_jtwm0"]
+[ext_resource type="Script" path="res://Scripts/big_blue_enemy.gd" id="1_jtwm0"]
 [ext_resource type="PackedScene" uid="uid://cqbw1x2hs0pri" path="res://Scenes/hitbox.tscn" id="2_h1gbi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k1j0q"]
