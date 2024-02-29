@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cpacv3an3oodl"]
+[gd_scene load_steps=12 format=3 uid="uid://cpacv3an3oodl"]
 
 [ext_resource type="PackedScene" uid="uid://vu60elt7dtyk" path="res://Scenes/tile_map.tscn" id="2_rlh6l"]
 [ext_resource type="PackedScene" uid="uid://buhrv3yofi81h" path="res://Scenes/player.tscn" id="2_wcnmb"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ccdtjnsr15nmy" path="res://Scenes/walking_spikey.tscn" id="5_1ykj7"]
 [ext_resource type="PackedScene" uid="uid://bj7kngt7dfwr2" path="res://Scenes/ladder.tscn" id="6_wyov3"]
 [ext_resource type="PackedScene" uid="uid://cnid176a1lent" path="res://Scenes/navalmineman.tscn" id="7_6hhsy"]
+[ext_resource type="PackedScene" uid="uid://cqbw1x2hs0pri" path="res://Scenes/hitbox.tscn" id="8_0haoi"]
 
 [sub_resource type="Curve2D" id="Curve2D_annbo"]
 _data = {
@@ -19,6 +20,10 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 171, 0)
 }
 point_count = 2
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nj4fa"]
+a = Vector2(16, 0)
+b = Vector2(1600, 0)
 
 [node name="World" type="Node2D"]
 
@@ -76,3 +81,11 @@ anim_speed = 0.5
 [node name="NavalMineMan2" parent="." instance=ExtResource("7_6hhsy")]
 position = Vector2(675, 207)
 curve = SubResource("Curve2D_5n8ft")
+
+[node name="abyss" type="Node2D" parent="."]
+
+[node name="Hitbox" parent="abyss" instance=ExtResource("8_0haoi")]
+position = Vector2(-384, 264)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="abyss/Hitbox"]
+shape = SubResource("SegmentShape2D_nj4fa")
