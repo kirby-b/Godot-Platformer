@@ -23,6 +23,7 @@ var jump_buffer = false # Tranks whether the jump buffer is on
 @onready var sprite = $AnimatedSprite2D
 @onready var ladder_check = $LadderChecker
 @onready var jump_timer = $JumpBuffer
+
 func _ready():
 	double_jump = moveData.EXTRA_JUMPS #Sets double jumps when the game starts
 
