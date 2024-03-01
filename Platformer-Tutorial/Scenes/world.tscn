@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bj7kngt7dfwr2" path="res://Scenes/ladder.tscn" id="6_wyov3"]
 [ext_resource type="PackedScene" uid="uid://cnid176a1lent" path="res://Scenes/navalmineman.tscn" id="7_6hhsy"]
 [ext_resource type="PackedScene" uid="uid://cqbw1x2hs0pri" path="res://Scenes/hitbox.tscn" id="8_0haoi"]
-[ext_resource type="PackedScene" uid="uid://cup241yojt5jf" path="res://item_box_yellow.tscn" id="9_1xstj"]
-[ext_resource type="PackedScene" uid="uid://c6cd6mn5lo1q1" path="res://coin_box_yellow.tscn" id="10_2lwey"]
+[ext_resource type="PackedScene" uid="uid://cup241yojt5jf" path="res://Scenes/item_box_yellow.tscn" id="9_1xstj"]
+[ext_resource type="PackedScene" uid="uid://c6cd6mn5lo1q1" path="res://Scenes/coin_box_yellow.tscn" id="10_2lwey"]
 
 [sub_resource type="Curve2D" id="Curve2D_annbo"]
 _data = {
