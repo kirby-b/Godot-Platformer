@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cpacv3an3oodl"]
+[gd_scene load_steps=14 format=3 uid="uid://cpacv3an3oodl"]
 
 [ext_resource type="PackedScene" uid="uid://vu60elt7dtyk" path="res://Scenes/tile_map.tscn" id="2_rlh6l"]
 [ext_resource type="PackedScene" uid="uid://buhrv3yofi81h" path="res://Scenes/player.tscn" id="2_wcnmb"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cnid176a1lent" path="res://Scenes/navalmineman.tscn" id="7_6hhsy"]
 [ext_resource type="PackedScene" uid="uid://cqbw1x2hs0pri" path="res://Scenes/hitbox.tscn" id="8_0haoi"]
 [ext_resource type="PackedScene" uid="uid://cup241yojt5jf" path="res://item_box_yellow.tscn" id="9_1xstj"]
+[ext_resource type="PackedScene" uid="uid://c6cd6mn5lo1q1" path="res://coin_box_yellow.tscn" id="10_2lwey"]
 
 [sub_resource type="Curve2D" id="Curve2D_annbo"]
 _data = {
@@ -94,8 +95,14 @@ shape = SubResource("SegmentShape2D_nj4fa")
 [node name="ItemBoxYellow" parent="." instance=ExtResource("9_1xstj")]
 position = Vector2(351, 63)
 
-[node name="ItemBoxYellow2" parent="." instance=ExtResource("9_1xstj")]
+[node name="CoinBoxYellow" parent="." instance=ExtResource("10_2lwey")]
 position = Vector2(279, 117)
 
-[node name="ItemBoxYellow3" parent="." instance=ExtResource("9_1xstj")]
+[node name="CoinBoxYellow2" parent="." instance=ExtResource("10_2lwey")]
 position = Vector2(423, 117)
+
+[node name="CoinBoxYellow3" parent="." instance=ExtResource("10_2lwey")]
+position = Vector2(675, 0)
+
+[node name="CoinBoxYellow4" parent="." instance=ExtResource("10_2lwey")]
+position = Vector2(981, 81)
