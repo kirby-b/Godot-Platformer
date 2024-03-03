@@ -23,6 +23,7 @@ var jump_buffer = false # Tranks whether the jump buffer is on
 @onready var sprite = $AnimatedSprite2D
 @onready var ladder_check = $LadderChecker
 @onready var jump_timer = $JumpBuffer
+@onready var remote_trans = $RemoteTransform2D
 
 func _ready():
 	double_jump = moveData.EXTRA_JUMPS #Sets double jumps when the game starts
@@ -114,4 +115,10 @@ func _on_jump_buffer_timeout():
 
 func player_death():
 	SoundPlayer.play_sound(SoundPlayer.HURT)
-	get_tree().call_deferred("reload_current_scene")
+	queue_free()
+	Events.emit_signal("player_died")
+	#get_tree().call_deferred("reload_current_scene")
+	
+func connect_camera(camera):
+	var camera_path = camera.get_path()
+	remote_trans.remote_path = camera_path

@@ -23,8 +23,6 @@ flip_h = true
 texture_filter = 1
 shape = SubResource("RectangleShape2D_euf5n")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="LadderChecker" type="RayCast2D" parent="."]
 position = Vector2(0, -10)
 target_position = Vector2(0, 23)
@@ -34,5 +32,7 @@ collide_with_bodies = false
 [node name="JumpBuffer" type="Timer" parent="."]
 wait_time = 0.111
 one_shot = true
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
 
 [connection signal="timeout" from="JumpBuffer" to="." method="_on_jump_buffer_timeout"]

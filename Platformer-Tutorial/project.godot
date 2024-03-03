@@ -22,6 +22,7 @@ buses/default_bus_layout="res://Resources/default_bus_layout.tres"
 [autoload]
 
 SoundPlayer="*res://Scenes/sound_player.tscn"
+Events="*res://Scripts/Events.gd"
 
 [display]
 
