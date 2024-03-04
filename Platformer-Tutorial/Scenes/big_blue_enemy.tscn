@@ -39,6 +39,7 @@ animations = [{
 }]
 
 [node name="Big_Blue_Enemy" type="CharacterBody2D"]
+collision_mask = 2
 script = ExtResource("1_jtwm0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
