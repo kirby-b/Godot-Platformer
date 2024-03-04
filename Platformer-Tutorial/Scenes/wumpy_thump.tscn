@@ -31,7 +31,7 @@ animations = [{
 }]
 
 [node name="WumpyThump" type="CharacterBody2D"]
-collision_mask = 2
+collision_layer = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0ihsp")
