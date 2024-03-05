@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cpacv3an3oodl"]
+[gd_scene load_steps=17 format=3 uid="uid://cpacv3an3oodl"]
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_0udal"]
 [ext_resource type="PackedScene" uid="uid://vu60elt7dtyk" path="res://Scenes/tile_map.tscn" id="2_rlh6l"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cup241yojt5jf" path="res://Scenes/item_box_yellow.tscn" id="9_1xstj"]
 [ext_resource type="PackedScene" uid="uid://c6cd6mn5lo1q1" path="res://Scenes/coin_box_yellow.tscn" id="10_2lwey"]
 [ext_resource type="PackedScene" uid="uid://dvrm1qsnheipf" path="res://Scenes/check_point.tscn" id="12_m6c8g"]
+[ext_resource type="PackedScene" uid="uid://7chbjo5avsxe" path="res://Scenes/wumpy_thump.tscn" id="13_u33ig"]
 
 [sub_resource type="Curve2D" id="Curve2D_annbo"]
 _data = {
@@ -116,3 +117,9 @@ position = Vector2(981, 81)
 
 [node name="CheckPoint" parent="." instance=ExtResource("12_m6c8g")]
 position = Vector2(747, 45)
+
+[node name="WumpyThump" parent="." instance=ExtResource("13_u33ig")]
+position = Vector2(479, 61)
+
+[node name="WumpyThump2" parent="." instance=ExtResource("13_u33ig")]
+position = Vector2(824, 52)

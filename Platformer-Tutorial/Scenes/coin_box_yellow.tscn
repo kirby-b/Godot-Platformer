@@ -1,13 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6cd6mn5lo1q1"]
+[gd_scene load_steps=5 format=3 uid="uid://c6cd6mn5lo1q1"]
 
 [ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="1_l6f1m"]
 
-[node name="CoinBoxYellow" type="StaticBody2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5j6w"]
+atlas = ExtResource("1_l6f1m")
+region = Rect2(162, 0, 18, 18)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_l6f1m")
-region_enabled = true
-region_rect = Rect2(198, 0, 18, 18)
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6a4y"]
+atlas = ExtResource("1_l6f1m")
+region = Rect2(198, 0, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u50nv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5j6w")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6a4y")
+}],
+"loop": true,
+"name": &"full",
+"speed": 5.0
+}]
+
+[node name="CoinBoxYellow" type="StaticBody2D"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-8, -8, -8, -8, -9, -8, -9, 8, -8, 8, -8, 9, 8, 9, 8, 8, 9, 8, 9, -8, 8, -8, 8, -9, -8, -9)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u50nv")
+animation = &"full"
