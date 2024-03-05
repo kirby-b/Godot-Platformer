@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://7chbjo5avsxe"]
 
-[ext_resource type="Script" path="res://Scenes/wumpy_thump.gd" id="1_g50y2"]
+[ext_resource type="Script" path="res://Scripts/wumpy_thump.gd" id="1_g50y2"]
 [ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://Images/tilemap-characters_packed.png" id="1_nyws8"]
 [ext_resource type="PackedScene" uid="uid://cqbw1x2hs0pri" path="res://Scenes/hitbox.tscn" id="2_wytch"]
 
@@ -65,6 +65,8 @@ one_shot = true
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2(0, 9)
+emitting = false
 amount = 32
 process_material = SubResource("ParticleProcessMaterial_v637w")
+lifetime = 2.0
 explosiveness = 1.0

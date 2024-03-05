@@ -13,6 +13,10 @@ var state = IDLE
 @onready var detect_floor = $RayCast2D
 @onready var sprite = $AnimatedSprite2D
 @onready var particles = $GPUParticles2D
+
+func _ready():
+	particles.one_shot = true
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	match state:
