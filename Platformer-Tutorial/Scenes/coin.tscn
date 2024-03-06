@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://duewag7s8a6tn"]
 
-[ext_resource type="Script" path="res://Scenes/coin.gd" id="1_hecki"]
+[ext_resource type="Script" path="res://Scripts/coin.gd" id="1_hecki"]
 [ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="1_hrxvd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t8dxj"]
