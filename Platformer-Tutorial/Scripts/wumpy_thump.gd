@@ -36,6 +36,7 @@ func crush(delta):
 		position.y += 200 * delta
 	else:
 		particles.emitting = true
+		SoundPlayer.play_sound(SoundPlayer.BOOM)
 		state = LAND
 		timer.start(1)
 	
