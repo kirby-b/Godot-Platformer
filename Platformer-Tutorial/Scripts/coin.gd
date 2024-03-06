@@ -10,3 +10,9 @@ func _ready():
 func _process(delta):
 	sprite.play("spin")
 	
+
+
+func _on_body_entered(body):
+	if body is Player:
+		SoundPlayer.play_sound(SoundPlayer.COIN)
+		queue_free()

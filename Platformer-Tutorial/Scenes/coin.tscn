@@ -26,6 +26,7 @@ animations = [{
 }]
 
 [node name="Coin" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_hecki")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -34,3 +35,5 @@ animation = &"spin"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-6, -4, -5, -4, -5, -5, -4, -5, -4, -6, 4, -6, 4, -5, 5, -5, 5, -4, 6, -4, 6, 4, 5, 4, 5, 5, 4, 5, 4, 6, -4, 6, -4, 5, -5, 5, -5, 4, -6, 4)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
