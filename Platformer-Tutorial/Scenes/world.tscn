@@ -130,3 +130,36 @@ position = Vector2(280, 63)
 
 [node name="Coin2" parent="." instance=ExtResource("14_vqi0y")]
 position = Vector2(423, 63)
+
+[node name="Coin3" parent="." instance=ExtResource("14_vqi0y")]
+position = Vector2(891, 90)
+
+[node name="Coin4" parent="." instance=ExtResource("14_vqi0y")]
+position = Vector2(1071, 90)
+
+[node name="Coin5" parent="." instance=ExtResource("14_vqi0y")]
+position = Vector2(711, 135)
+
+[node name="Coin6" parent="." instance=ExtResource("14_vqi0y")]
+position = Vector2(729, 117)
+
+[node name="Coin7" parent="." instance=ExtResource("14_vqi0y")]
+position = Vector2(747, 135)
+
+[node name="Coin8" parent="." instance=ExtResource("14_vqi0y")]
+position = Vector2(621, 63)
+
+[node name="Coin9" parent="." instance=ExtResource("14_vqi0y")]
+position = Vector2(639, 63)
+
+[node name="Coin10" parent="." instance=ExtResource("14_vqi0y")]
+position = Vector2(657, 63)
+
+[node name="Coin11" parent="." instance=ExtResource("14_vqi0y")]
+position = Vector2(675, 63)
+
+[node name="Coin12" parent="." instance=ExtResource("14_vqi0y")]
+position = Vector2(693, 63)
+
+[node name="Coin13" parent="." instance=ExtResource("14_vqi0y")]
+position = Vector2(711, 63)
