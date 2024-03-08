@@ -60,4 +60,4 @@ target_position = Vector2(0, 4)
 [node name="Hitbox" parent="." instance=ExtResource("2_h1gbi")]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
-polygon = PackedVector2Array(-8, 12, 9, 12, 9, 11, 11, 11, 11, 10, 12, 10, 12, -7, 11, -7, 11, -8, 10, -8, 10, -9, -10, -9, -10, -8, -11, -8, -11, -7, -12, -7, -12, 10, -11, 10, -11, 11, -8, 11)
+polygon = PackedVector2Array(-8, 12, 0, 12, 9, 12, 9, 11, 11, 11, 11, 10, 12, 10, 12, -7, 11, -7, 11, -8, 10, -8, 10, -9, -10, -9, -10, -8, -11, -8, -11, -7, -12, -7, -12, 10, -11, 10, -11, 11, -8, 11)
