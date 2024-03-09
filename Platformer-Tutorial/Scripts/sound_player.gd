@@ -3,7 +3,7 @@ extends Node
 const BOOM = preload("res://Sounds/boom.wav")
 const COIN = preload("res://Sounds/coin.wav")
 const HURT = preload("res://Sounds/hurt.wav")
-const JUMP = preload("res://Sounds/jump.wav")
+const JUMP = preload("res://Sounds/Jump.wav")
 const LOSE = preload("res://Sounds/lose.wav")
 const ONEUP = preload("res://Sounds/one_up.wav")
 const ZAP = preload("res://Sounds/zap.wav")	
