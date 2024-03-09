@@ -16,3 +16,4 @@ func _on_body_entered(body):
 	if body is Player:
 		SoundPlayer.play_sound(SoundPlayer.COIN)
 		queue_free()
+		Events.emit_signal("coin_get")
