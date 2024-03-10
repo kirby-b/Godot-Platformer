@@ -53,6 +53,7 @@ sprite_frames = SubResource("SpriteFrames_0ihsp")
 animation = &"crush"
 
 [node name="Hitbox" parent="." instance=ExtResource("2_wytch")]
+instant_kill = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
 polygon = PackedVector2Array(-7, -8, 7, -8, 7, -7, 8, -7, 8, 7, 7, 7, 7, 8, -7, 8, -7, 7, -8, 7, -8, -7, -7, -7)
