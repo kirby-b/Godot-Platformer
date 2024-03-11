@@ -18,6 +18,7 @@ var state = MOVE
 var double_jump = 0 
 var was_in_air = false # Tracks whether the player was just in the air
 var jump_buffer = false # Tranks whether the jump buffer is on
+var life = 6
 
 # On ready variables to access nodes 
 @onready var sprite = $AnimatedSprite2D
@@ -27,6 +28,12 @@ var jump_buffer = false # Tranks whether the jump buffer is on
 
 func _ready():
 	double_jump = moveData.EXTRA_JUMPS #Sets double jumps when the game starts
+	Events.connect("player_hurt", Callable(self , "_on_player_hurt"))
+	
+func _on_player_hurt():
+	life -= 1
+	if life == 0:
+		player_death()
 
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
@@ -113,12 +120,22 @@ func climb_state(direction):
 func _on_jump_buffer_timeout():
 	jump_buffer = false
 
+#Controls Player getting hurt
+func player_hurt():
+	SoundPlayer.play_sound(SoundPlayer.HURT) #Plays hurt sound
+	#Something with Invincibility Frames
+	Events.emit_signal("player_hurt") # Emits hurt signal
+	#get_tree().call_deferred("reload_current_scene")
+
+# Controls Player death
 func player_death():
-	SoundPlayer.play_sound(SoundPlayer.HURT)
+	#On Death it plays a sound, deletes the character instance, and emits
+	SoundPlayer.play_sound(SoundPlayer.LOSE)
 	queue_free()
 	Events.emit_signal("player_died")
 	#get_tree().call_deferred("reload_current_scene")
 	
+#Forces the camera to follow the player
 func connect_camera(camera):
 	var camera_path = camera.get_path()
 	remote_trans.remote_path = camera_path
