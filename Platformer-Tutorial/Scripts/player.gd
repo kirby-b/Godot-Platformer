@@ -123,9 +123,7 @@ func _on_jump_buffer_timeout():
 #Controls Player getting hurt
 func player_hurt():
 	SoundPlayer.play_sound(SoundPlayer.HURT) #Plays hurt sound
-	#Something with Invincibility Frames
 	Events.emit_signal("player_hurt") # Emits hurt signal
-	#get_tree().call_deferred("reload_current_scene")
 
 # Controls Player death
 func player_death():
@@ -133,7 +131,6 @@ func player_death():
 	SoundPlayer.play_sound(SoundPlayer.LOSE)
 	queue_free()
 	Events.emit_signal("player_died")
-	#get_tree().call_deferred("reload_current_scene")
 	
 #Forces the camera to follow the player
 func connect_camera(camera):

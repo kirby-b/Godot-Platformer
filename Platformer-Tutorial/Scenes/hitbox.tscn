@@ -7,4 +7,8 @@ collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_konjy")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.079
+one_shot = true
+
 [connection signal="body_entered" from="." to="." method="_on_hitbox_body_entered"]
