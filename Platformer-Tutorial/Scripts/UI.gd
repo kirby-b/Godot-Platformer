@@ -8,13 +8,9 @@ extends CanvasLayer
 @onready var small_digit = $LowerDigit
 @onready var coin_icon = $CoinIcon
 
-#Loads a player script to call functions
-var player_script = preload("res://Scripts/player.gd").new()
-
 #Variables to track coins and life
 var coin_count = 0
 var life = 6
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,14 +18,40 @@ func _ready():
 	#Connects to events so it can react to them
 	Events.connect("coin_get", Callable(self, "_on_coin_get"))
 	Events.connect("player_hurt", Callable(self , "_on_player_hurt"))
+	Events.connect("respawn", Callable(self, "_on_respawn"))
 
+#Runs on respawn to reset values for hearts and probably other stuff in the future
+func _on_respawn():
+	life = 6
+	heart1.frame = 0
+	heart2.frame = 0
+	heart3.frame = 0
+	
 #Controls what happens when you get a coin
 func _on_coin_get():
 	pass
 	
 #Controls player hurting and life bar
 func _on_player_hurt():
-	life -=1
+	life -= 1
+	print("Life")
+	match life:
+		6: 
+			heart3.frame = 0
+		5: 
+			heart3.frame = 1
+		4: 
+			heart3.frame = 2
+			heart2.frame = 0
+		3:
+			heart2.frame = 1
+		2: 
+			heart2.frame = 2
+			heart1.frame = 0
+		1: 
+			heart1.frame = 1
+		0: 
+			heart1.frame = 2
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

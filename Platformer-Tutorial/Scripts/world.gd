@@ -24,6 +24,7 @@ func _on_player_died():
 	var player = player_scene.instantiate() #Instances new player
 	player.position = player_start #Sets player to spawn point
 	add_child(player) #Adds player child to world
+	Events.emit_signal("respawn")
 	player.connect_camera(camera) #Reconnects the camera
 	
 #Controls check point
