@@ -9,7 +9,8 @@ extends CanvasLayer
 @onready var coin_icon = $CoinIcon
 
 #Variables to track coins and life
-var coin_count = 0
+var coin_count_higher = 0
+var coin_count_lower = 0
 var life = 6
 
 # Called when the node enters the scene tree for the first time.
@@ -29,12 +30,18 @@ func _on_respawn():
 	
 #Controls what happens when you get a coin
 func _on_coin_get():
-	pass
+	coin_count_lower += 1
+	if coin_count_lower >= 10:
+		coin_count_lower -= 10
+		coin_count_higher += 1
+	if coin_count_higher >= 10:
+		life += 1 #This is temporary. It will later be changed to a sort of 1 up
+	small_digit.frame = coin_count_lower
+	big_digit.frame = coin_count_higher
 	
 #Controls player hurting and life bar
 func _on_player_hurt():
 	life -= 1
-	print("Life")
 	match life:
 		6: 
 			heart3.frame = 0
