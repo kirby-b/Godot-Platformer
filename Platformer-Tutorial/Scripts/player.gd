@@ -136,3 +136,7 @@ func player_death():
 func connect_camera(camera):
 	var camera_path = camera.get_path()
 	remote_trans.remote_path = camera_path
+	
+func bounce():
+	velocity.y = moveData.JUMP_VELOCITY
+	was_in_air = true

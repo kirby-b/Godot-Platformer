@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 # Initial direction(right)
 var direction = 1
+var life = 3
 
 # Gets needed node variables
 @onready var ledgecheckR = $LedgeCheckerR
@@ -24,3 +25,9 @@ func _physics_process(_delta):
 	velocity.x = direction * 25 # Constant speed
 	move_and_slide()
 	
+func _on_weak_point_body_entered(body):
+	if body is Player:
+		body.bounce()
+		life -= 1
+	if life <= 0:
+		queue_free()
