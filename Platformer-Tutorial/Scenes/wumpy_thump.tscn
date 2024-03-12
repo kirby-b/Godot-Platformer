@@ -56,7 +56,7 @@ animation = &"crush"
 instant_kill = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
-polygon = PackedVector2Array(-7, -8, 7, -8, 7, -7, 8, -7, 8, 7, 7, 7, 7, 8, -7, 8, -7, 7, -8, 7, -8, -7, -7, -7)
+polygon = PackedVector2Array(7, -7, 8, -7, 8, 7, 7, 7, 7, 8, -7, 8, -7, 7, -8, 7, -8, -7, -7, -7)
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(0, 9)
@@ -71,3 +71,8 @@ amount = 32
 process_material = SubResource("ParticleProcessMaterial_v637w")
 lifetime = 2.0
 explosiveness = 1.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-8, -7, 8, -7, 8, -9, -8, -9)
