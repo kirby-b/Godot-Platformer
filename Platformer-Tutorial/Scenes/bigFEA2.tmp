@@ -67,6 +67,13 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WeakPoint"]
-polygon = PackedVector2Array(-10, -8, 10, -8, 10, -9, -10, -9)
+polygon = PackedVector2Array(-10, -9, 10, -9, 10, -10, -10, -10)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-10, -9, 10, -9, 10, -8, -10, -8)
 
 [connection signal="body_entered" from="WeakPoint" to="." method="_on_weak_point_body_entered"]
