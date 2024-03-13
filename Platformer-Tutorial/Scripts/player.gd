@@ -113,7 +113,11 @@ func climb_state(direction):
 	if not is_on_ladder():
 		state = MOVE
 	sprite.play("idle")
-	velocity = direction * moveData.CLIMB_SPEED # controls the speed you move at while on a ladder
+	velocity = direction * moveData.CLIMB_SPEED # controls the speed you move at while on a 
+	if direction.x > 0:
+		sprite.flip_h = true
+	elif direction.x < 0:
+		sprite.flip_h = false
 	move_and_slide()
 
 # Turns off the jump buffer after a small timeout period
