@@ -61,7 +61,7 @@ target_position = Vector2(0, 4)
 [node name="Hitbox" parent="." instance=ExtResource("2_joip0")]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
-polygon = PackedVector2Array(-5, 0, -3, 0, -2, 0, 0, 0, 1, 0, 3, 0, 4, 0, 6, 0, 6, -1, 7, -1, 7, -11, 6, -11, 6, -12, 5, -12, -5, -12, -5, -12, -6, -12, -6, -11, -7, -11, -7, -1, -5, -1)
+polygon = PackedVector2Array(-5, 0, -3, 0, -2, 0, 0, 0, 1, 0, 3, 0, 4, 0, 6, 0, 6, -1, 7, -1, 7, -11, 6, -11, 6, -12, 5, -12, 5, -11, -5, -11, -5, -12, -6, -12, -6, -11, -7, -11, -7, -1, -5, -1)
 
 [node name="WeakPoint" type="Area2D" parent="."]
 collision_layer = 4
@@ -69,5 +69,12 @@ collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WeakPoint"]
 polygon = PackedVector2Array(-5, -12, 5, -12, 5, -13, -5, -13)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-5, -12, -5, -11, 5, -11, 5, -12)
 
 [connection signal="body_entered" from="WeakPoint" to="." method="_on_weak_point_body_entered"]
