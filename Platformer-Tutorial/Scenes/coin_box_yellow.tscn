@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6cd6mn5lo1q1"]
+[gd_scene load_steps=6 format=3 uid="uid://c6cd6mn5lo1q1"]
 
 [ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="1_l6f1m"]
 
@@ -29,11 +29,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CoinBoxYellow" type="StaticBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkgdb"]
+size = Vector2(18, 18)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-8, -8, -8, -8, -9, -8, -9, 8, -8, 8, -8, 9, 8, 9, 8, 8, 9, 8, 9, -8, 8, -8, 8, -9, -8, -9)
+[node name="CoinBoxYellow" type="StaticBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_u50nv")
 animation = &"full"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gkgdb")
