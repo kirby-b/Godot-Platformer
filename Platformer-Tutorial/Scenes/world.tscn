@@ -199,3 +199,23 @@ position = Vector2(1224, 120)
 
 [node name="Coin17" parent="." instance=ExtResource("14_vqi0y")]
 position = Vector2(1264, 120)
+
+[node name="Spikes4" parent="." instance=ExtResource("3_l77qj")]
+position = Vector2(891, 144)
+rotation = -3.14159
+
+[node name="Spikes5" parent="." instance=ExtResource("3_l77qj")]
+position = Vector2(963, 144)
+rotation = -3.14159
+
+[node name="Spikes6" parent="." instance=ExtResource("3_l77qj")]
+position = Vector2(981, 144)
+rotation = -3.14159
+
+[node name="Spikes7" parent="." instance=ExtResource("3_l77qj")]
+position = Vector2(999, 144)
+rotation = -3.14159
+
+[node name="Spikes8" parent="." instance=ExtResource("3_l77qj")]
+position = Vector2(1071, 144)
+rotation = -3.14159
