@@ -1,5 +1,4 @@
 extends CharacterBody2D
-
 # Initial direction(right)
 var direction = 1
 var life = 3
@@ -28,7 +27,6 @@ func _physics_process(_delta):
 
 func _on_weak_point_body_entered(body):
 	if body is Player:
-		body.bounce()
 		life -= 1
 	if life <= 0:
 		queue_free()

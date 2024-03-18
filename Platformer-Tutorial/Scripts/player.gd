@@ -22,6 +22,7 @@ var life = 6
 
 # On ready variables to access nodes 
 @onready var sprite = $AnimatedSprite2D
+@onready var bounce_check = $BounceChecker
 @onready var ladder_check = $LadderChecker
 @onready var jump_timer = $JumpBuffer
 @onready var remote_trans = $RemoteTransform2D
@@ -51,6 +52,12 @@ func is_on_ladder():
 	var collider = ladder_check.get_collider()
 	if not ladder_check.is_colliding(): return false
 	if not collider is Ladder: return false
+	return true
+	
+func landed_on_enemy():
+	var collider = bounce_check.get_collider()
+	if not bounce_check.is_colliding(): return false
+	if not collider is Stompable: return false
 	return true
 
 # Controls the move state
@@ -106,6 +113,10 @@ func move_state(direction, delta):
 		sprite.play("idle")
 		was_in_air = false
 		double_jump = moveData.EXTRA_JUMPS
+		
+	if landed_on_enemy():
+		bounce()
+		
 	move_and_slide()
 
 # Controls the climb state

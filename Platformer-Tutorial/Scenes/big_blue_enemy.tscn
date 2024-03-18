@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cdxhlfu4e53hd"]
+[gd_scene load_steps=9 format=3 uid="uid://cdxhlfu4e53hd"]
 
 [ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://Images/tilemap-characters_packed.png" id="1_dn4cj"]
 [ext_resource type="Script" path="res://Scripts/big_blue_enemy.gd" id="1_jtwm0"]
 [ext_resource type="PackedScene" uid="uid://cqbw1x2hs0pri" path="res://Scenes/hitbox.tscn" id="2_h1gbi"]
+[ext_resource type="Script" path="res://Scripts/StompableHead.gd" id="4_6wwv1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k1j0q"]
 atlas = ExtResource("1_dn4cj")
@@ -60,7 +61,7 @@ target_position = Vector2(0, 4)
 [node name="Hitbox" parent="." instance=ExtResource("2_h1gbi")]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
-polygon = PackedVector2Array(-8, 12, 9, 12, 9, 11, 11, 11, 11, 10, 12, 10, 12, -7, 11, -7, 11, -8, 10, -8, 10, -7, -10, -7, -10, -8, -11, -8, -11, -7, -12, -7, -12, 10, -11, 10, -11, 11, -8, 11)
+polygon = PackedVector2Array(-8, 12, 9, 12, 9, 11, 11, 11, 11, 10, 12, 10, 12, -7, 11, -7, 10, -7, -10, -7, -11, -7, -12, -7, -12, 10, -11, 10, -11, 11, -8, 11)
 
 [node name="WeakPoint" type="Area2D" parent="."]
 collision_layer = 4
@@ -72,8 +73,9 @@ polygon = PackedVector2Array(-10, -8, 10, -8, 10, -9, -10, -9)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 4
 collision_mask = 3
+script = ExtResource("4_6wwv1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-10, -8, -10, -7, 10, -7, 10, -8)
+polygon = PackedVector2Array(-11, -8, -11, -7, 11, -7, 11, -8)
 
 [connection signal="body_entered" from="WeakPoint" to="." method="_on_weak_point_body_entered"]
