@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://cpacv3an3oodl"]
 
-[ext_resource type="Script" path="res://Scripts/world.gd" id="1_0udal"]
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_i0jhp"]
 [ext_resource type="PackedScene" uid="uid://vu60elt7dtyk" path="res://Scenes/tile_map.tscn" id="2_rlh6l"]
 [ext_resource type="PackedScene" uid="uid://buhrv3yofi81h" path="res://Scenes/player.tscn" id="2_wcnmb"]
 [ext_resource type="PackedScene" uid="uid://6o5mf5ms5p4w" path="res://Scenes/UI.tscn" id="3_5pj8o"]
@@ -35,7 +35,7 @@ a = Vector2(16, 0)
 b = Vector2(1600, 0)
 
 [node name="World" type="Node2D"]
-script = ExtResource("1_0udal")
+script = ExtResource("1_i0jhp")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_5pj8o")]
 
