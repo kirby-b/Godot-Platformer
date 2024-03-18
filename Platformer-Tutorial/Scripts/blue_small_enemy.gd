@@ -24,9 +24,8 @@ func _physics_process(_delta):
 	velocity.x = direction * 25 # Constant speed
 	move_and_slide()
 	
-
 func _on_weak_point_body_entered(body):
 	if body is Player:
-		life -= 1
+		life -= 1 #Removes a life if the body is a player
 	if life <= 0:
-		queue_free()
+		queue_free() #If all life is gone, it dies
