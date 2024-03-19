@@ -31,7 +31,12 @@ collide_with_areas = true
 collide_with_bodies = false
 
 [node name="BounceChecker" type="RayCast2D" parent="."]
-position = Vector2(0, -10)
+position = Vector2(4, -10)
+target_position = Vector2(0, 23)
+collision_mask = 4
+
+[node name="BounceChecker2" type="RayCast2D" parent="."]
+position = Vector2(-4, -10)
 target_position = Vector2(0, 23)
 collision_mask = 4
 
