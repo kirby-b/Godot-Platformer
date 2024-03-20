@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://0u84h7m30gdc"]
+
+[ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="1_fvh8i"]
+[ext_resource type="Script" path="res://Scripts/next_level.gd" id="1_o24qi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o60ph"]
+size = Vector2(18, 18)
+
+[node name="NextLevel" type="Area2D"]
+script = ExtResource("1_o24qi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -9)
+texture = ExtResource("1_fvh8i")
+region_enabled = true
+region_rect = Rect2(144, 72, 18, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_o60ph")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
