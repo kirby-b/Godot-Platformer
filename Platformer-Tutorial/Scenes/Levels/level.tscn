@@ -9,4 +9,5 @@ script = ExtResource("1_few4e")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("1_054tn")]
+z_index = 9
 position = Vector2(243, 153)
