@@ -18,6 +18,7 @@ func _ready():
 	coin_icon.play("spin") #Animates the coin on the hud
 	#Connects to events so it can react to them
 	Events.connect("coin_get", Callable(self, "_on_coin_get"))
+	Events.connect("diamond_get", Callable(self, "_on_diamond_get"))
 	Events.connect("player_hurt", Callable(self , "_on_player_hurt"))
 	Events.connect("respawn", Callable(self, "_on_respawn"))
 
@@ -35,14 +36,28 @@ func _on_coin_get():
 		coin_count_lower -= 10
 		coin_count_higher += 1
 	if coin_count_higher >= 10:
+		coin_count_higher -= 10
 		life += 1 #This is temporary. It will later be changed to a sort of 1 up
-	small_digit.frame = coin_count_lower
-	big_digit.frame = coin_count_higher
+
+func _on_diamond_get():
+	coin_count_lower += 5
+	if coin_count_lower >= 10:
+		coin_count_lower -= 10
+		coin_count_higher += 1
+	if coin_count_higher >= 10:
+		coin_count_higher -= 10
+		life += 1 #This is temporary. It will later be changed to a sort of 1 up
 	
-#Controls player hurting and life bar
+#Controls player hurting
 func _on_player_hurt():
 	life -= 1
-	#Matchs the life count. Its better than a bunch of if statments.....
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	# Sets coin frames to coin counts
+	small_digit.frame = coin_count_lower
+	big_digit.frame = coin_count_higher
+	# Matchs the life count. Its better than a bunch of if statments.....
 	match life:
 		6: 
 			heart3.frame = 0
@@ -60,7 +75,3 @@ func _on_player_hurt():
 			heart1.frame = 1
 		0: 
 			heart1.frame = 2
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
