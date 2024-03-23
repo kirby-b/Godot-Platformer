@@ -42,6 +42,7 @@ func _on_coin_get():
 #Controls player hurting and life bar
 func _on_player_hurt():
 	life -= 1
+	#Matchs the life count. Its better than a bunch of if statments.....
 	match life:
 		6: 
 			heart3.frame = 0
