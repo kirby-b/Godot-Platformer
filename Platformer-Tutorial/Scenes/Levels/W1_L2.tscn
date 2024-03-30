@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dvrm1qsnheipf" path="res://Scenes/check_point.tscn" id="11_xtltr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wx2yd"]
-size = Vector2(1136.56, 5.6875)
+size = Vector2(2990.56, 5.6875)
 
 [node name="World1-Lvl2" instance=ExtResource("1_rvigi")]
 
@@ -44,7 +44,7 @@ position = Vector2(-81, 36)
 instant_kill = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="abyss/Hitbox" index="1"]
-position = Vector2(187.719, 0)
+position = Vector2(1114.72, 0)
 shape = SubResource("RectangleShape2D_wx2yd")
 
 [node name="Diamond" parent="." index="7" instance=ExtResource("6_ye17x")]
