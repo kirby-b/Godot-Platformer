@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjnwk2q7qbnaw"
-path="res://.godot/imported/tilemap_packed.png-0b03c79609fdd56dcaa320c0cb5a5c5c.ctex"
+uid="uid://cl5pg1k68dftb"
+path="res://.godot/imported/industry_tilemap_packed.png-084cebf0e93e2b19faacf3b6daed6ff0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Food Expansion/tilemap_packed.png"
-dest_files=["res://.godot/imported/tilemap_packed.png-0b03c79609fdd56dcaa320c0cb5a5c5c.ctex"]
+source_file="res://Images/Industrial Expansion/industry_tilemap_packed.png"
+dest_files=["res://.godot/imported/industry_tilemap_packed.png-084cebf0e93e2b19faacf3b6daed6ff0.ctex"]
 
 [params]
 
