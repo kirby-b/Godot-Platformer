@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6cd6mn5lo1q1"]
+[gd_scene load_steps=7 format=3 uid="uid://c6cd6mn5lo1q1"]
 
 [ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="1_l6f1m"]
+[ext_resource type="Script" path="res://Scripts/coin_box.gd" id="1_twa8a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m5j6w"]
 atlas = ExtResource("1_l6f1m")
@@ -33,10 +34,12 @@ animations = [{
 size = Vector2(18, 18)
 
 [node name="CoinBoxYellow" type="StaticBody2D"]
+collision_mask = 2
+script = ExtResource("1_twa8a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_u50nv")
-animation = &"full"
+animation = &"empty"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gkgdb")
