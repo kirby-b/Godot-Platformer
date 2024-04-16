@@ -43,3 +43,5 @@ animation = &"empty"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gkgdb")
+
+[node name="GetHitBoi" type="RayCast2D" parent="."]
