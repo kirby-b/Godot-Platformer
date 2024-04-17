@@ -30,7 +30,17 @@ func _process(delta):
 
 func active():
 	sprite.play("full")
-	
+	if is_player():
+		Events.emit_signal("coin_get")
+		# Basically I want to check if the collider is player, then I need to check if they are in 
+		# the air. If all that passes, it gives the player a coin.
 	
 func deactivated():
 	sprite.play("empty")
+
+# Checks whether the player is on a ladder
+func is_player():
+	var collider = hit_detect.get_collider()
+	if not hit_detect.is_colliding(): return false
+	if not collider is Player: return false
+	return true
