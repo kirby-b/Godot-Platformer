@@ -1,7 +1,9 @@
 extends CharacterBody2D
+
 # Initial direction(right)
 var direction = 1
-var life = 3
+@export() var speed: float
+
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -26,11 +28,5 @@ func _physics_process(delta):
 	sprite.flip_h = direction > 0
 	
 	sprite.play("walk") # Constantly plays the walk
-	velocity.x = direction * 40 # Constant speed
+	velocity.x = direction * speed # Constant speed
 	move_and_slide()
-	
-func _on_weak_point_body_entered(body):
-	if body is Player:
-		life -= 1 #Removes a life if the body is a player
-	if life <= 0:
-		queue_free() #If all life is gone, it dies

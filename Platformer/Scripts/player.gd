@@ -54,13 +54,7 @@ func is_on_ladder():
 	if not ladder_check.is_colliding(): return false
 	if not collider is Ladder: return false
 	return true
-	
-func landed_on_enemy():
-	var collider_1 = bounce_check_1.get_collider()
-	var collider_2 = bounce_check_2.get_collider()
-	if not bounce_check_1.is_colliding() and not bounce_check_2.is_colliding(): return false
-	if not collider_1 is Stompable and not collider_2 is Stompable: return false
-	return true
+
 
 # Controls the move state
 func move_state(direction, delta):
@@ -116,8 +110,6 @@ func move_state(direction, delta):
 		was_in_air = false
 		double_jump = moveData.EXTRA_JUMPS
 		
-	if landed_on_enemy():
-		bounce()
 		
 	move_and_slide()
 
