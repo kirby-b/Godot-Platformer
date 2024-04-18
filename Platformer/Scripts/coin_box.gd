@@ -32,6 +32,7 @@ func active():
 	sprite.play("full")
 	if is_player():
 		Events.emit_signal("coin_get")
+		state = DEACTIVE
 		# Basically I want to check if the collider is player, then I need to check if they are in 
 		# the air. If all that passes, it gives the player a coin.
 	
