@@ -47,3 +47,6 @@ shape = SubResource("RectangleShape2D_gkgdb")
 [node name="GetHitBoi" type="RayCast2D" parent="."]
 target_position = Vector2(0, 13)
 collision_mask = 2
+
+[node name="CollectBuffer" type="Timer" parent="."]
+one_shot = true
