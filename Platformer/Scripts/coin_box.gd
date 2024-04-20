@@ -9,6 +9,9 @@ enum{
 	DEACTIVE
 }
 
+# Exports 
+@export() var coins_in_box: int
+
 # On ready variables to access nodes
 @onready var sprite = $AnimatedSprite2D
 @onready var hit_detect = $GetHitBoi
