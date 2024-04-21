@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://pjnbjsfxadoe"]
+[gd_scene load_steps=19 format=3 uid="uid://pjnbjsfxadoe"]
 
 [ext_resource type="PackedScene" uid="uid://c2oltcisl6jcn" path="res://Scenes/Levels/level.tscn" id="1_a65sf"]
 [ext_resource type="PackedScene" uid="uid://6o5mf5ms5p4w" path="res://Scenes/UI.tscn" id="2_jn7lf"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://djoa3iij2gkhv" path="res://Scenes/flapper.tscn" id="11_27buo"]
 [ext_resource type="Texture2D" uid="uid://bjuo7bpfw7agr" path="res://Images/tilemap-backgrounds_packed.png" id="11_g2ykj"]
 [ext_resource type="PackedScene" uid="uid://mrc6i2nn0f84" path="res://Scenes/spikes.tscn" id="12_ce65u"]
+[ext_resource type="PackedScene" uid="uid://c6cd6mn5lo1q1" path="res://Scenes/coin_box_yellow.tscn" id="13_nhpbn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vp6gh"]
 size = Vector2(1296, 1)
@@ -243,3 +244,18 @@ position = Vector2(206, -1026)
 
 [node name="Spikes2" parent="." index="50" instance=ExtResource("12_ce65u")]
 position = Vector2(192, -395)
+
+[node name="CoinBoxYellow" parent="." index="51" instance=ExtResource("13_nhpbn")]
+position = Vector2(225, -585)
+
+[node name="CoinBoxYellow2" parent="." index="52" instance=ExtResource("13_nhpbn")]
+position = Vector2(369, -711)
+
+[node name="CoinBoxYellow3" parent="." index="53" instance=ExtResource("13_nhpbn")]
+position = Vector2(216, -855)
+
+[node name="CoinBoxYellow4" parent="." index="54" instance=ExtResource("13_nhpbn")]
+position = Vector2(369, -999)
+
+[node name="CoinBoxYellow5" parent="." index="55" instance=ExtResource("13_nhpbn")]
+position = Vector2(342, -1530)
