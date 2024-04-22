@@ -30,5 +30,7 @@ Days 31-34: Added new tile maps and worked on making levels longer. I also start
 1. In Godot 4 to change cell size of a tilemap, you go to where it says tileset in the upper right corner and click the down arrow. From there click edit and the cell size should be there.
 2. For anything you want to just follow the camera, use a canvas layer.
 3. Using an animated sprite is easier than changing a sprite mid game.
-4. Dont rely on the tutorials entirely, you have to do your own learning and reading. If you dont, you just end up in a spiral of not knowing what is going on.
-5. Read the freaking documentation. If you learn to read documentation it is going to be 100% more useful than any tutorial.
+4. You can set the camera limits by clicking on the limit in the camera2d node. I know this sounds obvious, but it took me to long to realize and I dont want others to do the same.
+5. A nice way to make enemies that bounce back and forth is to have two solid objects outside the camera border and have the enemy bounce back and forth between them. I did this with my bird enemies that are not on rails.
+6. Dont rely on the tutorials entirely, you have to do your own learning and reading. If you dont, you just end up in a spiral of not knowing what is going on.
+7. Read the freaking documentation. If you learn to read documentation it is going to be 100% more useful than any tutorial.
