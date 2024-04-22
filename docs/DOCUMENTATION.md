@@ -4,12 +4,31 @@
 
 Days 1-3: Followed the tutorial to add all tilesets into the files and create the character with basic movement, skins, and animations. This part was still very similar to the tutorial, 
 but I was on a newer version so there were some extra/different steps I had to take
-Days 4-6: Added a tilemap, created spikes, and added a camera that follows the player. This was very interesting and very fun for me because I had to do many things very differently from the
+
+Days 4-5: Added a tilemap, created spikes, and added a camera that follows the player. This was very interesting and very fun for me because I had to do many things very differently from the
 tutorial. This was also about the time I started realizing the tutorial was going to be more of guide for what I should develop next and a small path to get there, rather than a fully correct 
 tutorial.
 
-# Tips and Tricks I learned from making this game
+Days 6-7: This was when I added walking enemies and hitboxes. I also added custom movement data for my character, that way you can load different movement types.
+
+Days 8-10: Added ladders, double jump, and a jump buffer. The ladder also had me add enumerated move states from climbing vs moving. Lastly I added looping enemies that move on a sort of rail system.
+
+Day 11: This is when I added sounds and the game stated to feel more complete. I got the sounds by using chiptune and I added sounds that I felt I needed. 
+
+Day 13: Added the smash enemy that does not in anyway look like a copyright enemy. This not only was very fun to make, but it allowed me to use new sounds and taught me how to use particles.
+
+Day 14-15: This was the last of the lessons from the tutorial. It showed me level inheritence and scene transitions, which are very important to any game with multiple levels.
+
+Days 16-24: Worked on adding more levels
+
+Days 25-30: Added new enemies and levels
+
+Days 31-34: Added new tile maps and worked on making levels longer. I also started work on making the background work better, along with starting this documentation
+
+# Tips, Tricks, and Advice
 
 1. In Godot 4 to change cell size of a tilemap, you go to where it says tileset in the upper right corner and click the down arrow. From there click edit and the cell size should be there.
-2. For anything you want to just follow the camera, use a canvas layer
+2. For anything you want to just follow the camera, use a canvas layer.
 3. Using an animated sprite is easier than changing a sprite mid game.
+4. Dont rely on the tutorials entirely, you have to do your own learning and reading. If you dont, you just end up in a spiral of not knowing what is going on.
+5. Read the freaking documentation. If you learn to read documentation it is going to be 100% more useful than any tutorial.
