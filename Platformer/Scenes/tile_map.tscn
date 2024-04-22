@@ -1,9 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://vu60elt7dtyk"]
+[gd_scene load_steps=11 format=3 uid="uid://vu60elt7dtyk"]
 
 [ext_resource type="Texture2D" uid="uid://dpxkko1n4exjb" path="res://Images/Farm Expansion/farm_tilemap_packed.png" id="1_4tp6k"]
 [ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="1_062kk"]
 [ext_resource type="Texture2D" uid="uid://cjnwk2q7qbnaw" path="res://Images/Food Expansion/food_tilemap_packed.png" id="3_dfyqs"]
 [ext_resource type="Texture2D" uid="uid://cl5pg1k68dftb" path="res://Images/Industrial Expansion/industry_tilemap_packed.png" id="4_t0pke"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_gvww4"]
+tile_data = PackedInt32Array(0, 65537, 1, 65536, 65537, 6, 131072, 65537, 7, 1, 131073, 1, 65537, 131073, 6, 131073, 131073, 7, 2, 196609, 1, 65538, 196609, 6, 131074, 196609, 7)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_op6dq"]
 texture = ExtResource("1_4tp6k")
@@ -1784,7 +1787,9 @@ sources/1 = SubResource("TileSetAtlasSource_waxli")
 sources/0 = SubResource("TileSetAtlasSource_op6dq")
 sources/2 = SubResource("TileSetAtlasSource_ewyn4")
 sources/3 = SubResource("TileSetAtlasSource_3ff54")
+pattern_0 = SubResource("TileMapPattern_gvww4")
 
 [node name="TileMap" type="TileMap"]
 tile_set = SubResource("TileSet_xc27c")
 format = 2
+layer_0/name = "Foreground"
