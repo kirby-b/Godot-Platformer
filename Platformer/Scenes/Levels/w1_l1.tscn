@@ -45,7 +45,7 @@ layer_0/tile_data = PackedInt32Array(-524288, 65537, 1, -458752, 65537, 6, -3932
 position = Vector2(0, 4)
 limit_left = 0
 limit_top = -392
-limit_right = 1332
+limit_right = 1333
 limit_bottom = 0
 editor_draw_limits = true
 
@@ -280,5 +280,198 @@ texture = ExtResource("18_1kn4d")
 region_enabled = true
 region_rect = Rect2(144, 0, 48, 72)
 
+[node name="Panel7" type="Sprite2D" parent="Background" index="6"]
+z_index = -100
+position = Vector2(1555, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel8" type="Sprite2D" parent="Background" index="7"]
+z_index = -100
+position = Vector2(1795, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel9" type="Sprite2D" parent="Background" index="8"]
+z_index = -100
+position = Vector2(2035, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel10" type="Sprite2D" parent="Background" index="9"]
+z_index = -100
+position = Vector2(2275, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel11" type="Sprite2D" parent="Background" index="10"]
+z_index = -100
+position = Vector2(2514, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel12" type="Sprite2D" parent="Background" index="11"]
+z_index = -100
+position = Vector2(2753, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel13" type="Sprite2D" parent="Background" index="12"]
+z_index = -100
+position = Vector2(2990, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel14" type="Sprite2D" parent="Background" index="13"]
+z_index = -100
+position = Vector2(3230, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel15" type="Sprite2D" parent="Background" index="14"]
+z_index = -100
+position = Vector2(3470, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel16" type="Sprite2D" parent="Background" index="15"]
+z_index = -100
+position = Vector2(3710, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel17" type="Sprite2D" parent="Background" index="16"]
+z_index = -100
+position = Vector2(3950, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel18" type="Sprite2D" parent="Background" index="17"]
+z_index = -100
+position = Vector2(4189, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel19" type="Sprite2D" parent="Background" index="18"]
+z_index = -100
+position = Vector2(4428, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel20" type="Sprite2D" parent="Background" index="19"]
+z_index = -100
+position = Vector2(4665, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel21" type="Sprite2D" parent="Background" index="20"]
+z_index = -100
+position = Vector2(4905, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel22" type="Sprite2D" parent="Background" index="21"]
+z_index = -100
+position = Vector2(5144, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel23" type="Sprite2D" parent="Background" index="22"]
+z_index = -100
+position = Vector2(5381, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel24" type="Sprite2D" parent="Background" index="23"]
+z_index = -100
+position = Vector2(5621, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel25" type="Sprite2D" parent="Background" index="24"]
+z_index = -100
+position = Vector2(5861, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel26" type="Sprite2D" parent="Background" index="25"]
+z_index = -100
+position = Vector2(6101, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel27" type="Sprite2D" parent="Background" index="26"]
+z_index = -100
+position = Vector2(6341, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel28" type="Sprite2D" parent="Background" index="27"]
+z_index = -100
+position = Vector2(6580, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel29" type="Sprite2D" parent="Background" index="28"]
+z_index = -100
+position = Vector2(6819, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="Panel30" type="Sprite2D" parent="Background" index="29"]
+z_index = -100
+position = Vector2(7056, -216)
+scale = Vector2(5, 5)
+texture = ExtResource("18_1kn4d")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
 [node name="CoinBoxYellow5" parent="." index="54" instance=ExtResource("11_mt3e6")]
 position = Vector2(225, -243)
+coins_in_box = 3

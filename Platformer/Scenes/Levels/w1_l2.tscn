@@ -278,7 +278,159 @@ texture = ExtResource("11_b58y2")
 region_enabled = true
 region_rect = Rect2(144, 0, 48, 72)
 
-[node name="BottomPanel" type="Sprite2D" parent="Background" index="11"]
+[node name="TopPanel12" type="Sprite2D" parent="Background" index="11"]
+z_index = -100
+position = Vector2(2755, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel13" type="Sprite2D" parent="Background" index="12"]
+z_index = -100
+position = Vector2(2995, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel14" type="Sprite2D" parent="Background" index="13"]
+z_index = -100
+position = Vector2(3235, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel15" type="Sprite2D" parent="Background" index="14"]
+z_index = -100
+position = Vector2(3475, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel16" type="Sprite2D" parent="Background" index="15"]
+z_index = -100
+position = Vector2(3714, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel17" type="Sprite2D" parent="Background" index="16"]
+z_index = -100
+position = Vector2(3953, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel18" type="Sprite2D" parent="Background" index="17"]
+z_index = -100
+position = Vector2(4193, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel19" type="Sprite2D" parent="Background" index="18"]
+z_index = -100
+position = Vector2(4433, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel20" type="Sprite2D" parent="Background" index="19"]
+z_index = -100
+position = Vector2(4673, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel21" type="Sprite2D" parent="Background" index="20"]
+z_index = -100
+position = Vector2(4913, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel22" type="Sprite2D" parent="Background" index="21"]
+z_index = -100
+position = Vector2(5153, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel23" type="Sprite2D" parent="Background" index="22"]
+z_index = -100
+position = Vector2(5393, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel24" type="Sprite2D" parent="Background" index="23"]
+z_index = -100
+position = Vector2(5633, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel25" type="Sprite2D" parent="Background" index="24"]
+z_index = -100
+position = Vector2(5873, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel26" type="Sprite2D" parent="Background" index="25"]
+z_index = -100
+position = Vector2(6112, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel27" type="Sprite2D" parent="Background" index="26"]
+z_index = -100
+position = Vector2(6351, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel28" type="Sprite2D" parent="Background" index="27"]
+z_index = -100
+position = Vector2(6591, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel29" type="Sprite2D" parent="Background" index="28"]
+z_index = -100
+position = Vector2(6831, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="TopPanel30" type="Sprite2D" parent="Background" index="29"]
+z_index = -100
+position = Vector2(7071, -218)
+scale = Vector2(5, 5)
+texture = ExtResource("11_b58y2")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 72)
+
+[node name="BottomPanel" type="Sprite2D" parent="Background" index="30"]
 z_index = -100
 position = Vector2(1262, -13)
 scale = Vector2(40, 5)
