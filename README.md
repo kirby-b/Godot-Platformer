@@ -9,11 +9,3 @@ My game is much more developed than the tutorial and is written in a newer versi
 # Current Features
 
 Includes 3 levels, 1 character, a bunch of fun enemies, lots of coins to feed the greed, and a decent UI. The game is definitely in its infancy and has a long way to go before I will be done with it, but I hope what I have is helpful to anybody who wants to use it as an example or to learn from it.
-
-# Links
-
-Tutorial I followed:  https://www.youtube.com/playlist?list=PL9FzW-m48fn16W1Sz5bhTd1ArQQv4f-Cm
-
-Sprites from:  https://www.kenney.nl/assets/pixel-platformer
-
-Sounds generated with:  https://sfbgames.itch.io/chiptone
