@@ -21,7 +21,7 @@ func _ready():
 func _on_player_died():
 	timer.start(1) #Timer so it isnt instant
 	await timer.timeout #Waits for timer
-	var player = player_scene.instantiate() #Instances new player
+	player = player_scene.instantiate() #Instances new player
 	player.position = player_start #Sets player to spawn point
 	add_child(player) #Adds player child to world
 	Events.emit_signal("respawn")
