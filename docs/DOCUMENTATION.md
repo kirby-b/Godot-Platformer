@@ -27,6 +27,8 @@ Days 31-34: Added new tile maps and worked on making levels longer. I also start
 
 Day 35: Added terrains and hate that I didnt earlier
 
+Day 36: Updated tilesets so they all have proper terrains and collision. I also made the first level more full
+
 # Tips, Tricks, and Advice
 
 1. In Godot 4 to change cell size of a tilemap, you go to where it says tileset in the upper right corner and click the down arrow. From there click edit and the cell size should be there.
