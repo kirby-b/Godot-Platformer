@@ -479,3 +479,21 @@ position = Vector2(3132, -270)
 
 [node name="Spikes16" parent="." index="128" instance=ExtResource("4_ih7l3")]
 position = Vector2(3348, -270)
+
+[node name="CoinBoxYellow6" parent="." index="129" instance=ExtResource("11_mt3e6")]
+position = Vector2(2871, -261)
+
+[node name="CoinBoxYellow7" parent="." index="130" instance=ExtResource("11_mt3e6")]
+position = Vector2(3609, -261)
+
+[node name="CoinBoxYellow8" parent="." index="131" instance=ExtResource("11_mt3e6")]
+position = Vector2(1584, -342)
+
+[node name="CoinBoxYellow9" parent="." index="132" instance=ExtResource("11_mt3e6")]
+position = Vector2(1350, -225)
+
+[node name="CoinBoxYellow10" parent="." index="133" instance=ExtResource("11_mt3e6")]
+position = Vector2(2619, -297)
+
+[node name="CoinBoxYellow11" parent="." index="134" instance=ExtResource("11_mt3e6")]
+position = Vector2(4356, -225)
