@@ -29,6 +29,8 @@ Day 35: Added terrains and hate that I didnt earlier
 
 Day 36: Updated tilesets so they all have proper terrains and collision. I also made the first level more full
 
+Day 37: Made level 1 and 2 have full platforms, coins/coin blocks, enemies all the way,  ladders where necessary, and added other fun stuff where necessary like spikes and decor. Once I was done with all that, I organized all the nodes using named blank base nodes. Overall this was just a long day of making sure the levels where long enough and had the right spice to be fun.
+
 # Tips, Tricks, and Advice
 
 1. In Godot 4 to change cell size of a tilemap, you go to where it says tileset in the upper right corner and click the down arrow. From there click edit and the cell size should be there.
