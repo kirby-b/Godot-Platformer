@@ -23,14 +23,23 @@ Days 16-24: Worked on adding more levels
 
 Days 25-30: Added new enemies and levels
 
-Days 31-34: Added new tile maps and worked on making levels longer. I also started work on making the background work better, along with starting this documentation
+Days 31-34: Added new tile maps and worked on making levels longer. I also started work on making the background work better, along with starting this documentation. 
+
+Day 35: Added terrains and hate that I didnt earlier
+
+Day 36: Updated tilesets so they all have proper terrains and collision. I also made the first level more full
+
+Day 37: Made level 1 and 2 have full platforms, coins/coin blocks, enemies all the way,  ladders where necessary, and added other fun stuff where necessary like spikes and decor. Once I was done with all that, I organized all the nodes using named blank base nodes. Overall this was just a long day of making sure the levels where long enough and had the right spice to be fun.
+
+Day 38: I started out editing the camera size so I should fit my ideal maze size, of course I could edit after but this just made it feel more organized. I then started planning the maze and how everything would be laid out as I was starting this level from scratch. With all of the leaf maze laid out I started adding enemies, then coins, then all other small details.
 
 # Tips, Tricks, and Advice
 
 1. In Godot 4 to change cell size of a tilemap, you go to where it says tileset in the upper right corner and click the down arrow. From there click edit and the cell size should be there.
 2. For anything you want to just follow the camera, use a canvas layer.
-3. Using an animated sprite is easier than changing a sprite mid game.
-4. You can set the camera limits by clicking on the limit in the camera2d node. I know this sounds obvious, but it took me to long to realize and I dont want others to do the same.
-5. A nice way to make enemies that bounce back and forth is to have two solid objects outside the camera border and have the enemy bounce back and forth between them. I did this with my bird enemies that are not on rails.
-6. Dont rely on the tutorials entirely, you have to do your own learning and reading. If you dont, you just end up in a spiral of not knowing what is going on.
-7. Read the freaking documentation. If you learn to read documentation it is going to be 100% more useful than any tutorial.
+3. Use terrains for making levels and drawing maps. It is so much easier than placing each individual block
+4. Using an animated sprite is easier than changing a sprite mid game.
+5. You can set the camera limits by clicking on the limit in the camera2d node. I know this sounds obvious, but it took me to long to realize and I dont want others to do the same.
+6. A nice way to make enemies that bounce back and forth is to have two solid objects outside the camera border and have the enemy bounce back and forth between them. I did this with my bird enemies that are not on rails.
+7. Dont rely on the tutorials entirely, you have to do your own learning and reading. If you dont, you just end up in a spiral of not knowing what is going on.
+8. Read the freaking documentation. If you learn to read documentation it is going to be 100% more useful than any tutorial.
