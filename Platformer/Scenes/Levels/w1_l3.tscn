@@ -7,9 +7,9 @@
 [node name="World1_Lvl3" instance=ExtResource("1_a65sf")]
 
 [node name="Camera2D" parent="." index="0"]
-limit_left = 0
-limit_top = -300
-limit_right = 1500
+limit_left = -2500
+limit_top = -400
+limit_right = 2500
 limit_bottom = 0
 editor_draw_limits = true
 
