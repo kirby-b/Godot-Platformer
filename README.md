@@ -4,7 +4,7 @@ This is a basic godot platformer I made from a tutorial.
 
 I have a long term plan set for this with lots of ideas. Most of these ideas are under the issues tab or already in the game.
 
-My game is much more developed than the tutorial and is written in a newer version of godot (3.5 for tutorial, and mine is 4.2), but I have commented all of my scripts and plan to write more documentation to help ease any confusion.
+My game is much more developed than the tutorial and is written in a newer version of godot (3.5 for tutorial, and mine is 4.2), but I have commented all of my scripts and plan to write more [documentation](https://github.com/kirby-b/Godot-Platformer/tree/master/docs) to help ease any confusion.
 
 # Current Features
 
