@@ -31,7 +31,7 @@ Day 36: Updated tilesets so they all have proper terrains and collision. I also 
 
 Day 37: Made level 1 and 2 have full platforms, coins/coin blocks, enemies all the way,  ladders where necessary, and added other fun stuff where necessary like spikes and decor. Once I was done with all that, I organized all the nodes using named blank base nodes. Overall this was just a long day of making sure the levels where long enough and had the right spice to be fun.
 
-Day 38: I started out editing the camera size so I should fit my ideal maze size, of course I could edit after but this just made it feel more organized. I then started planning the maze and how everything would be laid out as I was starting this level from scratch. With all of the leaf maze laid out I started adding enemies, then coins, then all other small details.
+Day 38: I started out editing the camera size so I should fit my ideal maze size, of course I could edit after but this just made it feel more organized. I then started planning the maze and how everything would be laid out as I was starting this level from scratch. With all of the leaf maze laid out I started adding enemies, then coins, then all other small details. Now that I was done with developing the first three levels(for now), I merged the development branch with the main.
 
 # Tips, Tricks, and Advice
 
