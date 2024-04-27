@@ -75,9 +75,9 @@ texture = ExtResource("2_2s022")
 region_enabled = true
 region_rect = Rect2(144, 36, 54, 18)
 
-[node name="Area2D" type="Area2D" parent="PathFollow2D/Area2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="PathFollow2D/Area2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Area2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Area2D/StaticBody2D"]
 shape = SubResource("RectangleShape2D_8magj")
 one_way_collision = true
 

@@ -9,7 +9,6 @@ enum ANIM_TYPE{
 # Exports variables for platform
 @export() var animation: ANIM_TYPE
 @export() var anim_speed: float = 1.0
-
 # Onready for loading nodes
 @onready var anim_player = $AnimationPlayer
 
