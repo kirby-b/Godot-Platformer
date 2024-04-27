@@ -35,6 +35,8 @@ Day 38: I started out editing the camera size so I should fit my ideal maze size
 
 Day 39: Minor updates for level 3 to add background and timer
 
+Day 40: Added a moving platform and worked on making world 2 level 1 more complete. 
+
 # Tips, Tricks, and Advice
 
 1. In Godot 4 to change cell size of a tilemap, you go to where it says tileset in the upper right corner and click the down arrow. From there click edit and the cell size should be there.
