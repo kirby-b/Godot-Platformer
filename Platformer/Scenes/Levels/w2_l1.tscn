@@ -92,56 +92,58 @@ layer_0/tile_data = PackedInt32Array(-393216, 0, 0, -327680, 0, 1, -262144, 0, 2
 
 [node name="Timer" type="Timer" parent="." index="4"]
 
-[node name="MovingPlatform0" parent="." index="5" instance=ExtResource("4_xyrqn")]
+[node name="Platforms" type="Node" parent="." index="5"]
+
+[node name="MovingPlatform0" parent="Platforms" index="0" instance=ExtResource("4_xyrqn")]
 position = Vector2(1386, -27)
 curve = SubResource("Curve2D_2aym6")
 
-[node name="MovingPlatform1" parent="." index="6" instance=ExtResource("4_xyrqn")]
+[node name="MovingPlatform1" parent="Platforms" index="1" instance=ExtResource("4_xyrqn")]
 position = Vector2(2277, -81)
 curve = SubResource("Curve2D_vsua4")
 animation = 1
 
-[node name="MovingPlatform2" parent="." index="7" instance=ExtResource("4_xyrqn")]
+[node name="MovingPlatform2" parent="Platforms" index="2" instance=ExtResource("4_xyrqn")]
 position = Vector2(2349, -180)
 curve = SubResource("Curve2D_l5t5a")
 animation = 1
 
-[node name="MovingPlatform3" parent="." index="8" instance=ExtResource("4_xyrqn")]
+[node name="MovingPlatform3" parent="Platforms" index="3" instance=ExtResource("4_xyrqn")]
 position = Vector2(2421, -279)
 curve = SubResource("Curve2D_3yp1r")
 animation = 1
 
-[node name="MovingPlatform4" parent="." index="9" instance=ExtResource("4_xyrqn")]
+[node name="MovingPlatform4" parent="Platforms" index="4" instance=ExtResource("4_xyrqn")]
 position = Vector2(2493, -81)
 curve = SubResource("Curve2D_makiv")
 animation = 1
 
-[node name="MovingPlatform5" parent="." index="10" instance=ExtResource("4_xyrqn")]
+[node name="MovingPlatform5" parent="Platforms" index="5" instance=ExtResource("4_xyrqn")]
 position = Vector2(2565, -180)
 curve = SubResource("Curve2D_wk0hd")
 animation = 1
 
-[node name="MovingPlatform6" parent="." index="11" instance=ExtResource("4_xyrqn")]
+[node name="MovingPlatform6" parent="Platforms" index="6" instance=ExtResource("4_xyrqn")]
 position = Vector2(2637, -279)
 curve = SubResource("Curve2D_1yvui")
 animation = 1
 
-[node name="MovingPlatform7" parent="." index="12" instance=ExtResource("4_xyrqn")]
+[node name="MovingPlatform7" parent="Platforms" index="7" instance=ExtResource("4_xyrqn")]
 position = Vector2(2709, -81)
 curve = SubResource("Curve2D_13v8r")
 animation = 1
 
-[node name="MovingPlatform8" parent="." index="13" instance=ExtResource("4_xyrqn")]
+[node name="MovingPlatform8" parent="Platforms" index="8" instance=ExtResource("4_xyrqn")]
 position = Vector2(2781, -180)
 curve = SubResource("Curve2D_ceuuj")
 animation = 1
 
-[node name="MovingPlatform9" parent="." index="14" instance=ExtResource("4_xyrqn")]
+[node name="MovingPlatform9" parent="Platforms" index="9" instance=ExtResource("4_xyrqn")]
 position = Vector2(2853, -279)
 curve = SubResource("Curve2D_5teui")
 animation = 1
 
-[node name="MovingPlatform10" parent="." index="15" instance=ExtResource("4_xyrqn")]
+[node name="MovingPlatform10" parent="Platforms" index="10" instance=ExtResource("4_xyrqn")]
 position = Vector2(2925, -81)
 curve = SubResource("Curve2D_8gogm")
 animation = 1
