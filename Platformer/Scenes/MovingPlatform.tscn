@@ -79,7 +79,6 @@ region_rect = Rect2(144, 36, 54, 18)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Area2D/StaticBody2D"]
 shape = SubResource("RectangleShape2D_8magj")
-one_way_collision = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
