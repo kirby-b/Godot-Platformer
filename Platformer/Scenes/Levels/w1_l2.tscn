@@ -45,6 +45,7 @@ layer_1/tile_data = PackedInt32Array(-851598, 720897, 2)
 [node name="CanvasLayer" parent="." index="1" instance=ExtResource("3_yypnb")]
 
 [node name="Camera2D" parent="." index="2"]
+zoom = Vector2(0.7, 0.7)
 limit_left = 0
 limit_top = -398
 limit_right = 7056
