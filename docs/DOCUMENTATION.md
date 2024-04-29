@@ -37,6 +37,8 @@ Day 39: Minor updates for level 3 to add background and timer
 
 Day 40: Added a moving platform and worked on making world 2 level 1 more complete. 
 
+Day 41: Had a friend play test the game and made some updates from the feedback. This included making the levels a bit less frusturating and making some objects go to the background
+
 # Tips, Tricks, and Advice
 
 1. In Godot 4 to change cell size of a tilemap, you go to where it says tileset in the upper right corner and click the down arrow. From there click edit and the cell size should be there.
