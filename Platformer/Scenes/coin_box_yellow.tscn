@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6cd6mn5lo1q1"]
+[gd_scene load_steps=8 format=3 uid="uid://c6cd6mn5lo1q1"]
 
 [ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="1_l6f1m"]
 [ext_resource type="Script" path="res://Scripts/coin_box.gd" id="1_twa8a"]
@@ -33,6 +33,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gkgdb"]
 size = Vector2(18, 18)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myfhq"]
+size = Vector2(18, 3)
+
 [node name="CoinBoxYellow" type="StaticBody2D"]
 collision_mask = 2
 script = ExtResource("1_twa8a")
@@ -44,9 +47,14 @@ animation = &"empty"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gkgdb")
 
-[node name="GetHitBoi" type="RayCast2D" parent="."]
-target_position = Vector2(0, 13)
+[node name="GetHitBoi" type="Area2D" parent="."]
 collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GetHitBoi"]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_myfhq")
 
 [node name="CollectBuffer" type="Timer" parent="."]
 one_shot = true
+
+[connection signal="body_entered" from="GetHitBoi" to="." method="_on_get_hit_boi_body_entered"]
