@@ -48,13 +48,3 @@ polygon = PackedVector2Array(-5, -3, -5, -2, 5, -2, 5, -3)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
 polygon = PackedVector2Array(9, 2, 9, -2, -9, -2, -9, 2, -2, 8, 2, 8)
-
-[node name="WeakPoint" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 2
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WeakPoint"]
-position = Vector2(0, 9)
-polygon = PackedVector2Array(-5, -12, 5, -12, 5, -13, 0, -13, -5, -13)
-
-[connection signal="body_entered" from="WeakPoint" to="." method="_on_weak_point_body_entered"]
