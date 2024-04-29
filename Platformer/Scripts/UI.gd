@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-#Onready for loading nodes
+# Onready for loading nodes
 @onready var heart1 = $Heart1
 @onready var heart2 = $Heart2
 @onready var heart3 = $Heart3
@@ -8,28 +8,28 @@ extends CanvasLayer
 @onready var small_digit = $LowerDigit
 @onready var coin_icon = $CoinIcon
 
-#Variables to track coins and life
+# Variables to track coins and life
 var coin_count_higher = 0
 var coin_count_lower = 0
 var life = 6
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	coin_icon.play("spin") #Animates the coin on the hud
-	#Connects to events so it can react to them
+	coin_icon.play("spin") # Animates the coin on the hud
+	# Connects to events so it can react to them
 	Events.connect("coin_get", Callable(self, "_on_coin_get"))
 	Events.connect("diamond_get", Callable(self, "_on_diamond_get"))
 	Events.connect("player_hurt", Callable(self , "_on_player_hurt"))
 	Events.connect("respawn", Callable(self, "_on_respawn"))
 
-#Runs on respawn to reset values for hearts and probably other stuff in the future
+# Runs on respawn to reset values for hearts and probably other stuff in the future
 func _on_respawn():
 	life = 6
 	heart1.frame = 0
 	heart2.frame = 0
 	heart3.frame = 0
 	
-#Controls what happens when you get a coin
+# Controls what happens when you get a coin
 func _on_coin_get():
 	coin_count_lower += 1
 	if coin_count_lower >= 10:
@@ -37,7 +37,7 @@ func _on_coin_get():
 		coin_count_higher += 1
 	if coin_count_higher >= 10:
 		coin_count_higher -= 10
-		life += 1 #This is temporary. It will later be changed to a sort of 1 up
+		# This will become a one up call later
 
 func _on_diamond_get():
 	coin_count_lower += 5
@@ -46,9 +46,9 @@ func _on_diamond_get():
 		coin_count_higher += 1
 	if coin_count_higher >= 10:
 		coin_count_higher -= 10
-		life += 1 #This is temporary. It will later be changed to a sort of 1 up
+		# This will become a one up call later
 	
-#Controls player hurting
+# Controls player hurting
 func _on_player_hurt():
 	life -= 1
 
