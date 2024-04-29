@@ -1,15 +1,15 @@
 extends Area2D
 
-#On ready for loading nodes
+# On ready for loading nodes
 @onready var anim_sprite = $AnimatedSprite2D
 
-#Innitializes checkpoint as unchecked
+# Innitializes checkpoint as unchecked
 var checked = false 
 
 # Runs when a body enters it
 func _on_body_entered(body):
 	if not body is Player:
-		return #Returns if the body isnt a player
+		return # Returns if the body isnt a player
 	else: 
 		if not checked: # Checks the check point, activates animation, and emits
 			checked = true

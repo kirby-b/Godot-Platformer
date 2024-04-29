@@ -1,6 +1,6 @@
 extends Node
 
-#Constants for sound paths
+# Constants for sound paths
 const BOOM = preload("res://Sounds/boom.wav")
 const COIN = preload("res://Sounds/coin.wav")
 const HURT = preload("res://Sounds/hurt.wav")

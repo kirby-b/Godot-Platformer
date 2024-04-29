@@ -29,7 +29,7 @@ var life = 6
 @onready var remote_trans = $RemoteTransform2D
 
 func _ready():
-	double_jump = moveData.EXTRA_JUMPS #Sets double jumps when the game starts
+	double_jump = moveData.EXTRA_JUMPS # Sets double jumps when the game starts
 	Events.connect("player_hurt", Callable(self , "_on_player_hurt"))
 	
 func _on_player_hurt():
@@ -129,19 +129,19 @@ func climb_state(direction):
 func _on_jump_buffer_timeout():
 	jump_buffer = false
 
-#Controls Player getting hurt
+# Controls Player getting hurt
 func player_hurt():
 	SoundPlayer.play_sound(SoundPlayer.HURT) #Plays hurt sound
 	Events.emit_signal("player_hurt") # Emits hurt signal
 
 # Controls Player death
 func player_death():
-	#On Death it plays a sound, deletes the character instance, and emits
+	# On Death it plays a sound, deletes the character instance, and emits
 	SoundPlayer.play_sound(SoundPlayer.LOSE)
 	queue_free()
 	Events.emit_signal("player_died")
 	
-#Forces the camera to follow the player
+# Forces the camera to follow the player
 func connect_camera(camera):
 	var camera_path = camera.get_path()
 	remote_trans.remote_path = camera_path

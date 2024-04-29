@@ -19,7 +19,7 @@ func _physics_process(delta):
 	# Checks if they are at a ledge
 	var found_ledge = not ledgecheckR.is_colliding() or not ledgecheckL.is_colliding()
 	
-	#Changes direction if they find a wall of ledge
+	# Changes direction if they find a wall of ledge
 	if found_wall or found_ledge:
 		direction *= -1
 	# Gets the flip with a simple boolean
