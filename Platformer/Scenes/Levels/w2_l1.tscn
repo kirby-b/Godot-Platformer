@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c2oltcisl6jcn" path="res://Scenes/Levels/level.tscn" id="1_3i1it"]
 [ext_resource type="PackedScene" uid="uid://vu60elt7dtyk" path="res://Scenes/tile_map.tscn" id="2_c2lpv"]
 [ext_resource type="PackedScene" uid="uid://0w4yvy1sbaig" path="res://Scenes/bg-tilemap.tscn" id="3_oagvp"]
-[ext_resource type="PackedScene" uid="uid://bwodt7mchq3jj" path="res://Scenes/MovingPlatform.tscn" id="4_xyrqn"]
+[ext_resource type="PackedScene" uid="uid://bwodt7mchq3jj" path="res://Scenes/moving_platform.tscn" id="4_xyrqn"]
 
 [sub_resource type="Curve2D" id="Curve2D_2aym6"]
 _data = {
