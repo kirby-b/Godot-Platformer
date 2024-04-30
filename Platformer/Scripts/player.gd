@@ -65,6 +65,9 @@ func move_state(direction, delta):
 	# Adds the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		
+	if (Input.is_action_just_pressed("ui_down") and is_on_floor()):
+		position.y += 1
 	
 	# Handle jump/ buffered jump.
 	if (Input.is_action_pressed("ui_accept") and is_on_floor() ) or (jump_buffer and is_on_floor()):
