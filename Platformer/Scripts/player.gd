@@ -72,7 +72,8 @@ func move_state(direction, delta):
 	# Adds the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		
+	
+	# Makes it so the player can fall through one way platforms
 	if (Input.is_action_just_pressed("ui_down") and is_on_floor()):
 		position.y += 1
 	
@@ -92,7 +93,8 @@ func move_state(direction, delta):
 		jump_buffer = true
 		jump_timer.start()
 		
-	# Flips the sprite to face the correct movement direction
+	# Flips the sprite to face the correct movement direction and contolling
+	# where the gun faces
 	if direction.x > 0:
 		sprite.flip_h = true
 		gun.flip_h = false
@@ -132,7 +134,7 @@ func climb_state(direction):
 	if not is_on_ladder():
 		state = MOVE
 	sprite.play("idle")
-	velocity = direction * moveData.CLIMB_SPEED # controls the speed you move at while on a 
+	velocity = direction * moveData.CLIMB_SPEED # controls ladder speed
 	if direction.x > 0:
 		sprite.flip_h = true
 	elif direction.x < 0:
@@ -160,6 +162,7 @@ func connect_camera(camera):
 	var camera_path = camera.get_path()
 	remote_trans.remote_path = camera_path
 	
+# Makes it so the player bounces into the air if something tells it to
 func bounce():
 	velocity.y = moveData.JUMP_VELOCITY
 	was_in_air = true
