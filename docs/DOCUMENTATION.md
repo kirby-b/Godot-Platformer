@@ -41,7 +41,7 @@ Day 41: Had a friend play test the game and made some updates from the feedback.
 
 Day 42: Worked on making it so you can fall through one way platforms
 
-Day 43: Fixed one of the problems in w1-lvl2. I also added platforms in w1-lvl3 so its easier to get around becasue testers found the navigation to be infuriating
+Day 43: Fixed one of the problems in w1-lvl2. I also added platforms in w1-lvl3 so its easier to get around becasue testers found the navigation to be infuriating. With these problems addressed, I began working on the enemy destruction problem. I decided to go with a gun sprite from another kenney asset pack.
 
 # Tips, Tricks, and Advice
 
