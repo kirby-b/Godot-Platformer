@@ -135,10 +135,16 @@ func climb_state(direction):
 		state = MOVE
 	sprite.play("idle")
 	velocity = direction * moveData.CLIMB_SPEED # controls ladder speed
+	# Flips the sprite to face the correct movement direction and contolling
+	# where the gun faces
 	if direction.x > 0:
 		sprite.flip_h = true
+		gun.flip_h = false
+		gun.offset = Vector2(10, 0)
 	elif direction.x < 0:
 		sprite.flip_h = false
+		gun.flip_h = true
+		gun.offset = Vector2(-10, 0)
 	move_and_slide()
 
 # Turns off the jump buffer after a small timeout period
