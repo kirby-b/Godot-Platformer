@@ -19,6 +19,7 @@ var double_jump = 0
 var was_in_air = false # Tracks whether the player was just in the air
 var jump_buffer = false # Tranks whether the jump buffer is on
 var life = 6
+var armed = true
 
 # On ready variables to access nodes 
 @onready var sprite = $AnimatedSprite2D
@@ -27,6 +28,7 @@ var life = 6
 @onready var ladder_check = $LadderChecker
 @onready var jump_timer = $JumpBuffer
 @onready var remote_trans = $RemoteTransform2D
+@onready var gun = $Gun
 
 func _ready():
 	double_jump = moveData.EXTRA_JUMPS # Sets double jumps when the game starts
@@ -42,6 +44,11 @@ func _physics_process(delta):
 	var direction = Vector2.ZERO
 	direction.x = Input.get_axis("ui_left", "ui_right")
 	direction.y = Input.get_axis("ui_up", "ui_down")
+	
+	if armed == false: 
+		gun.hide()
+	elif armed == true:
+		gun.show()
 	
 	# Changes how to player acts based on its state
 	match state:
@@ -88,8 +95,12 @@ func move_state(direction, delta):
 	# Flips the sprite to face the correct movement direction
 	if direction.x > 0:
 		sprite.flip_h = true
+		gun.flip_h = false
+		gun.offset = Vector2(10, 0)
 	elif direction.x < 0:
 		sprite.flip_h = false
+		gun.flip_h = true
+		gun.offset = Vector2(-10, 0)
 		
 	# Controls acceleration and deceleration
 	if direction.x:

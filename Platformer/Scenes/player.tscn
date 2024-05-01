@@ -52,9 +52,10 @@ one_shot = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
 
-[node name="Tile0050" type="Sprite2D" parent="."]
-position = Vector2(9, 4)
+[node name="Gun" type="Sprite2D" parent="."]
+position = Vector2(0, 4)
 texture = ExtResource("4_hebbx")
+offset = Vector2(10, 0)
 region_enabled = true
 region_rect = Rect2(2.619, 4.59358, 10.8104, 6.48627)
 
