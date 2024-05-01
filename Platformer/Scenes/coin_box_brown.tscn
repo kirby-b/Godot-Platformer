@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://caksqswqrwwoj"]
+
+[ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="1_bhch4"]
+[ext_resource type="Script" path="res://Scripts/coin_box.gd" id="1_roiao"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vjpo"]
+atlas = ExtResource("1_bhch4")
+region = Rect2(162, 18, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l22tm"]
+atlas = ExtResource("1_bhch4")
+region = Rect2(198, 18, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mi2fe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vjpo")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l22tm")
+}],
+"loop": true,
+"name": &"full",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87ais"]
+size = Vector2(18, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bhld"]
+size = Vector2(18, 3)
+
+[node name="CoinBoxBrown" type="StaticBody2D"]
+script = ExtResource("1_roiao")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mi2fe")
+animation = &"full"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_87ais")
+
+[node name="GetHitBoi" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GetHitBoi"]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_3bhld")
+
+[node name="CollectBuffer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="GetHitBoi" to="." method="_on_get_hit_boi_body_entered"]

@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://buhrv3yofi81h"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_84ky7"]
+[ext_resource type="SpriteFrames" uid="uid://b0r0g8qo2om4v" path="res://Resources/playerblue.tres" id="2_n70uf"]
+[ext_resource type="Resource" uid="uid://bke11hjl8viu2" path="res://Resources/BaseMovement.tres" id="2_s8k38"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_euf5n"]
+size = Vector2(14, 21)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_84ky7")
+moveData = ExtResource("2_s8k38")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.38419e-07, -2.38419e-07)
+scale = Vector2(0.9375, 0.9375)
+sprite_frames = ExtResource("2_n70uf")
+animation = &"run"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+shape = SubResource("RectangleShape2D_euf5n")
+
+[node name="LadderChecker" type="RayCast2D" parent="."]
+position = Vector2(0, -10)
+target_position = Vector2(0, 23)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="BounceChecker" type="RayCast2D" parent="."]
+position = Vector2(4, -10)
+target_position = Vector2(0, 23)
+collision_mask = 4
+
+[node name="BounceChecker2" type="RayCast2D" parent="."]
+z_index = 9
+position = Vector2(-4, -10)
+target_position = Vector2(0, 23)
+collision_mask = 4
+
+[node name="JumpBuffer" type="Timer" parent="."]
+wait_time = 0.111
+one_shot = true
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+
+[connection signal="timeout" from="JumpBuffer" to="." method="_on_jump_buffer_timeout"]

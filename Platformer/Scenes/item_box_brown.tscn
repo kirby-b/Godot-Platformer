@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2wjok1ppge1v"]
+
+[ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="1_c472h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vjpo"]
+atlas = ExtResource("1_c472h")
+region = Rect2(162, 18, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ii7y4"]
+atlas = ExtResource("1_c472h")
+region = Rect2(180, 18, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xr3qk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vjpo")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii7y4")
+}],
+"loop": true,
+"name": &"full",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1ly8"]
+size = Vector2(18, 18)
+
+[node name="ItemBoxBrown" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xr3qk")
+animation = &"full"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g1ly8")

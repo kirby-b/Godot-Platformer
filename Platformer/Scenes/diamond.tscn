@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdbat5my1qrpb"]
+
+[ext_resource type="Script" path="res://Scripts/diamond.gd" id="1_d2i53"]
+[ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="2_fjjka"]
+
+[node name="Diamond" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_d2i53")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(8, 7)
+polygon = PackedVector2Array(-3, -13, -1, -11, -1, -6, -7, 0, -9, 0, -15, -6, -15, -11, -13, -13)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fjjka")
+region_enabled = true
+region_rect = Rect2(126, 54, 18, 18)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

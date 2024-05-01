@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://djoa3iij2gkhv"]
+
+[ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://Images/tilemap-characters_packed.png" id="1_ecjje"]
+[ext_resource type="Script" path="res://Scripts/flapper.gd" id="1_xdlvf"]
+[ext_resource type="PackedScene" uid="uid://cqbw1x2hs0pri" path="res://Scenes/hitbox.tscn" id="2_81rrs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s71rr"]
+atlas = ExtResource("1_ecjje")
+region = Rect2(144, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hel5q"]
+atlas = ExtResource("1_ecjje")
+region = Rect2(168, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hoyqf"]
+atlas = ExtResource("1_ecjje")
+region = Rect2(192, 48, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t0xpe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s71rr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hel5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hoyqf")
+}],
+"loop": true,
+"name": &"flap",
+"speed": 5.0
+}]
+
+[node name="Flapper" type="CharacterBody2D"]
+collision_mask = 3
+script = ExtResource("1_xdlvf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t0xpe")
+animation = &"flap"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-5, -3, -5, -2, 5, -2, 5, -3)
+
+[node name="Hitbox" parent="." instance=ExtResource("2_81rrs")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+polygon = PackedVector2Array(9, 2, 9, -2, -9, -2, -9, 2, -2, 8, 2, 8)
