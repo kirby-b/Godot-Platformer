@@ -22,6 +22,7 @@ var was_in_air = false # Tracks whether the player was just in the air
 var jump_buffer = false # Tranks whether the jump buffer is on
 var life = 6
 var armed = true
+var aim_direction = 1
 
 # On ready variables to access nodes 
 @onready var sprite = $AnimatedSprite2D
@@ -31,6 +32,7 @@ var armed = true
 @onready var jump_timer = $JumpBuffer
 @onready var remote_trans = $RemoteTransform2D
 @onready var gun = $Gun
+@onready var muzzle = $Gun/Muzzle
 
 func _ready():
 	double_jump = moveData.EXTRA_JUMPS # Sets double jumps when the game starts
@@ -67,9 +69,11 @@ func move_state(direction, delta):
 		gun.hide()
 	elif armed == true:
 		gun.show()
-		
+	
+	# Fires gun
 	if Input.is_action_just_pressed("shoot") and armed == true:
 		shoot()
+		
 	# Checks to see if you are on a ladder
 	if is_on_ladder() and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_accept")):
 		state = CLIMB # Puts you into climb mode
@@ -104,10 +108,14 @@ func move_state(direction, delta):
 		sprite.flip_h = true
 		gun.flip_h = false
 		gun.offset = Vector2(10, 0)
+		muzzle.position = Vector2(17, -1)
+		aim_direction = 1
 	elif direction.x < 0:
 		sprite.flip_h = false
 		gun.flip_h = true
 		gun.offset = Vector2(-10, 0)
+		muzzle.position = Vector2(-17, -1)
+		aim_direction = -1
 		
 	# Controls acceleration and deceleration
 	if direction.x:
@@ -140,16 +148,31 @@ func climb_state(direction):
 		state = MOVE
 	sprite.play("idle")
 	velocity = direction * moveData.CLIMB_SPEED # controls ladder speed
+	
+	# Determines if the gun is active
+	if armed == false: 
+		gun.hide()
+	elif armed == true:
+		gun.show()
+	
+	# Fires gun
+	if Input.is_action_just_pressed("shoot") and armed == true:
+		shoot()
+		
 	# Flips the sprite to face the correct movement direction and contolling
 	# where the gun faces
 	if direction.x > 0:
 		sprite.flip_h = true
 		gun.flip_h = false
 		gun.offset = Vector2(10, 0)
+		muzzle.position = Vector2(17, -1)
+		aim_direction = 1
 	elif direction.x < 0:
 		sprite.flip_h = false
 		gun.flip_h = true
 		gun.offset = Vector2(-10, 0)
+		muzzle.position = Vector2(-17, -1)
+		aim_direction = -1
 	move_and_slide()
 
 # Turns off the jump buffer after a small timeout period
@@ -181,5 +204,6 @@ func bounce():
 #Makes the gun shoot
 func shoot():
 	var b = Bullet.instantiate()
+	b.aim(aim_direction)
 	get_tree().current_scene.add_child(b)
-	b.transform = $Gun/Muzzle.global_transform
+	b.transform = muzzle.global_transform
