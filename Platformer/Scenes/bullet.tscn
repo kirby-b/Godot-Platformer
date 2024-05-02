@@ -7,12 +7,16 @@
 size = Vector2(12, 6)
 
 [node name="Bullet" type="Area2D"]
+collision_mask = 13
 script = ExtResource("1_awqoe")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -3.14159
 texture = ExtResource("1_52xp4")
 region_enabled = true
 region_rect = Rect2(2, 5, 12, 6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_b6dmb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
