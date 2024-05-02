@@ -181,5 +181,5 @@ func bounce():
 #Makes the gun shoot
 func shoot():
 	var b = Bullet.instantiate()
-	owner.add_child(b)
+	get_tree().current_scene.add_child(b)
 	b.transform = $Gun/Muzzle.global_transform
