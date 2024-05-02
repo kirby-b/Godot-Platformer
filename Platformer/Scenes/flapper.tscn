@@ -34,6 +34,7 @@ animations = [{
 }]
 
 [node name="Flapper" type="CharacterBody2D"]
+collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_xdlvf")
 
