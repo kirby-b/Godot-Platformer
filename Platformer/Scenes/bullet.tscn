@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bru363u4k8kyc"]
+
+[ext_resource type="Texture2D" uid="uid://bbx5t2yftnvco" path="res://Images/büllet.png" id="1_52xp4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6dmb"]
+size = Vector2(12, 6)
+
+[node name="Bullet" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_52xp4")
+region_enabled = true
+region_rect = Rect2(2, 5, 12, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_b6dmb")
