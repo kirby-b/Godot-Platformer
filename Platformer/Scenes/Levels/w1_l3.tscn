@@ -67,58 +67,58 @@ rotation = -1.5708
 
 [node name="Enemies" type="Node" parent="." index="7"]
 
-[node name="Big_Blue_Enemy" parent="Enemies" index="0" instance=ExtResource("4_xje42")]
+[node name="Big_Blue_Enemy" parent="Enemies" index="0" groups=["enemies"] instance=ExtResource("4_xje42")]
 position = Vector2(-1179, 331)
 
-[node name="Big_Blue_Enemy2" parent="Enemies" index="1" instance=ExtResource("4_xje42")]
+[node name="Big_Blue_Enemy2" parent="Enemies" index="1" groups=["enemies"] instance=ExtResource("4_xje42")]
 position = Vector2(877, 385)
 
-[node name="Big_Blue_Enemy3" parent="Enemies" index="2" instance=ExtResource("4_xje42")]
+[node name="Big_Blue_Enemy3" parent="Enemies" index="2" groups=["enemies"] instance=ExtResource("4_xje42")]
 position = Vector2(635, 385)
 
-[node name="Big_Blue_Enemy4" parent="Enemies" index="3" instance=ExtResource("4_xje42")]
+[node name="Big_Blue_Enemy4" parent="Enemies" index="3" groups=["enemies"] instance=ExtResource("4_xje42")]
 position = Vector2(1034, -353)
 
-[node name="Blue_Small_Enemy" parent="Enemies" index="4" instance=ExtResource("5_y7fbi")]
+[node name="Blue_Small_Enemy" parent="Enemies" index="4" groups=["enemies"] instance=ExtResource("5_y7fbi")]
 position = Vector2(-118, -413)
 
-[node name="Blue_Small_Enemy2" parent="Enemies" index="5" instance=ExtResource("5_y7fbi")]
+[node name="Blue_Small_Enemy2" parent="Enemies" index="5" groups=["enemies"] instance=ExtResource("5_y7fbi")]
 position = Vector2(259, -413)
 
-[node name="Blue_Small_Enemy3" parent="Enemies" index="6" instance=ExtResource("5_y7fbi")]
+[node name="Blue_Small_Enemy3" parent="Enemies" index="6" groups=["enemies"] instance=ExtResource("5_y7fbi")]
 position = Vector2(116, -269)
 
-[node name="Blue_Small_Enemy4" parent="Enemies" index="7" instance=ExtResource("5_y7fbi")]
+[node name="Blue_Small_Enemy4" parent="Enemies" index="7" groups=["enemies"] instance=ExtResource("5_y7fbi")]
 position = Vector2(973, -125)
 
-[node name="Blue_Small_Enemy5" parent="Enemies" index="8" instance=ExtResource("5_y7fbi")]
+[node name="Blue_Small_Enemy5" parent="Enemies" index="8" groups=["enemies"] instance=ExtResource("5_y7fbi")]
 position = Vector2(855, 1)
 
-[node name="Blue_Small_Enemy6" parent="Enemies" index="9" instance=ExtResource("5_y7fbi")]
+[node name="Blue_Small_Enemy6" parent="Enemies" index="9" groups=["enemies"] instance=ExtResource("5_y7fbi")]
 position = Vector2(-1271, 415)
 
-[node name="Blue_Small_Enemy7" parent="Enemies" index="10" instance=ExtResource("5_y7fbi")]
+[node name="Blue_Small_Enemy7" parent="Enemies" index="10" groups=["enemies"] instance=ExtResource("5_y7fbi")]
 position = Vector2(-785, 415)
 
-[node name="Blue_Small_Enemy8" parent="Enemies" index="11" instance=ExtResource("5_y7fbi")]
+[node name="Blue_Small_Enemy8" parent="Enemies" index="11" groups=["enemies"] instance=ExtResource("5_y7fbi")]
 position = Vector2(22, 415)
 
-[node name="Blue_Small_Enemy9" parent="Enemies" index="12" instance=ExtResource("5_y7fbi")]
+[node name="Blue_Small_Enemy9" parent="Enemies" index="12" groups=["enemies"] instance=ExtResource("5_y7fbi")]
 position = Vector2(-708, -323)
 
-[node name="Blue_Small_Enemy10" parent="Enemies" index="13" instance=ExtResource("5_y7fbi")]
+[node name="Blue_Small_Enemy10" parent="Enemies" index="13" groups=["enemies"] instance=ExtResource("5_y7fbi")]
 position = Vector2(-536, -233)
 
-[node name="Flapper" parent="Enemies" index="14" instance=ExtResource("7_vlq71")]
+[node name="Flapper" parent="Enemies" index="14" groups=["enemies"] instance=ExtResource("7_vlq71")]
 position = Vector2(-773, 37)
 
-[node name="WalkingEnemy" parent="Enemies" index="15" instance=ExtResource("9_bt1pn")]
+[node name="WalkingEnemy" parent="Enemies" index="15" groups=["enemies"] instance=ExtResource("9_bt1pn")]
 position = Vector2(565, -54)
 
-[node name="WalkingEnemy2" parent="Enemies" index="16" instance=ExtResource("9_bt1pn")]
+[node name="WalkingEnemy2" parent="Enemies" index="16" groups=["enemies"] instance=ExtResource("9_bt1pn")]
 position = Vector2(-824, -107)
 
-[node name="WalkingEnemy3" parent="Enemies" index="17" instance=ExtResource("9_bt1pn")]
+[node name="WalkingEnemy3" parent="Enemies" index="17" groups=["enemies"] instance=ExtResource("9_bt1pn")]
 position = Vector2(1444, 307)
 
 [node name="NavalMineMan" parent="Enemies" index="18" instance=ExtResource("10_gtor5")]
