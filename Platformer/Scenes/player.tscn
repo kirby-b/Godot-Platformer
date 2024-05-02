@@ -59,4 +59,7 @@ offset = Vector2(10, 0)
 region_enabled = true
 region_rect = Rect2(2.619, 4.59358, 10.8104, 6.48627)
 
+[node name="Marker2D" type="Marker2D" parent="Gun"]
+position = Vector2(15, -1)
+
 [connection signal="timeout" from="JumpBuffer" to="." method="_on_jump_buffer_timeout"]
