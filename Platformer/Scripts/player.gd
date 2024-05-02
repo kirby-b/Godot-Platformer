@@ -9,6 +9,8 @@ enum{
 
 # Gets movement data variables
 @export() var moveData: Resource
+#Gets the bullet scene for instancing
+@export var Bullet : PackedScene
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -45,11 +47,6 @@ func _physics_process(delta):
 	direction.x = Input.get_axis("ui_left", "ui_right")
 	direction.y = Input.get_axis("ui_up", "ui_down")
 	
-	if armed == false: 
-		gun.hide()
-	elif armed == true:
-		gun.show()
-	
 	# Changes how to player acts based on its state
 	match state:
 		MOVE: move_state(direction, delta)
@@ -65,6 +62,14 @@ func is_on_ladder():
 
 # Controls the move state
 func move_state(direction, delta):
+	#Determines if the gun is active
+	if armed == false: 
+		gun.hide()
+	elif armed == true:
+		gun.show()
+		
+	if Input.is_action_just_pressed("shoot") and armed == true:
+		shoot()
 	# Checks to see if you are on a ladder
 	if is_on_ladder() and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_accept")):
 		state = CLIMB # Puts you into climb mode
@@ -172,3 +177,9 @@ func connect_camera(camera):
 func bounce():
 	velocity.y = moveData.JUMP_VELOCITY
 	was_in_air = true
+
+#Makes the gun shoot
+func shoot():
+	var b = Bullet.instantiate()
+	owner.add_child(b)
+	b.transform = $Gun/Muzzle.global_transform

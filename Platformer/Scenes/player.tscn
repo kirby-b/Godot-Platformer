@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://buhrv3yofi81h"]
+[gd_scene load_steps=7 format=3 uid="uid://buhrv3yofi81h"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_84ky7"]
 [ext_resource type="SpriteFrames" uid="uid://b0r0g8qo2om4v" path="res://Resources/playerblue.tres" id="2_n70uf"]
 [ext_resource type="Resource" uid="uid://bke11hjl8viu2" path="res://Resources/BaseMovement.tres" id="2_s8k38"]
+[ext_resource type="PackedScene" uid="uid://bru363u4k8kyc" path="res://Scenes/bullet.tscn" id="3_8gkfv"]
 [ext_resource type="Texture2D" uid="uid://bcoa8pk0uhtk3" path="res://Images/shooty.png" id="4_hebbx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euf5n"]
@@ -13,6 +14,7 @@ collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_84ky7")
 moveData = ExtResource("2_s8k38")
+Bullet = ExtResource("3_8gkfv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2.38419e-07, -2.38419e-07)
@@ -59,7 +61,7 @@ offset = Vector2(10, 0)
 region_enabled = true
 region_rect = Rect2(2.619, 4.59358, 10.8104, 6.48627)
 
-[node name="Marker2D" type="Marker2D" parent="Gun"]
-position = Vector2(15, -1)
+[node name="Muzzle" type="Marker2D" parent="Gun"]
+position = Vector2(17, -1)
 
 [connection signal="timeout" from="JumpBuffer" to="." method="_on_jump_buffer_timeout"]
