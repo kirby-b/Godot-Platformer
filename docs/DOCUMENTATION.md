@@ -43,6 +43,8 @@ Day 42: Worked on making it so you can fall through one way platforms
 
 Day 43: Fixed one of the problems in w1-lvl2. I also added platforms in w1-lvl3 so its easier to get around becasue testers found the navigation to be infuriating. With these problems addressed, I began working on the enemy destruction problem. I decided to go with a gun sprite from another kenney asset pack.
 
+Day 44: Added gun to sprite, made it have the ability to disappear, and made it look where the player does. I also added some other sprites like enemies, bullet, and bang.
+
 # Tips, Tricks, and Advice
 
 1. In Godot 4 to change cell size of a tilemap, you go to where it says tileset in the upper right corner and click the down arrow. From there click edit and the cell size should be there.
