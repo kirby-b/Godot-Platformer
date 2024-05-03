@@ -18,6 +18,7 @@ func _physics_process(_delta):
 	velocity.x = direction * 50 # Constant speed
 	move_and_slide()
 
+# Makes the enemy lose a life
 func lose_life():
 	life -= 1
 	if life <= 0:

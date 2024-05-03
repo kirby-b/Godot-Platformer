@@ -18,6 +18,7 @@ func _ready():
 	match animation: # Matchs state to determine animation type
 		ANIM_TYPE.LOOP: anim_player.play("MovementPathLoop")
 
+# Makes the enemy lose a life
 func lose_life():
 	life -= 1
 	if life <= 0:

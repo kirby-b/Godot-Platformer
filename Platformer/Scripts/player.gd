@@ -9,7 +9,7 @@ enum{
 
 # Gets movement data variables
 @export() var moveData: Resource
-#Gets the bullet scene for instancing
+# Gets the bullet scene for instancing
 @export var Bullet : PackedScene
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -19,7 +19,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var state = MOVE
 var double_jump = 0 
 var was_in_air = false # Tracks whether the player was just in the air
-var jump_buffer = false # Tranks whether the jump buffer is on
+var jump_buffer = false # Tracks whether the jump buffer is on
+var can_fire = true
 var life = 6
 var armed = true
 var aim_direction = 1
@@ -29,7 +30,8 @@ var aim_direction = 1
 @onready var bounce_check_1 = $BounceChecker
 @onready var bounce_check_2 = $BounceChecker2
 @onready var ladder_check = $LadderChecker
-@onready var jump_timer = $JumpBuffer
+@onready var jump_timer = $Timers/JumpBuffer
+@onready var bullet_delay = $Timers/BulletDelay
 @onready var remote_trans = $RemoteTransform2D
 @onready var gun = $Gun
 @onready var muzzle = $Gun/Muzzle
@@ -64,14 +66,14 @@ func is_on_ladder():
 
 # Controls the move state
 func move_state(direction, delta):
-	#Determines if the gun is active
+	# Determines if the gun is active
 	if armed == false: 
 		gun.hide()
 	elif armed == true:
 		gun.show()
 	
 	# Fires gun
-	if Input.is_action_just_pressed("shoot") and armed == true:
+	if Input.is_action_just_pressed("shoot") and armed == true and can_fire == true:
 		shoot()
 		
 	# Checks to see if you are on a ladder
@@ -201,9 +203,15 @@ func bounce():
 	velocity.y = moveData.JUMP_VELOCITY
 	was_in_air = true
 
-#Makes the gun shoot
+# Makes the gun shoot
 func shoot():
 	var b = Bullet.instantiate()
 	b.aim(aim_direction)
 	get_tree().current_scene.add_child(b)
 	b.transform = muzzle.global_transform
+	can_fire = false
+	bullet_delay.start()
+
+# Waits so you cant bullet spam
+func _on_bullet_delay_timeout():
+	can_fire = true
