@@ -69,15 +69,19 @@ rotation = -1.5708
 
 [node name="Big_Blue_Enemy" parent="Enemies" index="0" groups=["enemies"] instance=ExtResource("4_xje42")]
 position = Vector2(-1179, 331)
+life = 3
 
 [node name="Big_Blue_Enemy2" parent="Enemies" index="1" groups=["enemies"] instance=ExtResource("4_xje42")]
 position = Vector2(877, 385)
+life = 3
 
 [node name="Big_Blue_Enemy3" parent="Enemies" index="2" groups=["enemies"] instance=ExtResource("4_xje42")]
 position = Vector2(635, 385)
+life = 3
 
 [node name="Big_Blue_Enemy4" parent="Enemies" index="3" groups=["enemies"] instance=ExtResource("4_xje42")]
 position = Vector2(1034, -353)
+life = 3
 
 [node name="Blue_Small_Enemy" parent="Enemies" index="4" groups=["enemies"] instance=ExtResource("5_y7fbi")]
 position = Vector2(-118, -413)

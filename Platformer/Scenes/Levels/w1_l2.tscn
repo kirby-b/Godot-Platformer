@@ -120,6 +120,7 @@ position = Vector2(1503, -216)
 
 [node name="Big_Blue_Enemy" parent="Enemies" index="4" groups=["enemies"] instance=ExtResource("9_8it8s")]
 position = Vector2(1665, -246)
+life = 3
 
 [node name="Blue_Small_Enemy5" parent="Enemies" index="5" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(1971, -252)
@@ -129,6 +130,7 @@ position = Vector2(6763, -109)
 
 [node name="Big_Blue_Enemy2" parent="Enemies" index="7" groups=["enemies"] instance=ExtResource("9_8it8s")]
 position = Vector2(6790, -121)
+life = 3
 
 [node name="WumpyThump" parent="Enemies" index="8" instance=ExtResource("14_ev6vw")]
 position = Vector2(5067, -333)
@@ -162,6 +164,7 @@ position = Vector2(6480, -108)
 
 [node name="Big_Blue_Enemy3" parent="Enemies" index="18" groups=["enemies"] instance=ExtResource("9_8it8s")]
 position = Vector2(6078, -120)
+life = 3
 
 [node name="Blue_Small_Enemy10" parent="Enemies" index="19" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(6291, -324)

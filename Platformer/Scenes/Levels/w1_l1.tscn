@@ -419,9 +419,11 @@ position = Vector2(3240, -270)
 [node name="Big_Blue_Enemy" parent="Enemies" index="12" groups=["enemies"] instance=ExtResource("15_udcjc")]
 z_index = 11
 position = Vector2(990, -156)
+life = 3
 
 [node name="Big_Blue_Enemy2" parent="Enemies" index="13" groups=["enemies"] instance=ExtResource("15_udcjc")]
 position = Vector2(4348, -155)
+life = 3
 
 [node name="Blue_Small_Enemy" parent="Enemies" index="14" groups=["enemies"] instance=ExtResource("16_u8bdt")]
 z_index = 11
