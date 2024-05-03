@@ -47,6 +47,8 @@ Day 44: Added gun to sprite, made it have the ability to disappear, and made it 
 
 Day 45: Added bullet scene and made the gun actually fire. The process of adding the working gun also included some extra player code and an enemies group in each level.
 
+Day 46: I made the gun work properly, enemies have health, item boxes give you the gun, and I started using a global for arming the player. Globals will definitely be useful later
+
 # Tips, Tricks, and Advice
 
 1. In Godot 4 to change cell size of a tilemap, you go to where it says tileset in the upper right corner and click the down arrow. From there click edit and the cell size should be there.
