@@ -34,7 +34,7 @@ animations = [{
 size = Vector2(18, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bhld"]
-size = Vector2(18, 3)
+size = Vector2(14, 3)
 
 [node name="CoinBoxBrown" type="StaticBody2D"]
 script = ExtResource("1_roiao")
