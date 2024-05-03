@@ -24,6 +24,7 @@ buses/default_bus_layout="res://Resources/default_bus_layout.tres"
 SoundPlayer="*res://Scenes/sound_player.tscn"
 Events="*res://Scripts/Events.gd"
 Transition="*res://Scenes/transition.tscn"
+GlobalVars="*res://Scripts/GlobalVars.gd"
 
 [display]
 
