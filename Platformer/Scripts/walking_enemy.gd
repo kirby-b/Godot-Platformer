@@ -3,6 +3,8 @@ extends CharacterBody2D
 # Initial direction(right)
 var direction = 1
 
+@export() var life: int = 1
+
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 # Gets needed node variables
@@ -29,3 +31,7 @@ func _physics_process(delta):
 	velocity.x = direction * 25 # Constant speed
 	move_and_slide()
 	
+func lose_life():
+	life -= 1
+	if life <= 0:
+		queue_free()
