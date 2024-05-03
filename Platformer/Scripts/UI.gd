@@ -8,9 +8,7 @@ extends CanvasLayer
 @onready var small_digit = $LowerDigit
 @onready var coin_icon = $CoinIcon
 
-# Variables to track coins and life
-var coin_count_higher = 0
-var coin_count_lower = 0
+# Variables to track life
 var life = 6
 
 # Called when the node enters the scene tree for the first time.
@@ -31,21 +29,21 @@ func _on_respawn():
 	
 # Controls what happens when you get a coin
 func _on_coin_get():
-	coin_count_lower += 1
-	if coin_count_lower >= 10:
-		coin_count_lower -= 10
-		coin_count_higher += 1
-	if coin_count_higher >= 10:
-		coin_count_higher -= 10
+	GlobalVars.coins_lower += 1
+	if GlobalVars.coins_lower >= 10:
+		GlobalVars.coins_lower -= 10
+		GlobalVars.coins_upper += 1
+	if GlobalVars.coins_upper >= 10:
+		GlobalVars.coins_upper -= 10
 		# This will become a one up call later
 
 func _on_diamond_get():
-	coin_count_lower += 5
-	if coin_count_lower >= 10:
-		coin_count_lower -= 10
-		coin_count_higher += 1
-	if coin_count_higher >= 10:
-		coin_count_higher -= 10
+	GlobalVars.coins_lower += 5
+	if GlobalVars.coins_lower >= 10:
+		GlobalVars.coins_lower -= 10
+		GlobalVars.coins_upper += 1
+	if GlobalVars.coins_upper >= 10:
+		GlobalVars.coins_upper -= 10
 		# This will become a one up call later
 	
 # Controls player hurting
@@ -55,8 +53,8 @@ func _on_player_hurt():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# Sets coin frames to coin counts
-	small_digit.frame = coin_count_lower
-	big_digit.frame = coin_count_higher
+	small_digit.frame = GlobalVars.coins_lower
+	big_digit.frame = GlobalVars.coins_upper
 	# Matchs the life count. Its better than a bunch of if statments.....
 	match life:
 		6: 
