@@ -22,7 +22,6 @@ var was_in_air = false # Tracks whether the player was just in the air
 var jump_buffer = false # Tracks whether the jump buffer is on
 var can_fire = true
 var life = 6
-var armed = true
 var aim_direction = 1
 
 # On ready variables to access nodes 
@@ -67,13 +66,13 @@ func is_on_ladder():
 # Controls the move state
 func move_state(direction, delta):
 	# Determines if the gun is active
-	if armed == false: 
+	if GlobalVars.has_gun == false: 
 		gun.hide()
-	elif armed == true:
+	elif GlobalVars.has_gun == true:
 		gun.show()
 	
 	# Fires gun
-	if Input.is_action_just_pressed("shoot") and armed == true and can_fire == true:
+	if Input.is_action_just_pressed("shoot") and GlobalVars.has_gun == true and can_fire == true:
 		shoot()
 		
 	# Checks to see if you are on a ladder
@@ -152,13 +151,13 @@ func climb_state(direction):
 	velocity = direction * moveData.CLIMB_SPEED # controls ladder speed
 	
 	# Determines if the gun is active
-	if armed == false: 
+	if GlobalVars.has_gun == false: 
 		gun.hide()
-	elif armed == true:
+	elif GlobalVars.has_gun == true:
 		gun.show()
 	
 	# Fires gun
-	if Input.is_action_just_pressed("shoot") and armed == true:
+	if Input.is_action_just_pressed("shoot") and GlobalVars.has_gun == true:
 		shoot()
 		
 	# Flips the sprite to face the correct movement direction and contolling
