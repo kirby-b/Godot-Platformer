@@ -34,7 +34,7 @@ animations = [{
 size = Vector2(18, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myfhq"]
-size = Vector2(18, 3)
+size = Vector2(14, 3)
 
 [node name="CoinBoxYellow" type="StaticBody2D"]
 collision_mask = 2

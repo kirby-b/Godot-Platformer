@@ -106,29 +106,31 @@ position = Vector2(5409, -252)
 
 [node name="Enemies" type="Node" parent="." index="8"]
 
-[node name="Blue_Small_Enemy" parent="Enemies" index="0" instance=ExtResource("8_vvxc2")]
+[node name="Blue_Small_Enemy" parent="Enemies" index="0" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(459, -216)
 
-[node name="Blue_Small_Enemy2" parent="Enemies" index="1" instance=ExtResource("8_vvxc2")]
+[node name="Blue_Small_Enemy2" parent="Enemies" index="1" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(756, -306)
 
-[node name="Blue_Small_Enemy3" parent="Enemies" index="2" instance=ExtResource("8_vvxc2")]
+[node name="Blue_Small_Enemy3" parent="Enemies" index="2" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(1062, -180)
 
-[node name="Blue_Small_Enemy4" parent="Enemies" index="3" instance=ExtResource("8_vvxc2")]
+[node name="Blue_Small_Enemy4" parent="Enemies" index="3" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(1503, -216)
 
-[node name="Big_Blue_Enemy" parent="Enemies" index="4" instance=ExtResource("9_8it8s")]
+[node name="Big_Blue_Enemy" parent="Enemies" index="4" groups=["enemies"] instance=ExtResource("9_8it8s")]
 position = Vector2(1665, -246)
+life = 3
 
-[node name="Blue_Small_Enemy5" parent="Enemies" index="5" instance=ExtResource("8_vvxc2")]
+[node name="Blue_Small_Enemy5" parent="Enemies" index="5" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(1971, -252)
 
-[node name="Blue_Small_Enemy6" parent="Enemies" index="6" instance=ExtResource("8_vvxc2")]
+[node name="Blue_Small_Enemy6" parent="Enemies" index="6" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(6763, -109)
 
-[node name="Big_Blue_Enemy2" parent="Enemies" index="7" instance=ExtResource("9_8it8s")]
+[node name="Big_Blue_Enemy2" parent="Enemies" index="7" groups=["enemies"] instance=ExtResource("9_8it8s")]
 position = Vector2(6790, -121)
+life = 3
 
 [node name="WumpyThump" parent="Enemies" index="8" instance=ExtResource("14_ev6vw")]
 position = Vector2(5067, -333)
@@ -139,49 +141,50 @@ position = Vector2(3537, -333)
 [node name="WumpyThump3" parent="Enemies" index="10" instance=ExtResource("14_ev6vw")]
 position = Vector2(2322, -288)
 
-[node name="WalkingEnemy" parent="Enemies" index="11" instance=ExtResource("15_ljl8q")]
+[node name="WalkingEnemy" parent="Enemies" index="11" groups=["enemies"] instance=ExtResource("15_ljl8q")]
 position = Vector2(5940, -216)
 
-[node name="WalkingEnemy2" parent="Enemies" index="12" instance=ExtResource("15_ljl8q")]
+[node name="WalkingEnemy2" parent="Enemies" index="12" groups=["enemies"] instance=ExtResource("15_ljl8q")]
 position = Vector2(6426, -216)
 
-[node name="WalkingEnemy3" parent="Enemies" index="13" instance=ExtResource("15_ljl8q")]
+[node name="WalkingEnemy3" parent="Enemies" index="13" groups=["enemies"] instance=ExtResource("15_ljl8q")]
 position = Vector2(6165, -216)
 
-[node name="WalkingEnemy4" parent="Enemies" index="14" instance=ExtResource("15_ljl8q")]
+[node name="WalkingEnemy4" parent="Enemies" index="14" groups=["enemies"] instance=ExtResource("15_ljl8q")]
 position = Vector2(6633, -216)
 
-[node name="Blue_Small_Enemy7" parent="Enemies" index="15" instance=ExtResource("8_vvxc2")]
+[node name="Blue_Small_Enemy7" parent="Enemies" index="15" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(5940, -108)
 
-[node name="Blue_Small_Enemy8" parent="Enemies" index="16" instance=ExtResource("8_vvxc2")]
+[node name="Blue_Small_Enemy8" parent="Enemies" index="16" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(6192, -108)
 
-[node name="Blue_Small_Enemy9" parent="Enemies" index="17" instance=ExtResource("8_vvxc2")]
+[node name="Blue_Small_Enemy9" parent="Enemies" index="17" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(6480, -108)
 
-[node name="Big_Blue_Enemy3" parent="Enemies" index="18" instance=ExtResource("9_8it8s")]
+[node name="Big_Blue_Enemy3" parent="Enemies" index="18" groups=["enemies"] instance=ExtResource("9_8it8s")]
 position = Vector2(6078, -120)
+life = 3
 
-[node name="Blue_Small_Enemy10" parent="Enemies" index="19" instance=ExtResource("8_vvxc2")]
+[node name="Blue_Small_Enemy10" parent="Enemies" index="19" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(6291, -324)
 
-[node name="Blue_Small_Enemy11" parent="Enemies" index="20" instance=ExtResource("8_vvxc2")]
+[node name="Blue_Small_Enemy11" parent="Enemies" index="20" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(4734, -180)
 
-[node name="Blue_Small_Enemy12" parent="Enemies" index="21" instance=ExtResource("8_vvxc2")]
+[node name="Blue_Small_Enemy12" parent="Enemies" index="21" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(4563, -288)
 
-[node name="Blue_Small_Enemy13" parent="Enemies" index="22" instance=ExtResource("8_vvxc2")]
+[node name="Blue_Small_Enemy13" parent="Enemies" index="22" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(5571, -108)
 
-[node name="Blue_Small_Enemy14" parent="Enemies" index="23" instance=ExtResource("8_vvxc2")]
+[node name="Blue_Small_Enemy14" parent="Enemies" index="23" groups=["enemies"] instance=ExtResource("8_vvxc2")]
 position = Vector2(2718, -162)
 
-[node name="WalkingEnemy5" parent="Enemies" index="24" instance=ExtResource("15_ljl8q")]
+[node name="WalkingEnemy5" parent="Enemies" index="24" groups=["enemies"] instance=ExtResource("15_ljl8q")]
 position = Vector2(3330, -252)
 
-[node name="WalkingEnemy6" parent="Enemies" index="25" instance=ExtResource("15_ljl8q")]
+[node name="WalkingEnemy6" parent="Enemies" index="25" groups=["enemies"] instance=ExtResource("15_ljl8q")]
 position = Vector2(4149, -180)
 
 [node name="NavalMineMan" parent="Enemies" index="26" instance=ExtResource("16_ln747")]

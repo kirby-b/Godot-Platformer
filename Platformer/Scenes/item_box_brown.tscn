@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2wjok1ppge1v"]
+[gd_scene load_steps=8 format=3 uid="uid://c2wjok1ppge1v"]
 
 [ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="1_c472h"]
+[ext_resource type="Script" path="res://Scripts/item_box.gd" id="1_d2tjc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7vjpo"]
 atlas = ExtResource("1_c472h")
@@ -32,7 +33,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1ly8"]
 size = Vector2(18, 18)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fnh6"]
+size = Vector2(14, 3)
+
 [node name="ItemBoxBrown" type="StaticBody2D"]
+script = ExtResource("1_d2tjc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xr3qk")
@@ -40,3 +45,12 @@ animation = &"full"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_g1ly8")
+
+[node name="GetHitBoi" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GetHitBoi"]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_2fnh6")
+
+[connection signal="body_entered" from="GetHitBoi" to="." method="_on_get_hit_boi_body_entered"]

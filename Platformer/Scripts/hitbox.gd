@@ -1,7 +1,9 @@
 extends Area2D
 
+# Determines if the hitbox will instant kill you
 @export var instant_kill: bool = false
 
+# Timer for i frames
 @onready var timer = $Timer
 
 var iframes = false

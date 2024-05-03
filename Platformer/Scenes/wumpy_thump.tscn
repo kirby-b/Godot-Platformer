@@ -73,7 +73,6 @@ lifetime = 2.0
 explosiveness = 1.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]

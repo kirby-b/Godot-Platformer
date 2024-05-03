@@ -25,9 +25,9 @@ func _on_player_died():
 	player.position = player_start # Sets player to spawn point
 	add_child(player) # Adds player child to world
 	Events.emit_signal("respawn")
-	player.connect_camera(camera) #Reconnects the camera
+	player.connect_camera(camera) # Reconnects the camera
 	
-#Controls check point
+# Controls check point
 func _on_checkpoint(checkpoint_position):
 	player_start = checkpoint_position
 	# Gets checkpoint gloabl position and sets it to the new player spawn

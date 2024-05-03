@@ -9,6 +9,8 @@ enum{
 
 # Gets movement data variables
 @export() var moveData: Resource
+# Gets the bullet scene for instancing
+@export var Bullet : PackedScene
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -17,16 +19,21 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var state = MOVE
 var double_jump = 0 
 var was_in_air = false # Tracks whether the player was just in the air
-var jump_buffer = false # Tranks whether the jump buffer is on
+var jump_buffer = false # Tracks whether the jump buffer is on
+var can_fire = true
 var life = 6
+var aim_direction = 1
 
 # On ready variables to access nodes 
 @onready var sprite = $AnimatedSprite2D
 @onready var bounce_check_1 = $BounceChecker
 @onready var bounce_check_2 = $BounceChecker2
 @onready var ladder_check = $LadderChecker
-@onready var jump_timer = $JumpBuffer
+@onready var jump_timer = $Timers/JumpBuffer
+@onready var bullet_delay = $Timers/BulletDelay
 @onready var remote_trans = $RemoteTransform2D
+@onready var gun = $Gun
+@onready var muzzle = $Gun/Muzzle
 
 func _ready():
 	double_jump = moveData.EXTRA_JUMPS # Sets double jumps when the game starts
@@ -58,6 +65,16 @@ func is_on_ladder():
 
 # Controls the move state
 func move_state(direction, delta):
+	# Determines if the gun is active
+	if GlobalVars.has_gun == false: 
+		gun.hide()
+	elif GlobalVars.has_gun == true:
+		gun.show()
+	
+	# Fires gun
+	if Input.is_action_just_pressed("shoot") and GlobalVars.has_gun == true and can_fire == true:
+		shoot()
+		
 	# Checks to see if you are on a ladder
 	if is_on_ladder() and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_accept")):
 		state = CLIMB # Puts you into climb mode
@@ -65,7 +82,8 @@ func move_state(direction, delta):
 	# Adds the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		
+	
+	# Makes it so the player can fall through one way platforms
 	if (Input.is_action_just_pressed("ui_down") and is_on_floor()):
 		position.y += 1
 	
@@ -85,11 +103,20 @@ func move_state(direction, delta):
 		jump_buffer = true
 		jump_timer.start()
 		
-	# Flips the sprite to face the correct movement direction
+	# Flips the sprite to face the correct movement direction and contolling
+	# where the gun faces
 	if direction.x > 0:
 		sprite.flip_h = true
+		gun.flip_h = false
+		gun.offset = Vector2(10, 0)
+		muzzle.position = Vector2(17, -1)
+		aim_direction = 1
 	elif direction.x < 0:
 		sprite.flip_h = false
+		gun.flip_h = true
+		gun.offset = Vector2(-10, 0)
+		muzzle.position = Vector2(-17, -1)
+		aim_direction = -1
 		
 	# Controls acceleration and deceleration
 	if direction.x:
@@ -121,11 +148,32 @@ func climb_state(direction):
 	if not is_on_ladder():
 		state = MOVE
 	sprite.play("idle")
-	velocity = direction * moveData.CLIMB_SPEED # controls the speed you move at while on a 
+	velocity = direction * moveData.CLIMB_SPEED # controls ladder speed
+	
+	# Determines if the gun is active
+	if GlobalVars.has_gun == false: 
+		gun.hide()
+	elif GlobalVars.has_gun == true:
+		gun.show()
+	
+	# Fires gun
+	if Input.is_action_just_pressed("shoot") and GlobalVars.has_gun == true:
+		shoot()
+		
+	# Flips the sprite to face the correct movement direction and contolling
+	# where the gun faces
 	if direction.x > 0:
 		sprite.flip_h = true
+		gun.flip_h = false
+		gun.offset = Vector2(10, 0)
+		muzzle.position = Vector2(17, -1)
+		aim_direction = 1
 	elif direction.x < 0:
 		sprite.flip_h = false
+		gun.flip_h = true
+		gun.offset = Vector2(-10, 0)
+		muzzle.position = Vector2(-17, -1)
+		aim_direction = -1
 	move_and_slide()
 
 # Turns off the jump buffer after a small timeout period
@@ -149,6 +197,20 @@ func connect_camera(camera):
 	var camera_path = camera.get_path()
 	remote_trans.remote_path = camera_path
 	
+# Makes it so the player bounces into the air if something tells it to
 func bounce():
 	velocity.y = moveData.JUMP_VELOCITY
 	was_in_air = true
+
+# Makes the gun shoot
+func shoot():
+	var b = Bullet.instantiate()
+	b.aim(aim_direction)
+	get_tree().current_scene.add_child(b)
+	b.transform = muzzle.global_transform
+	can_fire = false
+	bullet_delay.start()
+
+# Waits so you cant bullet spam
+func _on_bullet_delay_timeout():
+	can_fire = true

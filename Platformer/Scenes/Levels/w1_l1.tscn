@@ -399,45 +399,47 @@ position = Vector2(698, -254)
 [node name="WumpyThump3" parent="Enemies" index="6" instance=ExtResource("13_oachm")]
 position = Vector2(3805, -425)
 
-[node name="WalkingSpikey1" parent="Enemies" index="7" instance=ExtResource("6_3c7lv")]
+[node name="WalkingSpikey1" parent="Enemies" index="7" groups=["enemies"] instance=ExtResource("6_3c7lv")]
 z_index = 11
 position = Vector2(549, -144)
 
-[node name="WalkingSpikey2" parent="Enemies" index="8" instance=ExtResource("6_3c7lv")]
+[node name="WalkingSpikey2" parent="Enemies" index="8" groups=["enemies"] instance=ExtResource("6_3c7lv")]
 z_index = 11
 position = Vector2(594, -126)
 
-[node name="WalkingEnemy" parent="Enemies" index="9" instance=ExtResource("6_3c7lv")]
+[node name="WalkingEnemy" parent="Enemies" index="9" groups=["enemies"] instance=ExtResource("6_3c7lv")]
 position = Vector2(2988, -270)
 
-[node name="WalkingEnemy2" parent="Enemies" index="10" instance=ExtResource("6_3c7lv")]
+[node name="WalkingEnemy2" parent="Enemies" index="10" groups=["enemies"] instance=ExtResource("6_3c7lv")]
 position = Vector2(3492, -270)
 
-[node name="WalkingEnemy3" parent="Enemies" index="11" instance=ExtResource("6_3c7lv")]
+[node name="WalkingEnemy3" parent="Enemies" index="11" groups=["enemies"] instance=ExtResource("6_3c7lv")]
 position = Vector2(3240, -270)
 
-[node name="Big_Blue_Enemy" parent="Enemies" index="12" instance=ExtResource("15_udcjc")]
+[node name="Big_Blue_Enemy" parent="Enemies" index="12" groups=["enemies"] instance=ExtResource("15_udcjc")]
 z_index = 11
 position = Vector2(990, -156)
+life = 3
 
-[node name="Big_Blue_Enemy2" parent="Enemies" index="13" instance=ExtResource("15_udcjc")]
+[node name="Big_Blue_Enemy2" parent="Enemies" index="13" groups=["enemies"] instance=ExtResource("15_udcjc")]
 position = Vector2(4348, -155)
+life = 3
 
-[node name="Blue_Small_Enemy" parent="Enemies" index="14" instance=ExtResource("16_u8bdt")]
+[node name="Blue_Small_Enemy" parent="Enemies" index="14" groups=["enemies"] instance=ExtResource("16_u8bdt")]
 z_index = 11
 position = Vector2(1030, -144)
 
-[node name="Blue_Small_Enemy2" parent="Enemies" index="15" instance=ExtResource("16_u8bdt")]
+[node name="Blue_Small_Enemy2" parent="Enemies" index="15" groups=["enemies"] instance=ExtResource("16_u8bdt")]
 z_index = 11
 position = Vector2(1068, -144)
 
-[node name="Blue_Small_Enemy3" parent="Enemies" index="16" instance=ExtResource("16_u8bdt")]
+[node name="Blue_Small_Enemy3" parent="Enemies" index="16" groups=["enemies"] instance=ExtResource("16_u8bdt")]
 position = Vector2(1811, -144)
 
-[node name="Blue_Small_Enemy4" parent="Enemies" index="17" instance=ExtResource("16_u8bdt")]
+[node name="Blue_Small_Enemy4" parent="Enemies" index="17" groups=["enemies"] instance=ExtResource("16_u8bdt")]
 position = Vector2(2917, -144)
 
-[node name="Blue_Small_Enemy5" parent="Enemies" index="18" instance=ExtResource("16_u8bdt")]
+[node name="Blue_Small_Enemy5" parent="Enemies" index="18" groups=["enemies"] instance=ExtResource("16_u8bdt")]
 position = Vector2(3329, -144)
 
 [node name="FunctionalProps" type="Node" parent="." index="10"]

@@ -6,6 +6,7 @@ Kenney.nl
   - https://www.kenney.nl/assets/pixel-platformer-food-expansion
   - https://www.kenney.nl/assets/pixel-platformer-industrial-expansion
   - https://www.kenney.nl/assets/pixel-platformer-farm-expansion
+  - https://www.kenney.nl/assets/pixel-line-platformer (for gun stuff and some extra enemies)
 
 Heart Beast
 - Maker of the tutorial I followed. Can be found here:

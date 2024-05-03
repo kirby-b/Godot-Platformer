@@ -41,7 +41,13 @@ Day 41: Had a friend play test the game and made some updates from the feedback.
 
 Day 42: Worked on making it so you can fall through one way platforms
 
-Day 43: Fixed one of the problems in w1-lvl2. I also added platforms in w1-lvl3 so its easier to get around becasue testers found the navigation to be infuriating
+Day 43: Fixed one of the problems in w1-lvl2. I also added platforms in w1-lvl3 so its easier to get around becasue testers found the navigation to be infuriating. With these problems addressed, I began working on the enemy destruction problem. I decided to go with a gun sprite from another kenney asset pack.
+
+Day 44: Added gun to sprite, made it have the ability to disappear, and made it look where the player does. I also added some other sprites like enemies, bullet, and bang.
+
+Day 45: Added bullet scene and made the gun actually fire. The process of adding the working gun also included some extra player code and an enemies group in each level.
+
+Day 46: I made the gun work properly, enemies have health, item boxes give you the gun, and I started using a global for arming the player. Globals will definitely be useful later
 
 # Tips, Tricks, and Advice
 
@@ -49,7 +55,8 @@ Day 43: Fixed one of the problems in w1-lvl2. I also added platforms in w1-lvl3 
 2. For anything you want to just follow the camera, use a canvas layer.
 3. Use terrains for making levels and drawing maps. It is so much easier than placing each individual block
 4. Using an animated sprite is easier than changing a sprite mid game.
-5. You can set the camera limits by clicking on the limit in the camera2d node. I know this sounds obvious, but it took me to long to realize and I dont want others to do the same.
-6. A nice way to make enemies that bounce back and forth is to have two solid objects outside the camera border and have the enemy bounce back and forth between them. I did this with my bird enemies that are not on rails.
-7. Dont rely on the tutorials entirely, you have to do your own learning and reading. If you dont, you just end up in a spiral of not knowing what is going on.
-8. Read the freaking documentation. If you learn to read documentation it is going to be 100% more useful than any tutorial.
+5. For the way I respawn the character, using "owner" doesnt work very well and should be replaced with "get_tree().current_scene". This was found while making the gun
+6. You can set the camera limits by clicking on the limit in the camera2d node. I know this sounds obvious, but it took me to long to realize and I dont want others to do the same.
+7. A nice way to make enemies that bounce back and forth is to have two solid objects outside the camera border and have the enemy bounce back and forth between them. I did this with my bird enemies that are not on rails.
+8. Dont rely on the tutorials entirely, you have to do your own learning and reading. If you dont, you just end up in a spiral of not knowing what is going on.
+9. Read the freaking documentation. If you learn to read documentation it is going to be 100% more useful than any tutorial.
