@@ -47,10 +47,6 @@ position = Vector2(-4, -10)
 target_position = Vector2(0, 23)
 collision_mask = 4
 
-[node name="JumpBuffer" type="Timer" parent="."]
-wait_time = 0.111
-one_shot = true
-
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
 
 [node name="Gun" type="Sprite2D" parent="."]
@@ -63,4 +59,16 @@ region_rect = Rect2(2.619, 4.59358, 10.8104, 6.48627)
 [node name="Muzzle" type="Marker2D" parent="Gun"]
 position = Vector2(17, -1)
 
-[connection signal="timeout" from="JumpBuffer" to="." method="_on_jump_buffer_timeout"]
+[node name="Timers" type="Node" parent="."]
+
+[node name="JumpBuffer" type="Timer" parent="Timers"]
+wait_time = 0.111
+one_shot = true
+
+[node name="BulletDelay" type="Timer" parent="Timers"]
+wait_time = 0.69
+one_shot = true
+
+[connection signal="timeout" from="Timers/JumpBuffer" to="." method="_on_jump_buffer_timeout"]
+[connection signal="timeout" from="Timers/BulletDelay" to="." method="_on_jump_buffer_timeout"]
+[connection signal="timeout" from="Timers/BulletDelay" to="." method="_on_bullet_delay_timeout"]
