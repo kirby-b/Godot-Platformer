@@ -47,7 +47,7 @@ Day 44: Added gun to sprite, made it have the ability to disappear, and made it 
 
 Day 45: Added bullet scene and made the gun actually fire. The process of adding the working gun also included some extra player code and an enemies group in each level.
 
-Day 46: I made the gun work properly, enemies have health, item boxes give you the gun, and I started using a global for arming the player. Globals will definitely be useful later
+Day 46: I made the gun work properly, enemies have health, item boxes give you the gun, and I started using a global for arming the player. Globals also allowed me to make coins global, this way coins persist between levels.
 
 # Tips, Tricks, and Advice
 
