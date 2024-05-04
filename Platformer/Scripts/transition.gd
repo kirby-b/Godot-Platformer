@@ -15,6 +15,18 @@ func play_exit():
 func play_enter():
 	animation_player.play("Enter")
 	
+# Plays the enter animation
+func play_game_over():
+	animation_player.play("Death")
+	
+# Emits a signal when you hit enter or space
+signal continued
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_accept"):
+		continued.emit()
+	
 # Emits a signal if the animation finishes
 func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "Death":
+		await continued # Waits for signal when you die
 	emit_signal("transition_complete")
