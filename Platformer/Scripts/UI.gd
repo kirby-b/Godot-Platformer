@@ -35,7 +35,7 @@ func _on_coin_get():
 		GlobalVars.coins_upper += 1
 	if GlobalVars.coins_upper >= 10:
 		GlobalVars.coins_upper -= 10
-		# This will become a one up call later
+		GlobalVars.lives += 1
 
 func _on_diamond_get():
 	GlobalVars.coins_lower += 5
@@ -44,7 +44,7 @@ func _on_diamond_get():
 		GlobalVars.coins_upper += 1
 	if GlobalVars.coins_upper >= 10:
 		GlobalVars.coins_upper -= 10
-		# This will become a one up call later
+		GlobalVars.lives += 1
 	
 # Controls player hurting
 func _on_player_hurt():
