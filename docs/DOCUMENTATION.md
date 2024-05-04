@@ -49,6 +49,8 @@ Day 45: Added bullet scene and made the gun actually fire. The process of adding
 
 Day 46: I made the gun work properly, enemies have health, item boxes give you the gun, and I started using a global for arming the player. Globals also allowed me to make coins global, this way coins persist between levels.
 
+Day 47: I added the game over screen and getting a life at 100 coins
+
 # Tips, Tricks, and Advice
 
 1. In Godot 4 to change cell size of a tilemap, you go to where it says tileset in the upper right corner and click the down arrow. From there click edit and the cell size should be there.
