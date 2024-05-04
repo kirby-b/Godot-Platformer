@@ -72,7 +72,7 @@ func move_state(direction, delta):
 		gun.show()
 	
 	# Fires gun
-	if Input.is_action_just_pressed("shoot") and GlobalVars.has_gun == true and can_fire == true:
+	if Input.is_action_just_pressed("shoot") and GlobalVars.has_gun == true and can_fire == true and GlobalVars.ammo > 0:
 		shoot()
 		
 	# Checks to see if you are on a ladder
@@ -208,6 +208,7 @@ func shoot():
 	b.aim(aim_direction)
 	get_tree().current_scene.add_child(b)
 	b.transform = muzzle.global_transform
+	GlobalVars.ammo -= 1
 	can_fire = false
 	bullet_delay.start()
 

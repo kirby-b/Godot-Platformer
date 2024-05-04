@@ -26,10 +26,15 @@ func _physics_process(delta):
 func _on_get_hit_boi_body_entered(body):
 	if state == ACTIVE:
 		sprite.play("full")
-		if body is Player and is_full:
+		if body is Player and is_full and GlobalVars.has_gun == false:
 			state = DEACTIVE
 			sprite.play("empty")
 			GlobalVars.has_gun = true
+			GlobalVars.ammo = 20
+		elif body is Player and is_full and GlobalVars.has_gun == true:
+			state = DEACTIVE
+			GlobalVars.ammo = 20
+			sprite.play("empty")
 			# Basically I want to check if the body is player, then I need to 
 			# check if they are in the air. If all that passes, it gives the 
 			# player a coin.

@@ -18,6 +18,7 @@ func next_area():
 	get_tree().paused = true # Pauses so you dont move while loading
 	await Transition.transition_complete # Waits till its done
 	get_tree().paused = false # Unpauses
+	GlobalVars.has_gun = false
 	get_tree().change_scene_to_file(NEXT_LVL) # Changes to next level
 	Transition.play_enter() # Plays enter transition
 
