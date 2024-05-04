@@ -19,13 +19,26 @@ func _ready():
 	
 # Controls what should happen when you die
 func _on_player_died():
-	timer.start(1) # Timer so it isnt instant
-	await timer.timeout # Waits for timer
-	player = player_scene.instantiate() # Instances new player
-	player.position = player_start # Sets player to spawn point
-	add_child(player) # Adds player child to world
-	Events.emit_signal("respawn")
-	player.connect_camera(camera) # Reconnects the camera
+	if !(GlobalVars.lives <= 0):
+		GlobalVars.lives -= 1
+		timer.start(1) # Timer so it isnt instant
+		await timer.timeout # Waits for timer
+		player = player_scene.instantiate() # Instances new player
+		player.position = player_start # Sets player to spawn point
+		add_child(player) # Adds player child to world
+		Events.emit_signal("respawn")
+		player.connect_camera(camera) # Reconnects the camera
+	else:
+		GlobalVars.lives = 3
+		timer.start(1) # Timer so it isnt instant
+		await timer.timeout # Waits for timer
+		Transition.play_game_over() # Plays exit transition
+		get_tree().paused = true # Pauses so you dont move while loading
+		await Transition.transition_complete # Waits till its done
+		get_tree().paused = false # Unpauses
+		GlobalVars.has_gun = false
+		get_tree().change_scene_to_file("res://Scenes/Levels/w1_l1.tscn") # Changes to next level
+		Transition.play_enter() # Plays enter transition
 	
 # Controls check point
 func _on_checkpoint(checkpoint_position):
