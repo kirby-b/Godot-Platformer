@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://buhrv3yofi81h"]
+[gd_scene load_steps=8 format=3 uid="uid://buhrv3yofi81h"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_84ky7"]
 [ext_resource type="SpriteFrames" uid="uid://b0r0g8qo2om4v" path="res://Resources/playerblue.tres" id="2_n70uf"]
 [ext_resource type="Resource" uid="uid://bke11hjl8viu2" path="res://Resources/BaseMovement.tres" id="2_s8k38"]
 [ext_resource type="PackedScene" uid="uid://bru363u4k8kyc" path="res://Scenes/bullet.tscn" id="3_8gkfv"]
 [ext_resource type="Texture2D" uid="uid://bcoa8pk0uhtk3" path="res://Images/shooty.png" id="4_hebbx"]
+[ext_resource type="Texture2D" uid="uid://bsj5vtxca6mhe" path="res://Images/bang.png" id="6_kxhu2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euf5n"]
 size = Vector2(14, 21)
@@ -57,7 +58,12 @@ region_enabled = true
 region_rect = Rect2(2.619, 4.59358, 10.8104, 6.48627)
 
 [node name="Muzzle" type="Marker2D" parent="Gun"]
-position = Vector2(17, -1)
+position = Vector2(24, -1)
+
+[node name="Bang" type="Sprite2D" parent="Gun"]
+position = Vector2(0, -1)
+texture = ExtResource("6_kxhu2")
+offset = Vector2(22, 0)
 
 [node name="Timers" type="Node" parent="."]
 
@@ -69,6 +75,9 @@ one_shot = true
 wait_time = 0.69
 one_shot = true
 
+[node name="MuzzleFlash" type="Timer" parent="Timers"]
+one_shot = true
+
 [connection signal="timeout" from="Timers/JumpBuffer" to="." method="_on_jump_buffer_timeout"]
-[connection signal="timeout" from="Timers/BulletDelay" to="." method="_on_jump_buffer_timeout"]
 [connection signal="timeout" from="Timers/BulletDelay" to="." method="_on_bullet_delay_timeout"]
+[connection signal="timeout" from="Timers/MuzzleFlash" to="." method="_on_muzzle_flash_timeout"]

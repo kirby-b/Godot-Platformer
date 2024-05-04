@@ -31,8 +31,10 @@ var aim_direction = 1
 @onready var ladder_check = $LadderChecker
 @onready var jump_timer = $Timers/JumpBuffer
 @onready var bullet_delay = $Timers/BulletDelay
+@onready var muzzle_flash = $Timers/MuzzleFlash
 @onready var remote_trans = $RemoteTransform2D
 @onready var gun = $Gun
+@onready var flash = $Gun/Bang
 @onready var muzzle = $Gun/Muzzle
 
 func _ready():
@@ -70,6 +72,7 @@ func move_state(direction, delta):
 		gun.hide()
 	elif GlobalVars.has_gun == true:
 		gun.show()
+		flash.hide()
 	
 	# Fires gun
 	if Input.is_action_just_pressed("shoot") and GlobalVars.has_gun == true and can_fire == true and GlobalVars.ammo > 0:
@@ -109,12 +112,16 @@ func move_state(direction, delta):
 		sprite.flip_h = true
 		gun.flip_h = false
 		gun.offset = Vector2(10, 0)
+		flash.flip_h = false
+		flash.offset = Vector2(22, 0)
 		muzzle.position = Vector2(17, -1)
 		aim_direction = 1
 	elif direction.x < 0:
 		sprite.flip_h = false
 		gun.flip_h = true
 		gun.offset = Vector2(-10, 0)
+		flash.flip_h = true
+		flash.offset = Vector2(-22, 0)
 		muzzle.position = Vector2(-17, -1)
 		aim_direction = -1
 		
@@ -166,12 +173,16 @@ func climb_state(direction):
 		sprite.flip_h = true
 		gun.flip_h = false
 		gun.offset = Vector2(10, 0)
+		flash.flip_h = false
+		flash.offset = Vector2(22, 0)
 		muzzle.position = Vector2(17, -1)
 		aim_direction = 1
 	elif direction.x < 0:
 		sprite.flip_h = false
 		gun.flip_h = true
 		gun.offset = Vector2(-10, 0)
+		flash.flip_h = true
+		flash.offset = Vector2(-22, 0)
 		muzzle.position = Vector2(-17, -1)
 		aim_direction = -1
 	move_and_slide()
@@ -209,9 +220,15 @@ func shoot():
 	get_tree().current_scene.add_child(b)
 	b.transform = muzzle.global_transform
 	GlobalVars.ammo -= 1
+	flash.show()
+	muzzle_flash.start()
 	can_fire = false
 	bullet_delay.start()
 
 # Waits so you cant bullet spam
 func _on_bullet_delay_timeout():
 	can_fire = true
+
+# Hides flash on timeout
+func _on_muzzle_flash_timeout():
+	flash.hide()
