@@ -51,6 +51,8 @@ Day 46: I made the gun work properly, enemies have health, item boxes give you t
 
 Day 47: I added the game over screen and getting a life at 100 coins
 
+Day 48: Added an invisible box for secrets. I added it to lvl 1 and added item boxes to lvl 2 and lvl 3
+
 # Tips, Tricks, and Advice
 
 1. In Godot 4 to change cell size of a tilemap, you go to where it says tileset in the upper right corner and click the down arrow. From there click edit and the cell size should be there.
