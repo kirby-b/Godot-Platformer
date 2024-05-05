@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bxvqer0pfbqjx"]
+[gd_scene load_steps=20 format=3 uid="uid://bxvqer0pfbqjx"]
 
 [ext_resource type="PackedScene" uid="uid://c2oltcisl6jcn" path="res://Scenes/Levels/level.tscn" id="1_a65sf"]
 [ext_resource type="PackedScene" uid="uid://6o5mf5ms5p4w" path="res://Scenes/UI.tscn" id="2_jn7lf"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cdbat5my1qrpb" path="res://Scenes/diamond.tscn" id="12_dvrpf"]
 [ext_resource type="PackedScene" uid="uid://0u84h7m30gdc" path="res://Scenes/next_level.tscn" id="13_kf21m"]
 [ext_resource type="PackedScene" uid="uid://duewag7s8a6tn" path="res://Scenes/coin.tscn" id="14_b0lrf"]
+[ext_resource type="PackedScene" uid="uid://cup241yojt5jf" path="res://Scenes/item_box_yellow.tscn" id="15_sxdom"]
 [ext_resource type="PackedScene" uid="uid://c6cd6mn5lo1q1" path="res://Scenes/coin_box_yellow.tscn" id="15_v7vfy"]
 
 [sub_resource type="Curve2D" id="Curve2D_bill8"]
@@ -193,6 +194,18 @@ position = Vector2(720, 342)
 
 [node name="CoinBoxYellow16" parent="FunctionalProps/Boxes" index="15" instance=ExtResource("15_v7vfy")]
 position = Vector2(702, 324)
+
+[node name="ItemBoxYellow" parent="FunctionalProps/Boxes" index="16" instance=ExtResource("15_sxdom")]
+position = Vector2(180, -198)
+
+[node name="ItemBoxYellow2" parent="FunctionalProps/Boxes" index="17" instance=ExtResource("15_sxdom")]
+position = Vector2(1188, -441)
+
+[node name="ItemBoxYellow3" parent="FunctionalProps/Boxes" index="18" instance=ExtResource("15_sxdom")]
+position = Vector2(963, 198)
+
+[node name="ItemBoxYellow4" parent="FunctionalProps/Boxes" index="19" instance=ExtResource("15_sxdom")]
+position = Vector2(-1026, 108)
 
 [node name="Currency" type="Node" parent="." index="9"]
 
