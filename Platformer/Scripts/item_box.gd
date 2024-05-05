@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-# This will all control the block giving the player a coin and deactivating.
+# This will all control the block giving the player a weapon and deactivating.
 # I admit my method may be a little jank, but it should work fine
 
 # States for whether the box is active or not
@@ -37,4 +37,4 @@ func _on_get_hit_boi_body_entered(body):
 			sprite.play("empty")
 			# Basically I want to check if the body is player, then I need to 
 			# check if they are in the air. If all that passes, it gives the 
-			# player a coin.
+			# player a weapon.
