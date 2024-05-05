@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcdt3jdutepxx"]
+
+[ext_resource type="Script" path="res://Scripts/invisibleblock.gd" id="1_fhgaj"]
+[ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="1_pcqn3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avwaq"]
+size = Vector2(18, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ycka"]
+size = Vector2(14, 3)
+
+[node name="Invisibleblock" type="StaticBody2D"]
+script = ExtResource("1_fhgaj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pcqn3")
+region_enabled = true
+region_rect = Rect2(162, 0, 18, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_avwaq")
+
+[node name="GetHitBoi" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GetHitBoi"]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_0ycka")
+
+[connection signal="body_entered" from="GetHitBoi" to="." method="_on_get_hit_boi_body_entered"]
