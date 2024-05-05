@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://1k52moh5760n"]
+[gd_scene load_steps=24 format=3 uid="uid://1k52moh5760n"]
 
 [ext_resource type="PackedScene" uid="uid://c2oltcisl6jcn" path="res://Scenes/Levels/level.tscn" id="1_qcs07"]
 [ext_resource type="PackedScene" uid="uid://vu60elt7dtyk" path="res://Scenes/tile_map.tscn" id="2_q17dx"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://75jfpslorw0m" path="res://Scenes/blue_small_enemy.tscn" id="16_u8bdt"]
 [ext_resource type="PackedScene" uid="uid://0u84h7m30gdc" path="res://Scenes/next_level.tscn" id="17_bsytk"]
 [ext_resource type="PackedScene" uid="uid://0w4yvy1sbaig" path="res://Scenes/bg-tilemap.tscn" id="17_ddyn0"]
+[ext_resource type="PackedScene" uid="uid://bcdt3jdutepxx" path="res://Scenes/invisibleblock.tscn" id="18_q3brv"]
 [ext_resource type="PackedScene" uid="uid://cdbat5my1qrpb" path="res://Scenes/diamond.tscn" id="18_sjeni"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_rm5ob"]
@@ -479,6 +480,12 @@ position = Vector2(2619, -297)
 
 [node name="CoinBoxYellow11" parent="FunctionalProps/Boxes" index="10" instance=ExtResource("11_mt3e6")]
 position = Vector2(4356, -225)
+
+[node name="Invisibleblock" parent="FunctionalProps/Boxes" index="11" instance=ExtResource("18_q3brv")]
+position = Vector2(1422, -324)
+
+[node name="Invisibleblock2" parent="FunctionalProps/Boxes" index="12" instance=ExtResource("18_q3brv")]
+position = Vector2(2772, -342)
 
 [node name="Ladders" type="Node" parent="FunctionalProps" index="1"]
 
