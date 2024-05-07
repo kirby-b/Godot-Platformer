@@ -1,7 +1,8 @@
-[gd_scene load_steps=31 format=3 uid="uid://6o5mf5ms5p4w"]
+[gd_scene load_steps=32 format=3 uid="uid://6o5mf5ms5p4w"]
 
 [ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="1_kjraj"]
 [ext_resource type="Script" path="res://Scripts/UI.gd" id="1_n4uxf"]
+[ext_resource type="Texture2D" uid="uid://b33v2a7k13oak" path="res://Images/tilemap_packed_inverted.png" id="3_3o4lh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18v88"]
 atlas = ExtResource("1_kjraj")
@@ -242,6 +243,25 @@ animation = &"nums-small"
 
 [node name="CoinIcon" type="AnimatedSprite2D" parent="."]
 position = Vector2(352, 8)
-scale = Vector2(0.888888, 0.888889)
+scale = Vector2(0.888889, 0.888889)
 sprite_frames = SubResource("SpriteFrames_0mvyv")
 animation = &"spin"
+
+[node name="LivesSprite" type="Sprite2D" parent="."]
+position = Vector2(8, 24)
+scale = Vector2(0.888889, 0.888889)
+texture = ExtResource("3_3o4lh")
+region_enabled = true
+region_rect = Rect2(72, 36, 18, 18)
+
+[node name="UpperLife" type="AnimatedSprite2D" parent="."]
+position = Vector2(24, 24)
+scale = Vector2(0.888889, 0.888889)
+sprite_frames = SubResource("SpriteFrames_dglku")
+animation = &"nums-small"
+
+[node name="LowerLife" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 24)
+scale = Vector2(0.888889, 0.888889)
+sprite_frames = SubResource("SpriteFrames_dglku")
+animation = &"nums-small"
