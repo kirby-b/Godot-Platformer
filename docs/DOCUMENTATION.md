@@ -55,7 +55,7 @@ Day 48: Added an invisible box for secrets. I added it to lvl 1 and added item b
 
 Day 49: I worked on making lives have a counter
 
-Day 50: I finished the lives count and limited lives to 99, added walls to the ends of levels so you cant fall out where you arent intended, added a bullet counter that only appears when you have the weapon, and made coins disappear on death.
+Day 50: I finished the lives count and limited lives to 99, added walls to the ends of levels so you cant fall out where you are not intended, added a bullet counter that only appears when you have the weapon, and made coins disappear on game over.
 
 # Tips, Tricks, and Advice
 
