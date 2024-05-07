@@ -30,6 +30,8 @@ func _on_player_died():
 		player.connect_camera(camera) # Reconnects the camera
 	else:
 		GlobalVars.lives = 3
+		GlobalVars.coins_lower = 0
+		GlobalVars.coins_upper = 0
 		timer.start(1) # Timer so it isnt instant
 		await timer.timeout # Waits for timer
 		Transition.play_game_over() # Plays exit transition
