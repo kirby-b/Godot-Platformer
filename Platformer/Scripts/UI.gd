@@ -6,10 +6,13 @@ extends CanvasLayer
 @onready var heart3 = $Heart3
 @onready var big_digit = $UpperDigit
 @onready var small_digit = $LowerDigit
+@onready var big_lives = $UpperLife
+@onready var small_lives = $LowerLife
 @onready var coin_icon = $CoinIcon
 
 # Variables to track life
 var life = 6
+var lives_str = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,7 +38,8 @@ func _on_coin_get():
 		GlobalVars.coins_upper += 1
 	if GlobalVars.coins_upper >= 10:
 		GlobalVars.coins_upper -= 10
-		GlobalVars.lives += 1
+		if GlobalVars.lives < 99:
+			GlobalVars.lives += 1
 
 func _on_diamond_get():
 	GlobalVars.coins_lower += 5
@@ -44,7 +48,8 @@ func _on_diamond_get():
 		GlobalVars.coins_upper += 1
 	if GlobalVars.coins_upper >= 10:
 		GlobalVars.coins_upper -= 10
-		GlobalVars.lives += 1
+		if GlobalVars.lives < 99:
+			GlobalVars.lives += 1
 	
 # Controls player hurting
 func _on_player_hurt():
@@ -52,6 +57,13 @@ func _on_player_hurt():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	lives_str = str(GlobalVars.lives)
+	if GlobalVars.lives >= 10:
+		small_lives.frame = int(lives_str[1])
+		big_lives.frame = int(lives_str[0])
+	else:
+		small_lives.frame = int(lives_str[0])
+		big_lives.frame = 0
 	# Sets coin frames to coin counts
 	small_digit.frame = GlobalVars.coins_lower
 	big_digit.frame = GlobalVars.coins_upper
