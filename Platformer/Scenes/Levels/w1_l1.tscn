@@ -530,4 +530,4 @@ position = Vector2(4886, -219)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RightWall" index="0"]
 position = Vector2(-28, 219)
-polygon = PackedVector2Array(0, -424, 0, 0, -16, 0, -16, -424)
+polygon = PackedVector2Array(-2, -536, 0, 0, -16, 0, -18, -536)

@@ -621,3 +621,15 @@ position = Vector2(2097, -207)
 
 [node name="CheckPoint2" parent="FunctionalProps" index="4" instance=ExtResource("11_3ldmj")]
 position = Vector2(4853, -279)
+
+[node name="LeftWall" type="StaticBody2D" parent="." index="11"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LeftWall" index="0"]
+polygon = PackedVector2Array(0, -576, -16, -576, -16, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="RightWall" type="StaticBody2D" parent="." index="12"]
+position = Vector2(7129.35, -185.704)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RightWall" index="0"]
+position = Vector2(-57.355, 185.704)
+polygon = PackedVector2Array(0, -552, -24, -552, -16, 0, 0, 0, 0, 0, 0, 0, 0, 0)
