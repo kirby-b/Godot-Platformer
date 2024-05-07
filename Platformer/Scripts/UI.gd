@@ -8,11 +8,14 @@ extends CanvasLayer
 @onready var small_digit = $LowerDigit
 @onready var big_lives = $UpperLife
 @onready var small_lives = $LowerLife
+@onready var upper_ammo = $BulletSprite/UpperAmmo
+@onready var lower_ammo = $BulletSprite/LowerAmmo
 @onready var coin_icon = $CoinIcon
 
 # Variables to track life
 var life = 6
 var lives_str = ""
+var ammo_str = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -57,13 +60,26 @@ func _on_player_hurt():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	lives_str = str(GlobalVars.lives)
-	if GlobalVars.lives >= 10:
+	# Controls lives display
+	lives_str = str(GlobalVars.lives) # String to get indexes
+	if GlobalVars.lives >= 10: # For lives over 10
 		small_lives.frame = int(lives_str[1])
 		big_lives.frame = int(lives_str[0])
-	else:
+	else: # For lives under 10
 		small_lives.frame = int(lives_str[0])
-		big_lives.frame = 0
+		big_lives.frame = 0 
+	if GlobalVars.has_gun:
+		# Controls ammo display
+		$BulletSprite.visible = true
+		ammo_str = str(GlobalVars.ammo) # String to get indexes
+		if GlobalVars.ammo >= 10: # For ammo over 10
+			lower_ammo.frame = int(ammo_str[1])
+			upper_ammo.frame = int(ammo_str[0])
+		else: # For ammo under 10
+			lower_ammo.frame = int(ammo_str[0])
+			upper_ammo.frame = 0
+	else:
+		$BulletSprite.visible = false
 	# Sets coin frames to coin counts
 	small_digit.frame = GlobalVars.coins_lower
 	big_digit.frame = GlobalVars.coins_upper

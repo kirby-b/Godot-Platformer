@@ -1,8 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://6o5mf5ms5p4w"]
+[gd_scene load_steps=33 format=3 uid="uid://6o5mf5ms5p4w"]
 
 [ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="1_kjraj"]
 [ext_resource type="Script" path="res://Scripts/UI.gd" id="1_n4uxf"]
 [ext_resource type="Texture2D" uid="uid://b33v2a7k13oak" path="res://Images/tilemap_packed_inverted.png" id="3_3o4lh"]
+[ext_resource type="Texture2D" uid="uid://bbx5t2yftnvco" path="res://Images/büllet.png" id="4_atggn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18v88"]
 atlas = ExtResource("1_kjraj")
@@ -262,6 +263,23 @@ animation = &"nums-small"
 
 [node name="LowerLife" type="AnimatedSprite2D" parent="."]
 position = Vector2(32, 24)
+scale = Vector2(0.888889, 0.888889)
+sprite_frames = SubResource("SpriteFrames_dglku")
+animation = &"nums-small"
+
+[node name="BulletSprite" type="Sprite2D" parent="."]
+position = Vector2(352, 24)
+texture = ExtResource("4_atggn")
+flip_h = true
+
+[node name="LowerAmmo" type="AnimatedSprite2D" parent="BulletSprite"]
+position = Vector2(-16, 0)
+scale = Vector2(0.888889, 0.888889)
+sprite_frames = SubResource("SpriteFrames_dglku")
+animation = &"nums-small"
+
+[node name="UpperAmmo" type="AnimatedSprite2D" parent="BulletSprite"]
+position = Vector2(-24, 0)
 scale = Vector2(0.888889, 0.888889)
 sprite_frames = SubResource("SpriteFrames_dglku")
 animation = &"nums-small"
