@@ -35,4 +35,5 @@ func _physics_process(delta):
 func lose_life():
 	life -= 1
 	if life <= 0:
+		SoundPlayer.play_sound(SoundPlayer.HURT)
 		queue_free()
