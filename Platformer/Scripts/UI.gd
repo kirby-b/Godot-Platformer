@@ -42,6 +42,7 @@ func _on_coin_get():
 	if GlobalVars.coins_upper >= 10:
 		GlobalVars.coins_upper -= 10
 		if GlobalVars.lives < 99:
+			SoundPlayer.play_sound(SoundPlayer.ONEUP)
 			GlobalVars.lives += 1
 
 func _on_diamond_get():
@@ -52,6 +53,7 @@ func _on_diamond_get():
 	if GlobalVars.coins_upper >= 10:
 		GlobalVars.coins_upper -= 10
 		if GlobalVars.lives < 99:
+			SoundPlayer.play_sound(SoundPlayer.ONEUP)
 			GlobalVars.lives += 1
 	
 # Controls player hurting

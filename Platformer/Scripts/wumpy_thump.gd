@@ -10,6 +10,8 @@ enum{
 # Initial State
 var state = IDLE
 
+var player_in_radius = false
+
 # Onready for loading nodes
 @onready var start_pos = global_position
 @onready var timer = $Timer
@@ -42,7 +44,8 @@ func crush(delta):
 	else:
 		# When it hits, it emits particles, plays a boom, and sets the state
 		particles.emitting = true
-		SoundPlayer.play_sound(SoundPlayer.BOOM)
+		if player_in_radius == true:
+			SoundPlayer.play_sound(SoundPlayer.BOOM)
 		state = LAND
 		timer.start(1) # Starts timer
 	
@@ -60,3 +63,15 @@ func land():
 	sprite.play("idle") # Idle animation
 	if timer.time_left == 0: # Waits and sets state to rise
 		state = RISE
+
+
+func _on_sound_radius_body_entered(body):
+	if body is Player:
+		player_in_radius = true
+	# When the doors area is entered by a player it sets touching as true
+
+
+func _on_sound_radius_body_exited(body):
+	if body is Player:
+		player_in_radius = false
+	# When the doors area is exited by a player it sets touching as true
