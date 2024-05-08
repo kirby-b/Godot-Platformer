@@ -7,7 +7,8 @@ const HURT = preload("res://Sounds/hurt.wav")
 const JUMP = preload("res://Sounds/jump.wav")
 const LOSE = preload("res://Sounds/lose.wav")
 const ONEUP = preload("res://Sounds/one_up.wav")
-const BANG = preload("res://Sounds/gun.wav")	
+const BANG = preload("res://Sounds/bang.wav")
+const ARMING = preload("res://Sounds/weapon_get.wav")
 
 @onready var sounds = $Players
 
