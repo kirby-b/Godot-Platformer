@@ -219,6 +219,7 @@ func shoot():
 	b.aim(aim_direction)
 	get_tree().current_scene.add_child(b)
 	b.transform = muzzle.global_transform
+	SoundPlayer.play_sound(SoundPlayer.BANG)
 	GlobalVars.ammo -= 1
 	flash.show()
 	muzzle_flash.start()
