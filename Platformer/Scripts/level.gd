@@ -11,6 +11,15 @@ var player_start = Vector2.ZERO
 @onready var timer = $Timer
 
 func _ready():
+	if GlobalVars.started_game == false:
+		TitleScreen.play_title()
+		await TitleScreen.transition_complete # Waits till its done
+		TitleScreen.play_exit()
+		await TitleScreen.transition_complete # Waits till its done
+		timer.start(1) # Timer so it isnt instant
+		TitleScreen.play_enter_level()
+		await TitleScreen.transition_complete # Waits till its done
+		GlobalVars.started_game = true
 	player.connect_camera(camera) # Connects camera to player
 	player_start = player.global_position # Sets player start location
 	# Connects to events so it can react to them
