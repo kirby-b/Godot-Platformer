@@ -8,7 +8,7 @@ enum{
 }
 
 # Gets movement data variables
-@export() var moveData: Resource
+@export() var moveData: Resource = load("res://Resources/BaseMovement.tres")
 # Gets the bullet scene for instancing
 @export var Bullet : PackedScene
 
