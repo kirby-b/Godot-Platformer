@@ -59,7 +59,7 @@ Day 50: I finished the lives count and limited lives to 99, added walls to the e
 
 Day 51: I worked on how sounds work and what sounds come from where. Biggest change was crusher enemies only making noise in an area
 
-Day 52: I added a title screen to add a bit of a more complete feel to the game
+Day 52: I added a title screen to add a bit of a more complete feel to the game. In addition to these changes, I worked on w2-lvl1 and contemplated doing bosses
 
 # Tips, Tricks, and Advice
 
