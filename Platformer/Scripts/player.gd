@@ -38,6 +38,7 @@ var aim_direction = 1
 @onready var muzzle = $Gun/Muzzle
 
 func _ready():
+	sprite.sprite_frames = load("res://Resources/playerblue.tres")
 	double_jump = moveData.EXTRA_JUMPS # Sets double jumps when the game starts
 	Events.connect("player_hurt", Callable(self , "_on_player_hurt"))
 	
