@@ -61,6 +61,8 @@ Day 51: I worked on how sounds work and what sounds come from where. Biggest cha
 
 Day 52: I added a title screen to add a bit of a more complete feel to the game. In addition to these changes, I worked on w2-lvl1 and contemplated doing bosses
 
+Day 53: Added a boss level layout and did some small fixes
+
 # Tips, Tricks, and Advice
 
 1. In Godot 4 to change cell size of a tilemap, you go to where it says tileset in the upper right corner and click the down arrow. From there click edit and the cell size should be there.
