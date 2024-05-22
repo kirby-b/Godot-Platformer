@@ -12,6 +12,7 @@ var player_start = Vector2.ZERO
 
 func _ready():
 	if GlobalVars.started_game == false:
+		get_tree().paused = true
 		TitleScreen.play_title()
 		await TitleScreen.transition_complete # Waits till its done
 		TitleScreen.play_exit()
@@ -20,6 +21,7 @@ func _ready():
 		TitleScreen.play_enter_level()
 		await TitleScreen.transition_complete # Waits till its done
 		GlobalVars.started_game = true
+		get_tree().paused = false
 	player.connect_camera(camera) # Connects camera to player
 	player_start = player.global_position # Sets player start location
 	# Connects to events so it can react to them
