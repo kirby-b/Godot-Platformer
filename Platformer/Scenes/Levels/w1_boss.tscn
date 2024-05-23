@@ -46,3 +46,15 @@ position = Vector2(1683, -117)
 
 [node name="BossWall4" parent="." index="10" instance=ExtResource("6_4chvb")]
 position = Vector2(1683, -99)
+
+[node name="RightWall" type="StaticBody2D" parent="." index="11"]
+position = Vector2(2501, 0)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RightWall" index="0"]
+position = Vector2(17, -1)
+polygon = PackedVector2Array(0, -424, 0, 0, -16, 0, -16, -424)
+
+[node name="LeftWall" type="StaticBody2D" parent="." index="12"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LeftWall" index="0"]
+polygon = PackedVector2Array(0, -424, 0, 0, -16, 0, -16, -424)
