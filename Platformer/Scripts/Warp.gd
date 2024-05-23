@@ -11,10 +11,13 @@ var player
 func _process(delta):
 	if can_teleport == true and Input.is_action_just_pressed("ui_down"):
 		player.position = middle.get_global_transform().origin
+		player.sink()
+		await Events.sink_finish
 		Transition.play_exit() # Plays exit transition
 		get_tree().paused = true # Pauses so you dont move while loading
 		await Transition.transition_complete # Waits till its done
 		get_tree().paused = false # Unpauses
+		player.unsink()
 		Transition.play_enter() # Plays enter transition
 		player.position = exit.get_global_transform().origin
 

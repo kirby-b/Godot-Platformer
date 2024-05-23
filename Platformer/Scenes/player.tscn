@@ -81,6 +81,10 @@ one_shot = true
 [node name="MuzzleFlash" type="Timer" parent="Timers"]
 one_shot = true
 
+[node name="SinkTimer" type="Timer" parent="Timers"]
+wait_time = 0.034
+one_shot = true
+
 [connection signal="timeout" from="Timers/JumpBuffer" to="." method="_on_jump_buffer_timeout"]
 [connection signal="timeout" from="Timers/BulletDelay" to="." method="_on_bullet_delay_timeout"]
 [connection signal="timeout" from="Timers/MuzzleFlash" to="." method="_on_muzzle_flash_timeout"]

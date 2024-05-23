@@ -36,6 +36,7 @@ var aim_direction = 1
 @onready var gun = $Gun
 @onready var flash = $Gun/Bang
 @onready var muzzle = $Gun/Muzzle
+@onready var sinktime = $Timers/SinkTimer
 
 func _ready():
 	sprite.sprite_frames = load("res://Resources/playerblue.tres")
@@ -73,7 +74,8 @@ func move_state(direction, delta):
 	elif GlobalVars.has_gun == true:
 		gun.show()
 		flash.hide()
-	
+	if Input.is_action_just_pressed("Test_Button"):
+		sink()
 	# Fires gun
 	if Input.is_action_just_pressed("shoot") and GlobalVars.has_gun == true and can_fire == true and GlobalVars.ammo > 0:
 		shoot()
@@ -233,3 +235,14 @@ func _on_bullet_delay_timeout():
 # Hides flash on timeout
 func _on_muzzle_flash_timeout():
 	flash.hide()
+	
+func sink():
+	for n in 25:
+		sprite.offset = Vector2(0, 1+n)
+		sinktime.start()
+		await sinktime.timeout
+	Events.emit_signal("sink_finish")
+
+func unsink():
+	sprite.offset = Vector2(0,0)
+		

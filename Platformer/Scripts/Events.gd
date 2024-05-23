@@ -7,3 +7,4 @@ signal checkpoint(checkpoint_position) # Signals that the player got a checkpoin
 signal coin_get # Signals the player getting a coin
 signal diamond_get # Signals the player getting a diamond (5 coins)
 signal respawn # Signals a player respawning
+signal sink_finish # Signals the player has sank
