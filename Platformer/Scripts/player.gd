@@ -74,8 +74,7 @@ func move_state(direction, delta):
 	elif GlobalVars.has_gun == true:
 		gun.show()
 		flash.hide()
-	if Input.is_action_just_pressed("Test_Button"):
-		sink()
+		
 	# Fires gun
 	if Input.is_action_just_pressed("shoot") and GlobalVars.has_gun == true and can_fire == true and GlobalVars.ammo > 0:
 		shoot()

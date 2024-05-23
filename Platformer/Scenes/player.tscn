@@ -82,7 +82,7 @@ one_shot = true
 one_shot = true
 
 [node name="SinkTimer" type="Timer" parent="Timers"]
-wait_time = 0.034
+wait_time = 0.05
 one_shot = true
 
 [connection signal="timeout" from="Timers/JumpBuffer" to="." method="_on_jump_buffer_timeout"]
