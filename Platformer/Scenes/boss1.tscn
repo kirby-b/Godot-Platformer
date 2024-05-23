@@ -2,15 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://Images/tilemap-characters_packed.png" id="1_0ocun"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vpc5y"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8oa2"]
 atlas = ExtResource("1_0ocun")
-region = Rect2(0, 0, 24, 24)
+region = Rect2(96, 0, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6fqao"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vpc5y")
+"texture": SubResource("AtlasTexture_h8oa2")
 }],
 "loop": true,
 "name": &"normal",
@@ -30,3 +30,6 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_rrv0b")
+
+[node name="FireballSpawn" type="Marker2D" parent="."]
+position = Vector2(11, 2)
