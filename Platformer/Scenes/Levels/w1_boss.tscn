@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://be11dya35o2p7"]
+[gd_scene load_steps=7 format=3 uid="uid://be11dya35o2p7"]
 
 [ext_resource type="PackedScene" uid="uid://c2oltcisl6jcn" path="res://Scenes/Levels/level.tscn" id="1_3dr2n"]
 [ext_resource type="PackedScene" uid="uid://vu60elt7dtyk" path="res://Scenes/tile_map.tscn" id="2_xmhw5"]
 [ext_resource type="PackedScene" uid="uid://6o5mf5ms5p4w" path="res://Scenes/UI.tscn" id="3_ry24e"]
 [ext_resource type="PackedScene" uid="uid://0w4yvy1sbaig" path="res://Scenes/bg-tilemap.tscn" id="4_swdsd"]
 [ext_resource type="PackedScene" uid="uid://0u84h7m30gdc" path="res://Scenes/next_level.tscn" id="5_g2cny"]
+[ext_resource type="PackedScene" uid="uid://bs60ppgcnlgxn" path="res://Scenes/bosswall.tscn" id="6_4chvb"]
 
 [node name="W1-Boss" instance=ExtResource("1_3dr2n")]
 
@@ -33,3 +34,15 @@ layer_0/tile_data = PackedInt32Array(-393216, 786432, 0, -327680, 786432, 1, -26
 
 [node name="NextLevel" parent="." index="6" instance=ExtResource("5_g2cny")]
 position = Vector2(2430, -126)
+
+[node name="BossWall" parent="." index="7" instance=ExtResource("6_4chvb")]
+position = Vector2(873, -117)
+
+[node name="BossWall2" parent="." index="8" instance=ExtResource("6_4chvb")]
+position = Vector2(873, -99)
+
+[node name="BossWall3" parent="." index="9" instance=ExtResource("6_4chvb")]
+position = Vector2(1683, -117)
+
+[node name="BossWall4" parent="." index="10" instance=ExtResource("6_4chvb")]
+position = Vector2(1683, -99)

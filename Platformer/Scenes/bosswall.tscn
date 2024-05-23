@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs60ppgcnlgxn"]
+
+[ext_resource type="Script" path="res://Scripts/bosswall.gd" id="1_h3b01"]
+[ext_resource type="Texture2D" uid="uid://bgl27ug76lpeu" path="res://Images/tilemap_packed.png" id="2_ijsqi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avwaq"]
+size = Vector2(18, 18)
+
+[node name="BossWall" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_h3b01")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ijsqi")
+region_enabled = true
+region_rect = Rect2(162, 0, 18, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_avwaq")
