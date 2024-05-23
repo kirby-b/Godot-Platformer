@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://im2bqhdq0qg4"]
+[gd_scene load_steps=6 format=3 uid="uid://im2bqhdq0qg4"]
 
 [ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://Images/tilemap-characters_packed.png" id="1_0ocun"]
+[ext_resource type="Script" path="res://Scripts/boss1.gd" id="1_bs1l8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h8oa2"]
 atlas = ExtResource("1_0ocun")
@@ -21,6 +22,7 @@ animations = [{
 size = Vector2(16, 23)
 
 [node name="Boss" type="CharacterBody2D"]
+script = ExtResource("1_bs1l8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6fqao")
