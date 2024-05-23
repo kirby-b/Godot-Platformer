@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bsj5vtxca6mhe" path="res://Images/bang.png" id="6_kxhu2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euf5n"]
-size = Vector2(14, 21)
+size = Vector2(14, 21.2253)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 25
@@ -26,8 +26,8 @@ frame = 1
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 texture_filter = 1
+position = Vector2(0, 0.612651)
 shape = SubResource("RectangleShape2D_euf5n")
 
 [node name="LadderChecker" type="RayCast2D" parent="."]
