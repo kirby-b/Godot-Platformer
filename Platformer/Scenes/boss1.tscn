@@ -31,5 +31,5 @@ flip_h = true
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_rrv0b")
 
-[node name="FireballSpawn" type="Marker2D" parent="."]
-position = Vector2(11, 2)
+[node name="LazerSpawn" type="Marker2D" parent="."]
+position = Vector2(11, 1)
