@@ -14,6 +14,7 @@ func _physics_process(delta):
 			shoot()
 			await can_fire
 			aim_direction *= -1
+		#Set boss position to random tube point
 
 # Makes the gun shoot
 func shoot():
