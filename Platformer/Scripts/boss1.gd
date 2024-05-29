@@ -8,6 +8,13 @@ var can_fire = true
 @export var Lazer : PackedScene
 var aim_direction = 1
 
+func _physics_process(delta):
+	if GlobalVars.activeboss == true:
+		for n in 4:
+			shoot()
+			await can_fire
+			aim_direction *= -1
+
 # Makes the gun shoot
 func shoot():
 	var l = Lazer.instantiate()
