@@ -6,3 +6,4 @@ var has_gun = false
 var ammo = 20
 var lives = 3
 var started_game = false
+var activeboss = false
