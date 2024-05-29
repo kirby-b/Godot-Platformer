@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://im2bqhdq0qg4"]
+[gd_scene load_steps=7 format=3 uid="uid://im2bqhdq0qg4"]
 
 [ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://Images/tilemap-characters_packed.png" id="1_0ocun"]
 [ext_resource type="Script" path="res://Scripts/boss1.gd" id="1_bs1l8"]
+[ext_resource type="PackedScene" uid="uid://b1fveavlkhn3n" path="res://Scenes/lazer.tscn" id="2_yd30c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h8oa2"]
 atlas = ExtResource("1_0ocun")
@@ -22,7 +23,9 @@ animations = [{
 size = Vector2(16, 23)
 
 [node name="Boss" type="CharacterBody2D"]
+collision_layer = 4
 script = ExtResource("1_bs1l8")
+Lazer = ExtResource("2_yd30c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6fqao")
@@ -34,8 +37,10 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_rrv0b")
 
 [node name="LazerSpawn" type="Marker2D" parent="."]
-position = Vector2(11, 1)
+position = Vector2(18, 0)
 
 [node name="LazerDelay" type="Timer" parent="."]
 wait_time = 0.69
 one_shot = true
+
+[connection signal="timeout" from="LazerDelay" to="." method="_on_lazer_delay_timeout"]
