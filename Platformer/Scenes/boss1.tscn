@@ -35,3 +35,7 @@ shape = SubResource("RectangleShape2D_rrv0b")
 
 [node name="LazerSpawn" type="Marker2D" parent="."]
 position = Vector2(11, 1)
+
+[node name="LazerDelay" type="Timer" parent="."]
+wait_time = 0.69
+one_shot = true
