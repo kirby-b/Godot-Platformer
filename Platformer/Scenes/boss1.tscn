@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://im2bqhdq0qg4"]
+[gd_scene load_steps=10 format=3 uid="uid://im2bqhdq0qg4"]
 
 [ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://Images/tilemap-characters_packed.png" id="1_0ocun"]
 [ext_resource type="Script" path="res://Scripts/boss1.gd" id="1_bs1l8"]
@@ -9,6 +9,14 @@
 atlas = ExtResource("1_0ocun")
 region = Rect2(96, 0, 24, 24)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkgq4"]
+atlas = ExtResource("1_0ocun")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ap5hf"]
+atlas = ExtResource("1_0ocun")
+region = Rect2(120, 0, 24, 24)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_6fqao"]
 animations = [{
 "frames": [{
@@ -17,6 +25,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkgq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ap5hf")
+}],
+"loop": true,
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -31,7 +50,7 @@ speed = 60.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6fqao")
-animation = &"normal"
+animation = &"walk"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
