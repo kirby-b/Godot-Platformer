@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cofi87ximcl8w"]
+
+[ext_resource type="Script" path="res://Scripts/start_boss.gd" id="1_wgtf3"]
+
+[node name="StartBoss" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_wgtf3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
