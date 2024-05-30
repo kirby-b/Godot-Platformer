@@ -63,5 +63,15 @@ polygon = PackedVector2Array(0, -424, 0, 0, -16, 0, -16, -424)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LeftWall" index="0"]
 polygon = PackedVector2Array(0, -424, 0, 0, -16, 0, -16, -424)
 
-[node name="ItemBoxYellow" parent="." index="14" instance=ExtResource("8_7gwgi")]
+[node name="Item_boxes" type="Node" parent="." index="14"]
+
+[node name="ItemBoxYellow" parent="Item_boxes" index="0" instance=ExtResource("8_7gwgi")]
 position = Vector2(513, -135)
+
+[node name="ItemBoxYellow2" parent="Item_boxes" index="1" instance=ExtResource("8_7gwgi")]
+position = Vector2(963, -153)
+can_empty = false
+
+[node name="ItemBoxYellow3" parent="Item_boxes" index="2" instance=ExtResource("8_7gwgi")]
+position = Vector2(1593, -153)
+can_empty = false
