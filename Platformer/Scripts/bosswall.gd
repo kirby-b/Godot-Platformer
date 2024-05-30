@@ -10,7 +10,7 @@ var is_visible = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Events.connect("boss_entered", Callable(self, "_on_boss_room_enter"))
+	Events.connect("boss_entered", Callable(self, "_on_boss_room_entered"))
 	Events.connect("boss_defeated", Callable(self, "_on_boss_defeated"))
 
 
