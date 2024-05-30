@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://im2bqhdq0qg4"]
+[gd_scene load_steps=8 format=3 uid="uid://im2bqhdq0qg4"]
 
 [ext_resource type="Texture2D" uid="uid://3p2wjb7fxj48" path="res://Images/tilemap-characters_packed.png" id="1_0ocun"]
 [ext_resource type="Script" path="res://Scripts/boss1.gd" id="1_bs1l8"]
 [ext_resource type="PackedScene" uid="uid://b1fveavlkhn3n" path="res://Scenes/lazer.tscn" id="2_yd30c"]
+[ext_resource type="PackedScene" uid="uid://cqbw1x2hs0pri" path="res://Scenes/hitbox.tscn" id="4_h5nee"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h8oa2"]
 atlas = ExtResource("1_0ocun")
@@ -43,5 +44,11 @@ position = Vector2(18, 0)
 [node name="LazerDelay" type="Timer" parent="."]
 wait_time = 0.69
 one_shot = true
+
+[node name="Hitbox" parent="." instance=ExtResource("4_h5nee")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_rrv0b")
 
 [connection signal="timeout" from="LazerDelay" to="." method="_on_lazer_delay_timeout"]

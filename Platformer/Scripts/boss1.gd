@@ -15,9 +15,8 @@ var direction = 1
 
 func _physics_process(delta):
 	if GlobalVars.activeboss == true:
-		for n in 4:
+		if can_fire:
 			shoot()
-			await can_fire
 			aim_direction *= -1
 		#Set boss position to random tube point
 	# Adds the gravity.
@@ -39,6 +38,7 @@ func _physics_process(delta):
 # Makes the gun shoot
 func shoot():
 	var l = Lazer.instantiate()
+	l.set_target("characters")
 	l.aim(aim_direction)
 	get_tree().current_scene.add_child(l)
 	l.transform = fire_point.global_transform
