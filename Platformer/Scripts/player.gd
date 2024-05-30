@@ -193,7 +193,7 @@ func _on_jump_buffer_timeout():
 	jump_buffer = false
 
 # Controls Player getting hurt
-func player_hurt():
+func lose_life():
 	SoundPlayer.play_sound(SoundPlayer.HURT) #Plays hurt sound
 	Events.emit_signal("player_hurt") # Emits hurt signal
 
