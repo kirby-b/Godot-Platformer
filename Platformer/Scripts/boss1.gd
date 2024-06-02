@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Boss
 
 @onready var lazer_delay = $LazerDelay
 @onready var fire_point = $LazerSpawn
@@ -19,7 +20,7 @@ func _physics_process(delta):
 		if can_fire:
 			shoot()
 			aim_direction *= -1
-		#Set boss position to random tube point
+		# Set boss position to random tube point
 		# Adds the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta
