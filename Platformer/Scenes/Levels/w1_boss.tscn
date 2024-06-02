@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://be11dya35o2p7"]
+[gd_scene load_steps=12 format=3 uid="uid://be11dya35o2p7"]
 
 [ext_resource type="PackedScene" uid="uid://c2oltcisl6jcn" path="res://Scenes/Levels/level.tscn" id="1_3dr2n"]
 [ext_resource type="PackedScene" uid="uid://im2bqhdq0qg4" path="res://Scenes/boss1.tscn" id="2_ndpj6"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bs60ppgcnlgxn" path="res://Scenes/bosswall.tscn" id="6_4chvb"]
 [ext_resource type="PackedScene" uid="uid://cup241yojt5jf" path="res://Scenes/item_box_yellow.tscn" id="8_7gwgi"]
 [ext_resource type="PackedScene" uid="uid://cofi87ximcl8w" path="res://Scenes/start_boss.tscn" id="9_ecwnf"]
+[ext_resource type="Texture2D" uid="uid://bxmbar82m0gy0" path="res://Images/portals.png" id="10_5lql6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1txix"]
 size = Vector2(18, 54)
@@ -86,3 +87,31 @@ position = Vector2(918, -108)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StartBoss" index="0"]
 position = Vector2(0, -9)
 shape = SubResource("RectangleShape2D_1txix")
+
+[node name="Portals" type="Node" parent="." index="16"]
+
+[node name="Portal" type="Sprite2D" parent="Portals" index="0"]
+position = Vector2(927, -104)
+texture = ExtResource("10_5lql6")
+region_enabled = true
+region_rect = Rect2(0, 0, 36, 36)
+
+[node name="Marker2D" type="Marker2D" parent="Portals/Portal" index="0"]
+
+[node name="Portal2" type="Sprite2D" parent="Portals" index="1"]
+position = Vector2(1638, -104)
+texture = ExtResource("10_5lql6")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 36, 36)
+
+[node name="Marker2D" type="Marker2D" parent="Portals/Portal2" index="0"]
+
+[node name="Portal3" type="Sprite2D" parent="Portals" index="2"]
+position = Vector2(1295, -232)
+texture = ExtResource("10_5lql6")
+region_enabled = true
+region_rect = Rect2(36, 0, 24, 32)
+
+[node name="Marker2D" type="Marker2D" parent="Portals/Portal3" index="0"]
+position = Vector2(1, 5)
