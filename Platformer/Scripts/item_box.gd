@@ -28,16 +28,16 @@ func _on_get_hit_boi_body_entered(body):
 	if state == ACTIVE:
 		sprite.play("full")
 		if body is Player and is_full and GlobalVars.has_gun == false:
-			state = DEACTIVE
 			if can_empty:
+				state = DEACTIVE
 				sprite.play("empty")
 			SoundPlayer.play_sound(SoundPlayer.ARMING)
 			GlobalVars.has_gun = true
 			GlobalVars.ammo = 20
 		elif body is Player and is_full and GlobalVars.has_gun == true:
-			state = DEACTIVE
 			GlobalVars.ammo = 20
 			if can_empty:
+				state = DEACTIVE
 				sprite.play("empty")
 			SoundPlayer.play_sound(SoundPlayer.ARMING)
 			# Basically I want to check if the body is player, then I need to 
