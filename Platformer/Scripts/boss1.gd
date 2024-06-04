@@ -10,7 +10,6 @@ class_name Boss
 @export() var speed: float
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var aim_direction = 1
 var direction = 1
 var can_fire = true
 var life = 10
@@ -19,7 +18,6 @@ func _physics_process(delta):
 	if GlobalVars.activeboss == true:
 		if can_fire:
 			shoot()
-			aim_direction *= -1
 		# Set boss position to random tube point
 		# Adds the gravity.
 		if not is_on_floor():
@@ -35,13 +33,19 @@ func _physics_process(delta):
 		
 		sprite.play("walk") # Constantly plays the walk
 		velocity.x = direction * speed # Constant speed
+		
+		if direction > 0:
+			fire_point.position = Vector2(17, -1)
+		elif direction < 0:
+			fire_point.position = Vector2(-17, -1)
+		
 		move_and_slide()
 
 # Makes the gun shoot
 func shoot():
 	var l = Lazer.instantiate()
 	l.set_target("characters")
-	l.aim(aim_direction)
+	l.aim(direction)
 	get_tree().current_scene.add_child(l)
 	l.transform = fire_point.global_transform
 	SoundPlayer.play_sound(SoundPlayer.BANG)
