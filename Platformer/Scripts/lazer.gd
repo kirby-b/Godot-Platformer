@@ -1,7 +1,7 @@
 extends Area2D
 
 var speed = 750
-var target_group = "characters"
+var target_group = ""
 
 func _physics_process(delta):
 	position += transform.x * speed * delta 
