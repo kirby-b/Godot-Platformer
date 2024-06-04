@@ -21,8 +21,10 @@ func _physics_process(delta):
 func _on_boss_room_entered():
 	is_visible = true
 	collision_mask = 2
+	collision_layer = 1
 	
 func _on_boss_defeated():
 	is_visible = false
 	collision_mask = 0
+	collision_layer = 0
 	
