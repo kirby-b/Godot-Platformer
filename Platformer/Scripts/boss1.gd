@@ -61,3 +61,4 @@ func lose_life():
 	if life <= 0:
 		SoundPlayer.play_sound(SoundPlayer.HURT)
 		queue_free()
+		Events.emit_signal("boss_defeated")
