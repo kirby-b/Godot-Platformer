@@ -12,7 +12,7 @@ func _on_hitbox_body_entered(body):
 	if iframes == false:
 		# Hurts the player and activates i frames
 		if body is Player and instant_kill == false:
-			body.player_hurt()
+			body.lose_life()
 			invincibility(body)
 		elif body is Player and instant_kill == true:
 			body.player_death() # Kills the player

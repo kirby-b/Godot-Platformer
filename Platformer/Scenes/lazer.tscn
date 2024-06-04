@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1fveavlkhn3n"]
+
+[ext_resource type="Script" path="res://Scripts/lazer.gd" id="1_2qge5"]
+[ext_resource type="Texture2D" uid="uid://7f5hys3aw10m" path="res://Images/lazer.png" id="2_ryxso"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6dmb"]
+size = Vector2(12, 6)
+
+[node name="Lazer" type="Area2D"]
+collision_layer = 0
+collision_mask = 6
+script = ExtResource("1_2qge5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -3.14159
+texture = ExtResource("2_ryxso")
+region_enabled = true
+region_rect = Rect2(2, 5, 12, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_b6dmb")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, 2.38419e-07)
+scale = Vector2(0.6, 0.3)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

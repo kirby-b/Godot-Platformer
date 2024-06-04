@@ -9,12 +9,13 @@ enum{
 	DEACTIVE
 }
 
-var is_full = true
+@export() var can_empty:bool = true
 
 # On ready variables to access nodes
 @onready var sprite = $AnimatedSprite2D
 
 var state = ACTIVE # Holds the current state
+var is_full = true
 
 # Called when the node enters the scene tree for the first time.
 func _physics_process(delta):
@@ -27,15 +28,17 @@ func _on_get_hit_boi_body_entered(body):
 	if state == ACTIVE:
 		sprite.play("full")
 		if body is Player and is_full and GlobalVars.has_gun == false:
-			state = DEACTIVE
-			sprite.play("empty")
+			if can_empty:
+				state = DEACTIVE
+				sprite.play("empty")
 			SoundPlayer.play_sound(SoundPlayer.ARMING)
 			GlobalVars.has_gun = true
 			GlobalVars.ammo = 20
 		elif body is Player and is_full and GlobalVars.has_gun == true:
-			state = DEACTIVE
 			GlobalVars.ammo = 20
-			sprite.play("empty")
+			if can_empty:
+				state = DEACTIVE
+				sprite.play("empty")
 			SoundPlayer.play_sound(SoundPlayer.ARMING)
 			# Basically I want to check if the body is player, then I need to 
 			# check if they are in the air. If all that passes, it gives the 

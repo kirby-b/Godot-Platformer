@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://75jfpslorw0m" path="res://Scenes/blue_small_enemy.tscn" id="16_u8bdt"]
 [ext_resource type="PackedScene" uid="uid://0u84h7m30gdc" path="res://Scenes/next_level.tscn" id="17_bsytk"]
 [ext_resource type="PackedScene" uid="uid://0w4yvy1sbaig" path="res://Scenes/bg-tilemap.tscn" id="17_ddyn0"]
-[ext_resource type="PackedScene" path="res://Scenes/invisibleblock.tscn" id="18_q3brv"]
+[ext_resource type="PackedScene" uid="uid://bcdt3jdutepxx" path="res://Scenes/invisibleblock.tscn" id="18_q3brv"]
 [ext_resource type="PackedScene" uid="uid://cdbat5my1qrpb" path="res://Scenes/diamond.tscn" id="18_sjeni"]
 [ext_resource type="Script" path="res://Scripts/Warp.gd" id="18_teag5"]
 

@@ -67,6 +67,13 @@ Day 54: Added warp pipes and did some small fixes to make the game look better
 
 Day 55: Made the player sink into pipes when they enter them. I also edited the boss and his level a bit, including adding a block that will keep you in during the boss fight.
 
+Day 56-58: Coming up with ideas to make the boss fun and not overly complicated. My ideas spread from having the boss pop out of pipes and shoot at you, to having him run around and go through portals.
+As of writing this, I'm going with the portals and have worked towards such.
+
+Day 59: Added portals and markers for where the boss will teleport through
+
+Day 60: Finished the boss level. He now can teleport around, and so can you. He is very easy to beat and I will probably mess with him later, along with some other things to make the boss more interesting.
+
 # Tips, Tricks, and Advice
 
 1. In Godot 4 to change cell size of a tilemap, you go to where it says tileset in the upper right corner and click the down arrow. From there click edit and the cell size should be there.
