@@ -61,7 +61,7 @@ shape = SubResource("RectangleShape2D_rrv0b")
 position = Vector2(18, 0)
 
 [node name="LazerDelay" type="Timer" parent="."]
-wait_time = 0.69
+wait_time = 2.0
 one_shot = true
 
 [node name="Hitbox" parent="." instance=ExtResource("4_h5nee")]
