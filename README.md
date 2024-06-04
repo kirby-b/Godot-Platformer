@@ -8,4 +8,4 @@ My game is much more developed than the tutorial and is written in a newer versi
 
 # Current Features
 
-Includes 3 levels, 1 character, a bunch of fun enemies, lots of coins to feed the greed, and a decent UI. The game is definitely in its infancy and has a long way to go before I will be done with it, but I hope what I have is helpful to anybody who wants to use it as an example or to learn from it.
+Includes 4 levels, 1 character, a bunch of fun enemies + a boss, lots of coins to feed the greed, and a decent UI. The game is definitely in its infancy and has a long way to go before I will be done with it, but I hope what I have is helpful to anybody who wants to use it as an example or to learn from it.
