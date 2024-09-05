@@ -1,4 +1,4 @@
-# Acknowlegements
+# Acknowledgements
 
 Kenney.nl
 - The place where I got the sprite sheets. The links are here:
