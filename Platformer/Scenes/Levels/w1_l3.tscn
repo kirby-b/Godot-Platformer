@@ -143,7 +143,7 @@ position = Vector2(-903, 316)
 
 [node name="NextLevel" parent="FunctionalProps" index="1" instance=ExtResource("13_kf21m")]
 position = Vector2(-1218, -323)
-NEXT_LVL = "res://Scenes/Levels/w1_boss.tscn"
+NEXT_LVL = "res://Scenes/Levels/w1_l4.tscn"
 
 [node name="Boxes" type="Node" parent="FunctionalProps" index="2"]
 
